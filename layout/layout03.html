@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃3</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: #E8F5E9;
+    }
+    #wrap {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #header {
+        width: 1200px;
+        height: 100px;
+        background-color: #C8E6C9;
+    }
+    #nav {
+        width: 1200px;
+        height: 100px;
+        background-color: #A5D6A7;
+    }
+    #aside1 {
+        width: 400px;
+        height: 780px;
+        background-color: #81C784;
+        float: left;
+    }
+    #aside2 {
+        width: 400px;
+        height: 390px;
+        background-color: #bac781;
+        float: left;
+    }
+    #article {
+        width: 800px;
+        height: 780px;
+        background-color: #FFA726;
+        float: left;
+    }
+    #footer1 {
+        width: 1200px;
+        height: 100px;
+        background-color: #fff;
+        clear: both;
+    }   
+    #footer2 {
+        width: 600px;
+        height: 100px;
+        background-color: #2d076b;
+    }
+</style>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="aside1">
+            <div id="aside2"></div>
+        </div>
+        <div id="article"></div>
+        <div id="footer1">
+            <div id="footer2"></div>
+        </div>
+    </div>
+</body>
+</html>
