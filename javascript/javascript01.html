@@ -138,7 +138,7 @@
 
                 <div id="sample04" class="sample">
                     <h3>04. 상수: 데이터 저장 + 데이터 변경</h3>
-                    <p>상수는 데이터를 저장은 가능하나 변경은 불가능합니다. 상수는(const)는 이미 선언한 상수에 대해 중복 선언이 불가능하며 상수의 값을 재지정 할 수도 없습니다.</p>
+                    <p>상수는 데이터를 저장은 가능하나 변경은 불가능합니다. <br>상수는(const)는 이미 선언한 상수에 대해 중복 선언이 불가능하며 상수의 값을 재지정 할 수도 없습니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const x = 100;
@@ -165,7 +165,7 @@
 
                 <div id="변수" class="sample">
                     <h3>변수</h3>
-                    <p>변수를 활용한 다양한 연산의 예시들입니다.</p>
+                    <p>변수를 활용한 다양한 연산의 예시들입니다.<br>상수 a와b의 연산은 차례대로 덧셈, 뺄셈, 크기 비교, 곱셈, 나눗셈, 나머지 값 입니다.<br>상수 C의 연산은 차례대로 10, 10, 1000, 1000+1000의 결과값인 2000입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const a = 10000;
@@ -202,7 +202,7 @@
 
                 <div id="sample05" class="sample">
                     <h3>05. 배열 : 데이터 저장(여러개): 표현방법1</h3>
-                    <p>배열을 통해서 데이터를 표현하는 첫 번 째 방법입니다.</p>
+                    <p>배열을 통해서 데이터를 표현하는 첫 번 째 방법입니다. <br>arr[ ]의 값을 정해줘서 배열을 연산합니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const arr = new Array( );
@@ -226,7 +226,7 @@
 
                 <div id="sample06" class="sample">
                     <h3>06. 배열 : 데이터 저장(여러개): 표현방법2</h3>
-                    <p>배열을 통해서 데이터를 표현하는 두 번 째 방법입니다.</p>
+                    <p>배열을 통해서 데이터를 표현하는 두 번 째 방법입니다. <br>new Array의 값을 정해줘서 배열을 연산합니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const arr = new Array(100, 200, "javascript");
@@ -247,7 +247,7 @@
 
                 <div id="sample07" class="sample">
                     <h3>07. 배열 : 데이터 저장(여러개): 표현방법3</h3>
-                    <p>배열을 통해서 데이터를 표현하는 세 번 째 방법입니다.</p>
+                    <p>배열을 통해서 데이터를 표현하는 세 번 째 방법입니다. <br>new Array( )를 [ ]로 대체해서 배열을 연산합니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const arr = [ ];
@@ -271,7 +271,7 @@
 
                 <div id="sample08" class="sample">
                     <h3>08. 배열 : 데이터 저장(여러개): 표현방법4</h3>
-                    <p>배열을 통해서 데이터를 표현하는 네 번 째 방법입니다.</p>
+                    <p>배열을 통해서 데이터를 표현하는 네 번 째 방법입니다. <br>[ ]의 값을 정해줘서 배열을 연산합니다.<br>위의 배열을 이용한 데이터 저장 방법 중에서 가장 효율적인 연산 방법입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const arr = [100, 200, "javascript"]
@@ -292,7 +292,7 @@
 
                 <div id="sample09" class="sample">
                     <h3>09. 객체 : 데이터 저장(키와 값)</h3>
-                    <p></p>
+                    <p>객체를 이용해서 데이터를 저장하는 방법입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const obj = new Object( );
@@ -316,7 +316,7 @@
 
                 <div id="sample10" class="sample">
                     <h3>10. 객체 : 데이터 저장(키와 값) : 표현방법1</h3>
-                    <p></p>
+                    <p>객체를 이용한 데이터 저장을 표현하는 첫 번 째 방법입니다. <br>[숫자]의 형식에서 간소화하여, .알파벳의 값을 정해주는 방식입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     onst obj = new Object( );
@@ -340,7 +340,7 @@
 
                 <div id="sample11" class="sample">
                     <h3>11. 객체 : 데이터 저장(키와 값) : 표현방법2</h3>
-                    <p></p>
+                    <p>객체를 이용한 데이터 저장을 표현하는 두 번 째 방법입니다. <br>명령어에서 new Object( )를 중괄호로 대체하여 보다 간소하게 표현하는 방식입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const obj = { };
@@ -364,7 +364,7 @@
 
                 <div id="sample12" class="sample">
                     <h3>12. 객체 : 데이터 저장(키와 값) : 표현방법3</h3>
-                    <p></p>
+                    <p>객체를 이용한 데이터 저장을 표현하는 세 번 째 방법입니다. <br>값을 따로 정해주지 않고, 명령어에서 중괄호 안에 알파벳:을 차례대로 입력해주는 보다 간소한 방식입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const obj = {a:100, b:200, c:"javascript"};
