@@ -4,71 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃3</title>
-</head>
+    <title>레이아웃3 - float 방식</title>
 <style>
     * {
         margin: 0;
         padding: 0;
     }
     body {
-        background-color: #E8F5E9;
+        background-color: #E1F5FE;
     }
     #wrap {
-        width: 100%;
+        width: 1200px;
         margin: 0 auto;
     }
     #header {
-        width: 1200px;
-        height: 100px;
-        background-color: #C8E6C9;
+        width: 1200px;height: 100px;
+        background-color: #B3E5FC;
     }
     #nav {
         width: 1200px;
         height: 100px;
-        background-color: #A5D6A7;
+        background-color: #81D4FA;
     }
-    #aside1 {
-        width: 400px;
+    #main {
+        width: 1200px;
+        overflow: hidden;
+    }
+    #aside {
+        width: 300px;
         height: 780px;
-        background-color: #81C784;
+        background-color: #4FC3F7;
         float: left;
     }
-    #aside2 {
-        width: 400px;
-        height: 390px;
-        background-color: #bac781;
+    #article1 {
+        width: 900px;
+        height: 260px;
+        background-color: #29B6F6;
         float: left;
     }
-    #article {
-        width: 800px;
-        height: 780px;
-        background-color: #FFA726;
+    #article2 { 
+        width: 900px;
+        height: 260px;
+        background-color: #03A9F4;
         float: left;
     }
-    #footer1 {
+    #article3 {
+        width: 900px;
+        height: 260px;
+        background-color: #039BE5;
+        float: left;
+    }
+    #footer {
         width: 1200px;
         height: 100px;
-        background-color: #fff;
-        clear: both;
-    }   
-    #footer2 {
-        width: 600px;
-        height: 100px;
-        background-color: #2d076b;
+        background-color: #0288D1;
     }
 </style>
+</head>
 <body>
     <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
-        <div id="aside1">
-            <div id="aside2"></div>
+        <div id="main">
+            <div id="aside"></div>
+            <div id="article1"></div>
+            <div id="article2"></div>
+            <div id="article3"></div>
         </div>
-        <div id="article"></div>
-        <div id="footer1">
-            <div id="footer2"></div>
-        </div>
+        <div id="footer"></div>
     </div>
 </body>
 </html>
