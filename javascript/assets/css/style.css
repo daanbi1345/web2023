@@ -15,7 +15,7 @@
      text-decoration: none;
      color: #222;
  }
-
+ 
  /* 제목 초기화 */
  h1, h2, h3, h4, h5, h6 {
      font-weight: normal;
@@ -60,6 +60,23 @@ body {
  #header nav ul li.active a {
      background-color: #0243f1;
      color: #fff;
+ }
+
+ @media (max-width: 600px){
+    #body {
+        padding: 20px;
+    }
+    #header h1{
+        margin-bottom: 10px;
+    }
+    #header h1 a {
+        font-size: 40px;
+    }
+    #header nav ul li a {
+        margin: 3px 1px;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
  }
 
  /* 메인 영역 */

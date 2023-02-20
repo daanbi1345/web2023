@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/img/javascript.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/javascript-180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/img/javascript-180.png">
+
+    <!-- 웹 폰트 -->
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: "GmarketSans";
+            text-align: center;
+            border: 8px solid #0243f1;
+            box-sizing: border-box;
+            position: relative;
+            border-radius: 20px;
+        }
+        main::before {
+            content: "";
+            border: 8px solid #50b5f9;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: calc(100% - 16px);
+            height: calc(100% - 16px);
+            z-index: -1;
+            border-radius: 4px;
+
+        }
+        h1 {
+            color: #0243f1;
+            font-size: 5vw;
+            margin-bottom: 4vw;
+        }
+        nav ul li {
+            list-style: none;
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #0243f1;
+            border: 1px dashed #0243f1;
+            /* padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            padding-left: 20px; */
+            /* padding: 10px 20px 10px 20px; */
+            padding: 10px 20px;
+            display: inline-block;
+            /* margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 3px;
+            margin-right: 3px; */
+            margin: 6px 3px 6px 3px;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #0243f1;
+            color: #fff;
+        }
+        @media (max-width: 600px){
+            h1 {
+                font-size: 40px;
+            }
+            nav {
+                margin: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Javascript</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 불러오기</a></li>
+                <li><a href="javascript03.html">데이터 실행하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 객체</a></li>
+                <li><a href="javascript08.html">숫자 객체</a></li>
+                <li><a href="javascript09.html">브라우저 객체</a></li>
+                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript11.html">이벤트 객체</a></li>
+            </ul>
+        </nav>
+    </main>
+</body>
+</html>

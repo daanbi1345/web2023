@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript : 데이터 저장하기</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <mailn>
+        <div class="container">
+            <div class="main__menu">
+                <ul>
+                    <li><a href="#">01. 변수 : 데이터 저장</a></li>
+                    <li><a href="#">01. 상수 : 데이터 저장</a></li>
+                    <li><a href="#">01. 배열 : 데이터 저장</a></li>
+                    <li><a href="#">01. 객체 : 데이터 저장</a></li>
+                </ul>
+            </div>
+        </div>
+    </mailn>
+
+    <script>
+        // 01. 변수 : 데이터 저장
+        {
+            var x = 100;    //변수 x에 숫자 100을 저장    
+            var y = 200;    //변수 y에 숫자 100을 저장
+            var z = "javascript"    //변수 z에 "javascript"를 저장
+
+            document.write(x);
+            document.write(y);
+            document.write(z);
+        }
+
+        // 02. 변수 : 데이터 저장 + 데이터 변경
+        {
+            let x = 100;    //변수 x에 숫자 100을 저장
+            let y = 200;    //변수 y에 숫자 200을 저장
+            let z = "javascript"    //변수 z에 "javascript"를 저장
+
+            x = 300;    //변수 x의 값이 100에서 300으로 변경
+            y = 400;    //변수 y의 값이 200에서 400으로 변경
+            z = "react" //변수 z의 값이 "javascript"에서 "react"로 변경
+
+            document.write(x);
+            document.write(y);
+            document.write(z);
+        }
+
+        // 03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가
+        {
+            let x = 100;
+            let y = 200;
+            let z = "javascript";
+
+            x += 300;
+            y += 400;
+            z += "react"
+
+
+
+            document.write(x);
+            document.write(y);    
+            document.write(z);    
+
+        }      
+    </script>
+
+</body>
+</html>
