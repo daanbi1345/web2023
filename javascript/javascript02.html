@@ -7,6 +7,8 @@
     <title>javascript : 데이터 불러오기</title>
     
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
+
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript180x180.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
@@ -30,6 +32,15 @@
                 <li><a href="javascript10.html">요소 객체</a></li>
                 <li><a href="javascript11.html">이벤트 객체</a></li>
             </ul>
+            <ul class="last">
+                <li><a href="javascript12.html">데이터 효과</a></li>
+                <li><a href="javascript13.html">검색 효과</a></li>
+                <li><a href="javascript14.html">퀴즈 효과</a></li>
+                <li><a href="javascript15.html">마우스 효과</a></li>
+                <li><a href="javascript16.html">슬라이드 효과</a></li>
+                <li><a href="javascript17.html">패럴랙스 효과</a></li>
+                <li><a href="javascript18.html">게임 효과</a></li>
+            </ul>
         </nav>
     </header>
     <!-- //header -->
@@ -38,15 +49,179 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">01. 변수 : 데이터 저장</a></li>
-                    <li><a href="#">01. 상수: 데이터 저장</a></li>
-                    <li><a href="#">01. 배열: 데이터 저장</a></li>
-                    <li><a href="#">01. 객체: 데이터 저장</a></li>
+                    <li><a href="#">01. 변수 : 데이터 불러오기</a></li>
+                    <li><a href="#">02. 상수: 데이터 불러오기</a></li>
+                    <li><a href="#">03. 배열: 데이터 불러오기</a></li>
+
+                    <li><a href="#">04. 배열: 데이터 불러오기 : 2차 배열</a></li>
+                    <li><a href="#">05. 배열: 데이터 불러오기 : 갯수 구하기</a></li>
+                    <li><a href="#">06. 배열: 데이터 불러오기 :for( )문</a></li>
+                    <li><a href="#">07. 배열: 데이터 불러오기 :중첩 for( )문</a></li>
+                    <li><a href="#">03. 배열: 데이터 불러오기 :forEach( )문</a></li>
+                    <li><a href="#">03. 배열: 데이터 불러오기 :for of</a></li>
+                    <li><a href="#">03. 배열: 데이터 불러오기 :for in</a></li>
+                    <li><a href="#">03. 배열: 데이터 불러오기 :map( )</a></li>
+                    <li><a href="#">03. 배열: 데이터 불러오기 :펼침 연산자</a></li>
+                    <li><a href="#">03. 배열: 데이터 불러오기 :배열구조분해할당</a></li>
+
+                    <li><a href="#">01. 객체: 데이터 불러오기 : 기본</a></li>
+                    <li><a href="#">01. 객체: 데이터 불러오기 : Object</a></li>
+                    <li><a href="#">01. 객체: 데이터 불러오기 : 변수</a></li>
+                    <li><a href="#">01. 객체: 데이터 불러오기 : for in</a></li>
+                    <li><a href="#">01. 객체: 데이터 불러오기 : map( )</a></li>
+                    <li><a href="#">01. 객체: 데이터 불러오기 : hasOwnProperty( )</a></li>
+                    <li><a href="#">01. 객체: 데이터 불러오기 : 펼침연산자 - 복사</a></li>
+                    <li><a href="#">01. 객체: 데이터 불러오기 : 펼침연산자 - 추가</a></li>
+                    <li><a href="#">01. 객체: 데이터 불러오기 : 펼침연산자 - 결합</a></li>
+                    <li><a href="#">01. 객체: 데이터 불러오기 : 비구조화 할당</a></li>
+                    <li><a href="#">01. 객체: 데이터 불러오기 : 객체구조분해할당</a></li>
                 </ul>
             </div>
-            <ul>
+            <div class="main__sample01">
+                <div class="sample" id="sample01">
+                    <h3>01. 변수 : 데이터 불러오기</h3>
+                    <p>변수안에 저장된 데이터를 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code code class="language-js">
+    let x = 100, y = 200, z = "javascript";
 
-            </ul>
+    console.log(x, y, z);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100 <br>
+                                200 <br>
+                                javascript
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample01 -->
+
+            <div class="main__sample01">
+                <div class="sample" id="sample01">
+                    <h3>01. 변수 : 데이터 불러오기</h3>
+                    <p>변수안에 저장된 데이터를 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code code class="language-js">
+    let x = 100, y = 200, z = "javascript";
+
+    console.log(x, y, z);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100 <br>
+                                200 <br>
+                                javascript
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample01 -->
+
+            <div class="main__sample01">
+                <div class="sample" id="sample01">
+                    <h3>01. 변수 : 데이터 불러오기</h3>
+                    <p>변수안에 저장된 데이터를 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code code class="language-js">
+    let x = 100, y = 200, z = "javascript";
+
+    console.log(x, y, z);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100 <br>
+                                200 <br>
+                                javascript
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample01 -->    
+                
+            <div class="main__sample01">
+                <div class="sample" id="sample01">
+                    <h3>01. 변수 : 데이터 불러오기</h3>
+                    <p>변수안에 저장된 데이터를 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code code class="language-js">
+    let x = 100, y = 200, z = "javascript";
+
+    console.log(x, y, z);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100 <br>
+                                200 <br>
+                                javascript
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample01 -->
+
+            <div class="main__sample01">
+                <div class="sample" id="sample01">
+                    <h3>01. 변수 : 데이터 불러오기</h3>
+                    <p>변수안에 저장된 데이터를 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code code class="language-js">
+    let x = 100, y = 200, z = "javascript";
+
+    console.log(x, y, z);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100 <br>
+                                200 <br>
+                                javascript
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample01 -->
+
+            <div class="main__sample01">
+                <div class="sample" id="sample01">
+                    <h3>01. 변수 : 데이터 불러오기</h3>
+                    <p>변수안에 저장된 데이터를 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code code class="language-js">
+    let x = 100, y = 200, z = "javascript";
+
+    console.log(x, y, z);
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100 <br>
+                                200 <br>
+                                javascript
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample06 -->
+            
+            </div>
         </div>
     </main>
     <!-- //main -->
@@ -55,9 +230,75 @@
     <a href="mailto:205cho@naver.com">205cho@naver.com</a>
     </footer>
     <!-- //footer -->
-
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script>
+        // 01. 변수 : 데이터 불러오기
+        // 변수안에 저장된 데이터를 불러오는 방법입니다.
+        {
+            // let x = 100, y = 200, z = "javascript";
+
+            // console.log(x, y, z);
+        }
+
+        // 02. 상수 : 데이터 불러오기
+        // 상수안에 저장된 데이터를 불러오는 방법입니다.
+        {
+            // const x = 100, y = 200, z = "javascript";
+
+            // console.log(x, y, z);
+        }
+
+        // 03. 배열 : 데이터 불러오기
+        {
+            // const arr = [100, 200, "javascript"]; 
+
+            // console.log(arr[0], arr[1], arr[2]);
+        }
+
+        // 04. 배열: 데이터 불러오기 : 2차 배열
+        {
+            // const arr = [100, 200, ["javascript","react"]];
+
+            // console.log(arr[0]);
+            // console.log(arr[1]);
+            // console.log(arr[2][0]);
+            // console.log(arr[2][1]);
+        }
+        // 05. 배열: 데이터 불러오기 : 갯수 구하기
+        // 배열 안의 데이터의 갯수를 세는 법.
+        {
+            // const arr = [100, 200, "javascript"];
+
+            // console.log(arr.length)
+        }
+
+        // 06. 배열: 데이터 불러오기 :for( )문
+        {
+            // const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            // console.log(arr[0]);
+            // console.log(arr[1]);
+            // console.log(arr[2]);
+            // console.log(arr[3]);
+            // console.log(arr[4]);
+            // console.log(arr[5]);
+            // console.log(arr[6]);
+            // console.log(arr[7]);
+            // console.log(arr[8]);
         
+            // for(초깃값; 조건식; 증감식;)
+
+            // for(let i = 0; i<9; i++){
+            //     console.log(arr[i]);
+            // }
+            // i는 0, i는 9보다 작으므로 true> arr[0]의 값 출력
+            // i는 (i++이므로(++는 1씩 증가하는 값)) 1으로 변경되고, i는 9보다 작으므로 ture> arr[1]의 값 출력
+            // 위의 과정이 i<9의 조건에 맞게 9보다 작은 값까지 출력(true인 값까지) 
+        }
+        
+        // 07. 배열: 데이터 불러오기 :중첩 for( )문
+        // 
     </script>
 
 </body>
