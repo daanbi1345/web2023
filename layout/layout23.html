@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃3 - grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #E1F5FE;
+        }
+        #wrap {
+            margin: 0 auto;
+            display: grid;
+            width: 1200px;
+            grid-template-areas:
+                "header header"
+                "nav nav"
+                "aside article1"
+                "aside article2"
+                "aside article3"
+                "footer footer"
+            ;    
+            grid-template-columns: 300px 900px;
+            grid-template-rows: 100px 100px 260px 260px 260px 100px;
+        }
+        #header {
+            grid-area: header;
+            background-color: #B3E5FC;
+        }
+        #nav {
+            grid-area: nav;
+            background-color: #81D4FA;
+        } 
+        #aside {
+            grid-area: aside;
+            background-color: #4FC3F7;
+        }
+        #article1 {
+            background-color: #29B6F6;
+            grid-area: article1;
+        }
+        #article2 {
+            background-color: #03A9F4;
+            grid-area: article2;
+        }
+        #article3 {
+            background-color: #039BE5;
+            grid-area: article3;
+        }
+        #footer {
+            grid-area: footer;
+            background-color: #0288D1;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="aside"></aside>
+        <article id="article1"></article>
+        <article id="article2"></article>
+        <article id="article3"></article>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
