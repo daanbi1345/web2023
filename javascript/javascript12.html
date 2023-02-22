@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
+    
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript180x180.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
@@ -49,6 +50,10 @@
             <div class="main__menu">
                 <ul>
                     <li><a href="#">01. 데이터 이펙트 : 1부터 100까지 출력하기</a></li>
+                    <li><a href="#">02. 데이터 이펙트 : 0부터 50까지 출력하기</a></li>
+                    <li><a href="#">03. 데이터 이펙트 : 1부터 100까지 짝수만 출력하기</a></li>
+                    <li><a href="#">04. 데이터 이펙트 : 1부터 100까지 5의 배수만 출력하기</a></li>
+                    <li><a href="#">05. 데이터 이펙트 : 1부터 100까지 5의 배수만 출력하기</a></li>
                 </ul>
             </div>
             <div class="main__sample">
@@ -71,7 +76,7 @@
             console.log(i) 
 }
     // 초기값을 0으로 설정하고 1씩 증가시켜서 50번을 반복 
-    // 0, 2, 3, 4, 5, 6 ~ 50
+    // 0, 1, 2, 3, 4, 5, 6 ~ 50
 </code></pre>
                 </div>
                 <!-- //sample02 -->
@@ -81,8 +86,9 @@
 <pre class="line-numbers"><code class="language-js">for(let i=0; i&lt;=100; i+=2){ 
             console.log(i)  
 }
-    // i = i + 2 (1부터 시작하는 경우에는 홀수가 출력되므로, 0부터 시작해야 함)
-    // 0, 2, 3, 4, 5, 6 ~ 50
+    // 1부터 시작하는 경우에는 홀수가 출력되므로, 0부터 시작해야 함
+    // i = i + 2 (0부터 2씩 더한 값이 출력됨)
+    // 2, 4, 6, 8, 10, 12 ~ 50
 </code></pre>
                 </div>
                 <!-- //sample03 -->

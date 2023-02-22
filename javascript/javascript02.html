@@ -77,16 +77,17 @@
                     <li><a href="#">01. 객체: 데이터 불러오기 : 객체구조분해할당</a></li>
                 </ul>
             </div>
-            <div class="main__sample01">
-                <div class="sample" id="sample01">
+            <div class="main__sample">
+                <div id="sample01" class="sample">
                     <h3>01. 변수 : 데이터 불러오기</h3>
                     <p>변수안에 저장된 데이터를 불러오는 방법입니다.</p>
                     <div class="script">
-<pre class="line-numbers"><code code class="language-js">
+<pre><code class="language-js">{
     let x = 100, y = 200, z = "javascript";
 
     console.log(x, y, z);
-</code></pre>
+}
+</pre></code>
                     </div>
                     <div class="result">
                         <details>
@@ -101,16 +102,16 @@
                 </div>
                 <!-- //sample01 -->
 
-            <div class="main__sample01">
-                <div class="sample" id="sample01">
-                    <h3>01. 변수 : 데이터 불러오기</h3>
-                    <p>변수안에 저장된 데이터를 불러오는 방법입니다.</p>
+                <div id="sample02" class="sample">
+                    <h3>02. 상수 : 데이터 불러오기</h3>
+                    <p>상수안에 저장된 데이터를 불러오는 방법입니다.</p>
                     <div class="script">
-<pre class="line-numbers"><code code class="language-js">
-    let x = 100, y = 200, z = "javascript";
+<pre><code class="language-js">{
+    const x = 100, y = 200, z = "javascript";
 
     console.log(x, y, z);
-</code></pre>
+}
+</pre></code>
                     </div>
                     <div class="result">
                         <details>
@@ -123,18 +124,18 @@
                         </details>
                     </div>
                 </div>
-                <!-- //sample01 -->
+                <!-- //sample02 -->
 
-            <div class="main__sample01">
-                <div class="sample" id="sample01">
-                    <h3>01. 변수 : 데이터 불러오기</h3>
+                <div id="sample03" class="sample">
+                    <h3>03. 배열 : 데이터 불러오기</h3>
                     <p>변수안에 저장된 데이터를 불러오는 방법입니다.</p>
                     <div class="script">
-<pre class="line-numbers"><code code class="language-js">
-    let x = 100, y = 200, z = "javascript";
+<pre><code class="language-js">{
+    const arr = [100, 200, "javascript"]; 
 
-    console.log(x, y, z);
-</code></pre>
+    console.log(arr[0], arr[1], arr[2]);    
+}
+</pre></code>
                     </div>
                     <div class="result">
                         <details>
@@ -147,18 +148,21 @@
                         </details>
                     </div>
                 </div>
-                <!-- //sample01 -->    
-                
-            <div class="main__sample01">
-                <div class="sample" id="sample01">
-                    <h3>01. 변수 : 데이터 불러오기</h3>
+                <!-- //sample03 -->
+
+                <div id="sample04" class="sample">
+                    <h3>04. 배열: 데이터 불러오기 : 2차 배열</h3>
                     <p>변수안에 저장된 데이터를 불러오는 방법입니다.</p>
                     <div class="script">
-<pre class="line-numbers"><code code class="language-js">
-    let x = 100, y = 200, z = "javascript";
+<pre><code class="language-js">{
+   const arr = [100, 200, ["javascript","react"]];
 
-    console.log(x, y, z);
-</code></pre>
+   console.log(arr[0]);
+   console.log(arr[1]);
+   console.log(arr[2][0]);
+   console.log(arr[2][1]);    
+}
+</pre></code>
                     </div>
                     <div class="result">
                         <details>
@@ -166,47 +170,64 @@
                             <div>
                                 100 <br>
                                 200 <br>
-                                javascript
+                                javascript <br>
+                                react
                             </div>
                         </details>
                     </div>
                 </div>
-                <!-- //sample01 -->
+                <!-- //sample04 -->
 
-            <div class="main__sample01">
-                <div class="sample" id="sample01">
-                    <h3>01. 변수 : 데이터 불러오기</h3>
-                    <p>변수안에 저장된 데이터를 불러오는 방법입니다.</p>
+                <div id="sample05" class="sample">
+                    <h3>05. 배열: 데이터 불러오기 : 갯수 구하기</h3>
+                    <p>배열 안의 데이터의 갯수를 세는 방법입니다.</p>
                     <div class="script">
-<pre class="line-numbers"><code code class="language-js">
-    let x = 100, y = 200, z = "javascript";
+<pre><code class="language-js">{
+   const arr = [100, 200, "javascript"];
 
-    console.log(x, y, z);
-</code></pre>
+   console.log(arr.length)    
+}    
+</pre></code>
                     </div>
                     <div class="result">
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                100 <br>
-                                200 <br>
-                                javascript
+                                3
                             </div>
                         </details>
                     </div>
                 </div>
-                <!-- //sample01 -->
+                <!-- //sample05 -->
 
-            <div class="main__sample01">
-                <div class="sample" id="sample01">
-                    <h3>01. 변수 : 데이터 불러오기</h3>
+                <div id="sample06" class="sample">
+                    <h3>06. 배열: 데이터 불러오기 :for( )문</h3>
                     <p>변수안에 저장된 데이터를 불러오는 방법입니다.</p>
                     <div class="script">
-<pre class="line-numbers"><code code class="language-js">
-    let x = 100, y = 200, z = "javascript";
+<pre><code class="language-js">{
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-    console.log(x, y, z);
-</code></pre>
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
+    console.log(arr[3]);
+    console.log(arr[4]);
+    console.log(arr[5]);
+    console.log(arr[6]);
+    console.log(arr[7]);
+    console.log(arr[8]);
+
+    for(초기값; 조건식; 증감식;)
+
+    for(let i = 0; i<9; i++) { 
+        console.log(arr[i]);
+    }
+
+    // i는 0, i는 9보다 작으므로 true> arr[0]의 값 출력
+    // i는 (i++이므로(++는 1씩 증가하는 값)) 1으로 변경되고, i는 9보다 작으므로 ture> arr[1]의 값 출력
+    // 위의 과정이 i<9의 조건에 맞게 9보다 작은 값까지 출력(true인 값까지)     
+}
+</pre></code>
                     </div>
                     <div class="result">
                         <details>
@@ -214,7 +235,13 @@
                             <div>
                                 100 <br>
                                 200 <br>
-                                javascript
+                                300 <br>
+                                400 <br>
+                                500 <br>
+                                600 <br>
+                                700 <br>
+                                800 <br>
+                                900
                             </div>
                         </details>
                     </div>
