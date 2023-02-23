@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4,5,6,7,8,9,10]
+
+        document.write(arr[4],"<br>"); 
+
+        document.write(arr[6],arr[7],"<br>");
+
+        document.write(arr[4] + arr[6],"<br>");
+
+        document.write(arr[8] * arr[9],"<br>");
+
+              
+         //2배수
+    for(let i=2; i<=100; i+=2){
+        document.write(i)
+    }
+    document.write("<br>")
+    //4배수
+    for(let i=4; i<=100; i+=4){
+        document.write(i)
+    }
+    document.write("<br>")
+    //8단
+    for(let i=8; i<=8; i++){
+        for( let j =1; j<=9; j++){
+            document.write(i+"*"+j+"="+(i*j),"<br>")
+        }
+    }
+    document.write("<br>")
+    //테이블
+    let table ="<table border ='1'>";
+        for(let i=1; i<=15; i++){
+            table += "<tr></tr>"
+            for(let j =1; j<=15; j++){
+                table += "<td>1<td>"
+            }
+        }
+    table += "</table>"
+    document.write(table);
+
+
+    </script>
+</body>
+</html>
