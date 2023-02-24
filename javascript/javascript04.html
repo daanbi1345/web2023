@@ -7,6 +7,8 @@
     <title>javascript : 데이터 제어하기</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript180x180.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
@@ -48,31 +50,233 @@
             <div class="main__menu">
                 <ul>
                     <li><a href="#">01. if문</a></li>
-                    <li><a href="#">01. if문 생략</a></li>
-                    <li><a href="#">01. 다중 if</a></li>
-                    <li><a href="#">01. 중첩 if</a></li>
-                    <li><a href="#">01. 삼항 연산자</a></li>
-                    <li><a href="#">01. switch문</a></li>
-                    <li><a href="#">01. while문</a></li>
-                    <li><a href="#">01. do while문</a></li>
-                    <li><a href="#">01. for문</a></li>
-                    <li><a href="#">01. 중첩 for문</a></li>
-                    <li><a href="#">01. break문</a></li>
-                    <li><a href="#">01. continue문</a></li>
+                    <li><a href="#">02. if문 생략</a></li>
+                    <li><a href="#">03. 삼항 연산자</a></li>
+                    <li><a href="#">04. 중첩 if(else if)</a></li>
+                    <li><a href="#">05. 다중 if</a></li>
+                   
+                    <li><a href="#">06. switch문</a></li>
+                    <li><a href="#">07. while문</a></li>
+                    <li><a href="#">08. do while문</a></li>
+                    <li><a href="#">09. for문</a></li>
+                    <li><a href="#">10. 중첩 for문</a></li>
+                    <li><a href="#">11. break문</a></li>
+                    <li><a href="#">12. continue문</a></li>
                 </ul>
             </div>
+            <div class="main__sample">
+                <div id="sample01" class="sample">
+                    <h3>01. if문</h3>
+                    <p>if문은 주어진 조건이 참(true)이면 특정 코드 블록을 실행하고, 조건이 거짓(false)이면 실행하지 않습니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">    // false : 0, null, undefined, false, ""(빈 문자열)
+    // true : 1, 2, "0", "1", "abc", [ ], { }, true
+if(조건식) {
+    document.write("실행되었습니다.(true)");
+} else {
+    document.write("실행되었습니다.(false)");
+}
+    // 실행되었습니다.(true) 나
+    // 실행되었습니다.(false)의 결과가 나온다.
+</pre></code>
+                    </div>
+                    <!-- //sample01 -->
+
+                <div id="sample02" class="sample">
+                    <h3>02. if문 생략</h3>
+                    <p>if문을 생략해서 쓸 수 있습니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">const num = 100;
+if(num) {
+    document.write("실행되었습니다.(true)");
+} else {
+    document.write("실행되었습니다.(false)");
+}
+    //위와 같은 식으로, 좀 더 간략하게 쓸 수 있다.
+if(num) document.write("실행되었습니다.(true)");
+else document.write("실행되었습니다.(false)");
+    // 실행되었습니다.(true) 나
+    // 실행되었습니다.(false)의 결과가 나온다.
+</pre></code>
+                    </div>
+                    <!-- //sample02 -->
+
+                <div id="sample03" class="sample">
+                    <h3>03. 삼항 연산자</h3>
+                    <p>삼항 연산자는 if문을 간단하게 표현할 수 있어서 코드를 더욱 간결하게 만들어줍니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">const num = 100;
+
+if(num == 100) {
+    document.write("true");
+} else {
+    document.write("false");
+}
+    // true 가 나온다.
+    // 위와 같은 식으로, 좀 더 간략하게 쓸 수 있다.
+    // 좀 더 효율적이다.
+(num == 100) ? document.write("true"): document.write("false");
+    // true 가 나온다.
+</pre></code>
+                    </div>
+                    <!-- //sample03 -->
+
+                <div id="sample04" class="sample">
+                    <h3>04. 중첩 if</h3>
+                    <p>if문을 중첩해서 쓸 수 있습니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">const num = 100;
+
+if(num == 90) {
+    document.write("실행되었습니다(num == 90)");
+}  else if (num == 100) {
+    document.write("실행되었습니다(num == 100)");
+} else if (num == 110) {
+    document.write("실행되었습니다(num == 110)");
+} else if (num == 120) {
+    document.write("실행되었습니다(num == 120)");
+} else {
+    document.write("실행되었습니다")
+}
+if(num === 90) { }   // 숫자, 문자, 함수, 객체 등의 구분을 할 수 있다.
+    // 결과로는, 실행되었습니다(num == 100)이 나온다.
+</pre></code>
+                    </div>
+                    <!-- //sample04 -->
+
+                <div id="sample05" class="sample">
+                    <h3>05. 삼항 연산자</h3>
+                    <p>입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">const num = 100;
+
+if(num == 100) {
+    document.write("실행되었습니다.(1)");
+    if(num == 100) {
+        document.write("실행되었습니다.(2)");
+        if(num == 100) {
+            document.write("실행되었습니다.(3)");
+        }                
+    }
+} else {
+    document.write("실행되었습니다.(4)")
+}   // if가 true이면 값이 출력되고, else가 false이면 값이 출력된다.
+    // 결과로는 실행되었습니다.(1)실행되었습니다.(2)실행되었습니다.(3)이 나온다.
+</pre></code>
+                    </div>
+                    <!-- //sample05 -->
+
+                <div id="sample06" class="sample">
+                    <h3>06. switch문</h3>
+                    <p>입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">for(let i =1; i&lt;=100; i++) {
+    document.write(i, "&lt;br&gt;");
+}   // 1~100
+
+const arr = [1,2,3,4,5,6,7,8,9]
+
+for(let i=0; i&lt;arr.length; i++) {
+    document.write(arr[i]);
+}   // 1~9
+
+for(let i=1; i&lt;arr.length; i+=2) {
+    document.write(arr[i]);
+}   // 2468 (짝수)
+
+for(let i=0; i&lt;arr.length; i+=2) {
+    document.write(arr[i]);
+}   // 13579 (홀수)
+
+const arr = [1,2,3,4,5,6,7,8,9]
+    
+for(let i=1; i&lt;=arr.length; i++) {
+    if(i % 2 == 0) {
+        document.write("&lt;span style='color:red'&gt;"+i+"&lt;/span&gt;"); // (빨간색)2468 
+    } else {
+        document.write(`&lt;span style='color:blue'&gt;${i}&lt;/span&gt;`); // (파란색)13579
+    }
+}   // 결과로는, 1부터 9까지의 값이 홀수는 파란색, 짝수는 빨간색으로 출력된다.
+</pre></code>
+                    </div>
+                    <!-- //sample06 -->
+
+                <div id="sample07" class="sample">
+                    <h3>07. while문</h3>
+                    <p>입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">
+
+</pre></code>
+                    </div>
+                    <!-- //sample07 -->
+
+                <div id="sample08" class="sample">
+                    <h3>08. do while문</h3>
+                    <p>입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">
+
+</pre></code>
+                    </div>
+                    <!-- //sample08 -->
+
+                <div id="sample09" class="sample">
+                    <h3>09. for문</h3>
+                    <p>입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">
+
+</pre></code>
+                    </div>
+                    <!-- //sample09 -->
+
+                <div id="sample10" class="sample">
+                    <h3>10. 중첩 for문</h3>
+                    <p>입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">
+
+</pre></code>
+                    </div>
+                    <!-- //sample10 -->
+
+                <div id="sample11" class="sample">
+                    <h3>11. break문</h3>
+                    <p>입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">
+
+</pre></code>
+                    </div>
+                    <!-- //sample11 -->
+
+                <div id="sample12" class="sample">
+                    <h3>12. continue문</h3>
+                    <p>입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">
+
+</pre></code>
+                    </div>
+                    <!-- //sample12 -->
+
         </div>
     </main>
     <!-- //main -->
 
     <footer id="footer">
-    <a href="mailto:205cho@naver.com">205cho@naver.com</a>
+    <a href="mailto:daanbi1345@gmail.com">daanbi1345@gmail.com</a>
     </footer>
     <!-- //footer -->
 
+    <script src="assets/js/prism.js"></script>
     <script>
+           
+        
+
         
     </script>
 
 </body>
-</html>
+</html>   

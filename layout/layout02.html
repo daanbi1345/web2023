@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃2 - float 방식</title>
+    <title>레이아웃02 - flaot 유형</title>
     <style>
         * {
             margin: 0;
@@ -48,31 +48,32 @@
         #footer {
             width: 100%;
             height: 100px;
+            background-color: #43A047;
             clear: both;
         }
-        @media (max-widht:1300px) {
-            #warp {
+        @media (max-width:1300px) {
+            #wrap {
                 width: 96%;
             }
         }
-        @media (max-widht:768px) {
-            #warp {
+        @media (max-width:768px) {
+            #wrap {
                 width: 100%;
             }
             #aside {
                 width: 40%;
-                height: 630px;
+                height: 680px;
             }
             #section {
                 width: 60%;
-                height: 630px;
+                height: 680px;
             }
             #article {
                 width: 100%;
                 height: 150px;
             }
         }
-        @media (max-widht:480px) {
+        @media (max-width:480px) {
             #aside {
                 width: 100px;
                 height: 200px;
@@ -85,7 +86,7 @@
     </style>
 </head>
 <body>
-    <div>
+    <div id="wrap">
         <header id="header"></header>
         <nav id="nav"></nav>
         <aside id="aside"></aside>

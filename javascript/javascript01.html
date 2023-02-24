@@ -652,7 +652,11 @@
     e: function( ){
         console.log("obj.c + 가 실행되었습니다.");
         }
-    }   
+    }
+    f: function( ){
+        console.log(this.c + "가 실행되었습니다.");
+        }
+    }
 
     console.log(obj.a);
     console.log(obj.b[0]);
@@ -662,6 +666,7 @@
     console.log(obj.d); 
     obj.d( ); // 실행문 쓰는 방법
     obj.e( );
+    obj.f( );
 }
 </code></pre>
                     </div>
@@ -773,51 +778,14 @@
     <!-- //main -->
 
     <footer id="footer">
-    <a href="mailto:205cho@naver.com">205cho@naver.com</a>
+    <a href="mailto:daanbi1345@gmail.com">daanbi1345@gmail.com</a>
     </footer>
     <!-- //footer -->
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    <script>
-        
-        
-        // 객체: 데이터 저장(키와 값): 표현방법8
-        {
-            // const j = "javascript";
-
-            // const obj = {
-            //     a: 100,
-            //     b: [200, 300],
-            //     c: "javascript",
-            //     d: function(){
-            //         console.log("javascript가 실행되었습니다.");
-            //     },
-            //     e: function(){
-            //         console.log(obj.c + "가 실행되었습니다.");
-            //     },
-            //     e: function(){
-            //         console.log(j + "가 실행되었습니다.");
-            //     },
-            //     f: function(){
-            //         console.log(this.c + "가 실행되었습니다.");
-            //     }
-            // } 
-
-            // console.log(obj.a);
-            // console.log(obj.b[0]);
-            // console.log(obj.b[1]);
-            // console.log(obj.b[2]); // obj[2]는 없기 때문에 undefined 라고 나온다.
-            // console.log(obj.c);
-            // obj.d(); // 실행문 쓰는 방법
-            // obj.e();
-            // obj.f();
-        }
-        // 변수 : 저장문
-        // 상수 : 저장문
-        // 배열 : 저장문
-        // 객체 : 저장문
-        // 함수 : 실행문
-
+    <script>   
+    
+      
     </script>
 </body>
 </html>
