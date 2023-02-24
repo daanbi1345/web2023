@@ -17,37 +17,67 @@
         document.write(arr[4] + arr[6],"<br>");
 
         document.write(arr[8] * arr[9],"<br>");
+        document.write("<br>")
+       
+
 
               
-         //2배수
+    //2배수
     for(let i=2; i<=100; i+=2){
         document.write(i)
     }
     document.write("<br>")
+    document.write("<br>")
+
     //4배수
     for(let i=4; i<=100; i+=4){
         document.write(i)
     }
     document.write("<br>")
+    document.write("<br>")
+
     //8단
-    for(let i=8; i<=8; i++){
-        for( let j =1; j<=9; j++){
-            document.write(i+"*"+j+"="+(i*j),"<br>")
+    // for(let i=8; i<=8; i++){
+    //     for( let j=1; j<=9; j++){
+    //         document.write(i+"*"+j+"="+i*j,"<br>")
+    //     }
+    // }
+    // document.write("<br>")
+
+    //테이블
+    // let table ="<table border ='1'>";
+    //     for(let i=1; i<=15; i++){
+    //         table += "<tr></tr>";
+    //         for(let j =1; j<=15; j++){
+    //             table += "<td>1<td>";
+    //         }
+    //     }
+    //     table += "</table border>";
+    // document.write(table);
+
+    for(let i=4; i<=9; i++){
+        for(let j=1; j<=9; j++){
+            document.write(i+"*"+j+"="+i*j,"<br>");
         }
     }
-    document.write("<br>")
-    //테이블
-    let table ="<table border ='1'>";
-        for(let i=1; i<=15; i++){
-            table += "<tr></tr>"
-            for(let j =1; j<=15; j++){
-                table += "<td>1<td>"
-            }
+     let table = "<table border = '1'>"
+        for(let i=1; i<=10; i++){
+            table += "<tr></tr>";
+                for(let j=1; j<=10; j++){
+                    table += "<td>0</td>";
+                }
         }
-    table += "</table>"
-    document.write(table);
+        table += "</table border>"
+        document.write(table)
 
-
+    for(let i=1; i<=10; i++){
+        if(i % 2 == 0){
+            document.write("<span style='color:red'")
+        }
+    }
     </script>
 </body>
 </html>
+
+
+
