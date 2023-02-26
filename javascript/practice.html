@@ -8,41 +8,22 @@
 </head>
 <body>
     <script>
-        let num = "num";
-        for(let i=1; i<=25; i++){
-            document.write(i,"<br>");
-        }
-        document.write(num);
-        document.write("<br>");
-
+       
         let table = "<table border='1'>";
-            table += "<tr></tr>"
-               for(let i=0; i<=5; i++){
-                    table += "<td>"+i+"</td>";
-               }                    
+            for(let i=1; i<=25; i++){
+                table += "<tr></tr>";
+                for(let j=1; j<=25; j++){
+                    if(j % 2 ==0){
+                       table += "<td style='color:red'>"+j+"</td>" 
+                    }
+                    if(j % 2 ==1){
+                        table += "<td style='color:blue'>"+j+"</td>"
+                    }                    
+                }               
+            }       
             table += "</table>"
         document.write(table); 
         
-        // 홀짝 색 넣기
-        
-        for(let i=1; i<=10; i++){
-            if(i % 2 === 0){
-                document.write("<span style='color:red>"+i+"</span>");
-            } 
-            if(i % 2 === 1) {
-                document.write("<span style='color : blue'>"+i+"</span>");
-            }
-        }
-
-        //     table += "<tr>";
-        //         table += "<td>1</td>";
-        //         table += "<td>2</td>";
-        //         table += "<td>3</td>";
-        //         table += "<td>4</td>";
-        //         table += "<td>5</td>";
-        //     table += "</tr>";
-        //     table += "</table>";
-        // document.write(table)
     </script>
 </body>
 </html>
