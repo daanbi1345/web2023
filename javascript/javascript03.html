@@ -50,17 +50,16 @@
             <div class="main__menu">
                 <ul>
                     <li><a href="#">01. 선언적 함수</a></li>
-                    <li><a href="#">01. 익명 함수</a></li>
-                    <li><a href="#">01. 매개변수 함수</a></li>
-                    <li><a href="#">01. 리턴값 함수</a></li>
+                    <li><a href="#">02. 익명 함수</a></li>
+                    <li><a href="#">03. 매개변수 함수</a></li>
+                    <li><a href="#">04. 리턴값 함수</a></li>
+                    <li><a href="#">05. 화살표 함수 : 선언적 함수</a></li>
+                    <li><a href="#">06. 화살표 함수 : 익명 함수</li>
+                    <li><a href="#">07. 화살표 함수 : 매개변수 함수</a></li>
+                    <li><a href="#">08. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
 
-                    <li><a href="#">01. 화살표 함수 : 선언적 함수</a></li>
-                    <li><a href="#">01. 화살표 함수 : 익명 함수</li>
-                    <li><a href="#">01. 화살표 함수 : 매개변수 함수</a></li>
-                    <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
                     <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
                     <li><a href="#">01. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
-
                     <li><a href="#">01. 함수 유형 : 함수와 매개변수를 이용한 형태</li>
                     <li><a href="#">01. 함수 유형 : 함수와 변수를 이용한 형태</li>
                     <li><a href="#">01. 함수 유형 : 함수와 배열, 객체를 이용한 형태</li>
@@ -105,7 +104,134 @@
     <!-- //footer -->
     <script src="assets/js/prism.js"></script>
     <script>
-        
+    // 변수, 상수, 배열, 객체 : 데이터 저장
+    // 함수 : 데이터 실행
+
+    // 1. _har // 특수 기호 중 유일하게 올 수 있는 것은 -_
+    // 2. 2kd
+    // 3. var
+    // 4. $ab
+    
+        // 선언적 함수
+        // {
+        //     function func(){
+        //         document.write("실행되었습니다!<br>");
+        //     }
+        //     func();
+        // }
+        // // 익명 함수
+        // {
+        //     const func = function(){
+        //         document.write("실행되었습니다!<br>");
+        //     }
+        //     func();
+        // }
+
+        // // 매개변수 함수
+        // {
+        //     function func(str){
+        //         document.write(str);
+        //     }
+        //     func("실행되었습니다!<br>");
+        // }
+
+        // // 리턴값(결과/끝) 함수
+        // {
+        //     function func(){
+        //         const str = "함수가 실행되었습니다."; // 변수 안에 있는 함수
+        //         return str; // 결과를 내고, 끝내는 것
+        //     }
+        //     document.write(func());
+        // }
+        // document.write("<br><br>")
+
+        // // 05. 
+        // {
+        //     func = () => {
+        //         document.write("실행되었습니다<br>");
+        //     }
+        //     func();
+        //     // 위와 같은 식:
+        //     // func = () => document.write("실행되었습니다");
+        //     // func();
+        // }
+        // {
+        //     const func = () => {
+        //         document.write("실행되었습니다<br>");
+        //     }
+        //     func();
+        // }
+        // {
+        //     function func(str){
+        //         document.write(str);
+        //     }
+        //     func("실행되었습니다<br>"); //매개변수 함수는 데이터 값을 변수를 통해서 전달할 때 씀
+        //     //매개변수 함수를 화살표 함수로 바꾸면,
+        //     func = (str) => {
+        //         document.write(str);
+        //     }
+        //     func("실행되었습니다<br>");
+        // }
+        // {
+        //     function func(){
+        //         const str = "실행되었습니다<br>";
+        //         return str; 
+        //     }
+        //     document.write(func());
+        //     //화살표 함수로 바꾸면,
+        //     func = () => {
+        //         const str = "실행되었습니다<br>"
+        //         return str;
+        //     }
+        //     document.write(func());
+        // }
+
+    
+        //  10-88까지 짝수만 출력
+        // for(let i=10; i<=88; i+=2){
+        //     document.write(i,"<br>");
+        // }
+        // 구구단
+        // for(let i=1; i<=9; i++){
+        //     for(let j=1; j<=9; j++){
+        //         document.write(i+"*"+j+"=" +(i*j),"<br>");
+        //     }
+        // }
+
+        // let table = "<table border='1'>"
+        //     for(let j=1; j<=100; j++){
+        //         table += "<tr>";                      
+        //         for(let i=1; i<=100; i++){
+        //             table += "<td>"+i+"</td>";
+        //         }
+        //         table += "</tr>";
+        //     }
+        //     table += "</table>";
+        // document.write(table)
+
+        // 함수 유형 4가지
+            function func() {
+                document.write("쓸 내용");
+            }
+            func();
+
+            const func= function(){
+                document.write("쓸 내용");
+            }
+            func();
+
+            function func(str) {
+                document.write(str);
+            }
+            func("쓸 내용");
+
+            function func (){
+                const str = "쓸 내용";
+                return str;
+            }
+            document.write(func());
+
+
     </script>
 
 </body>
