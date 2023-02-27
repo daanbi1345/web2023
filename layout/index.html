@@ -1,141 +1,362 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="webstoryboy">
-    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
-    <meta name="keywords" content="웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design">
-    <title>웹쓰3 | 조은경</title>
-    <!-- Bootstrap core CSS -->
-    <link href="../assets/css/bootstrap.css" rel="stylesheet">
-    <link href="../assets/css/docs.min.css" rel="stylesheet">
-    <link href="../assets/css/prism.css" rel="stylesheet">
-    <!-- 파비콘 -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    <link rel="apple-touch-icon" sizes="57x57" href="../assets/ico/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../assets/ico/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/ico/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../assets/ico/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../assets/ico/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/ico/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/ico/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../assets/ico/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/ico/favicon-16x16.png">
-    <link rel="manifest" href="../assets/ico/manifest.json">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-    <meta name="msapplication-TileImage" content="../assets/ico/ms-icon-144x144.png">
-    <meta name="theme-color" content="#FFFFFF">
-    <!-- Facebook meta tags -->
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="" />
-    <meta property="og:url" content="https:///" />
-    <meta property="og:image" content="http:///assets/ico/icon.jpg" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
-    <!-- twitter meta tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
-    <meta property="twitter:image" content="http:///assets/ico/icon.jpg" />
-    <!-- 웹 폰트 -->
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+  <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+  <meta name="keywords"
+    content=", 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design">
+  <title>웹쓰3 | 조은경</title>
+
+  <!-- css -->
+  <link href="assets/css/bootstrapTheme.css" rel="stylesheet">
+  <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/isotope.css" rel="stylesheet">
+  <link href="assets/css/font-awesome.css" rel="stylesheet">
+
+  <!-- 파비콘 -->
+  <link rel="shortcut icon" href="assets/ico/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/ico/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+  <link rel="manifest" href="assets/ico/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/ico/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Facebook meta tags -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="조은경" />
+  <meta property="og:url" content="http://daanbi12.dothome.co.kr" />
+  <meta property="og:image" content="http://daanbi12.dothome.co.kr/assets/ico/icon.jpg" />
+  <meta property="og:site_name" content="조은경" />
+  <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+
+  <!-- twitter meta tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="" />
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+  <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+  <!-- 웹 폰트 -->
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <style>
+    #clock {
+      display: block;
+    }
+
+    .link1 {
+      background: #fff;
+      left: 50%;
+      transform: translatex(-50%);
+      color: #000;
+      display: inline-block;
+      border-radius: 5px;
+      font-weight: bold;
+      padding: 10px 30px !important;
+      height: auto !important;
+      box-sizing: border-box;
+      width: auto !important;
+      font-size: 20px !important;
+      margin-top: 36px !important;
+    }
+
+    .link2 {
+      background: #fff;
+      left: 50%;
+      transform: translatex(-50%);
+      color: #000;
+      display: inline-block;
+      border-radius: 5px;
+      font-weight: bold;
+      padding: 10px 30px !important;
+      height: auto !important;
+      box-sizing: border-box;
+      width: auto !important;
+      font-size: 20px !important;
+      margin-top: 86px !important;
+    }
+
+    .disqus {
+      margin-right: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
+
 <body>
-    <a class="sr-only" href="#content">Skip to main content</a>
-    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="../index.html" class="navbar-brand">WEB'S &lt;/doc&gt;</a>
-            </div>
-            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
-                <ul class="nav navbar-nav">
-                    <li><a href="https://jongyung.tistory.com/">Blog</a></li>
-                    <li><a href="https://github.com/daanbi1345/web2023">Github</a></li>
-                </ul>
-            </nav>
+  <!-- nav -->
+  <div id="top-nav" class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="index.html">Cho eun kyoung</a>
+        <div class="nav-collapse collapse pull-right">
+          <ul class="nav">
+            <li><a href="https://jongyung.tistory.com/">Blog</a></li>
+            <li><a href="https://github.com/daanbi1345/web2023">Github</a></li>
+          </ul>
         </div>
-    </header>
-    <div class="bs-header bgs1" id="content">
-        <div class="container">
-            <h1>Class v1.0 &lt;/doc&gt;</h1>
-            <p><a href="https://daanbi12.dothome.co.kr" target="_blank">daanbi12.dothome.co.kr</a></p>
-        </div>
+      </div>
     </div>
-    <div class="container bs-docs-container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>(스마트웹&콘텐츠개발) 웹표준기반 스마트UI/UX디자인 & 웹퍼블리셔</h2>
-                <ul>
-                    <li><a href="layout01.html">레이아웃01 - flaot 유형</a></li>
-                    <li><a href="layout02.html">레이아웃02 - flaot 유형</a></li>
-                    <li><a href="layout03.html">레이아웃03 - flaot 유형</a></li>
-                    <li><a href="layout04.html">레이아웃04 - flaot 유형</a></li>
-                    <li><a href="layout05.html">레이아웃05 - flaot 유형</a></li>
-                    <li><a href="layout06.html">레이아웃06 - flaot 유형 - 반응형</a></li>
-                    <li><a href="layout07.html">레이아웃07 - flaot 유형 - 반응형</a></li>
-                    <li><a href="layout08.html">레이아웃08 - flaot 유형 - 반응형</a></li>
-                    <li><a href="layout09.html">레이아웃09 - flaot 유형 - 반응형</a></li>
-                    <li><a href="layout10.html">레이아웃10 - flaot 유형 - 반응형</a></li>
-                    <li><a href="layout11.html">레이아웃11 - flex 유형</a></li>
-                    <li><a href="layout12.html">레이아웃12 - flex 유형</a></li>
-                    <li><a href="layout13.html">레이아웃13 - flex 유형</a></li>
-                    <li><a href="layout14.html">레이아웃14 - flex 유형</a></li>
-                    <li><a href="layout15.html">레이아웃15 - flex 유형</a></li>
-                    <li><a href="layout16.html">레이아웃16 - flex 유형 - 반응형</a></li>
-                    <li><a href="layout17.html">레이아웃17 - flex 유형 - 반응형</a></li>
-                    <li><a href="layout18.html">레이아웃18 - flex 유형 - 반응형</a></li>
-                    <li><a href="layout19.html">레이아웃19 - flex 유형 - 반응형</a></li>
-                    <li><a href="layout20.html">레이아웃20 - flex 유형 - 반응형</a></li>
-                    <li><a href="layout21.html">레이아웃21 - grid 유형</a></li>
-                    <li><a href="layout22.html">레이아웃22 - grid 유형</a></li>
-                    <li><a href="layout23.html">레이아웃23 - grid 유형</a></li>
-                    <li><a href="layout24.html">레이아웃24 - grid 유형</a></li>
-                    <li><a href="layout25.html">레이아웃25 - grid 유형</a></li>
-                    <li><a href="layout26.html">레이아웃26 - grid 유형 - 반응형</a></li>
-                    <li><a href="layout27.html">레이아웃27 - grid 유형 - 반응형</a></li>
-                    <li><a href="layout28.html">레이아웃28 - grid 유형 - 반응형</a></li>
-                    <li><a href="layout29.html">레이아웃29 - grid 유형 - 반응형</a></li>
-                    <li><a href="layout30.html">레이아웃30 - grid 유형 - 반응형</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- //row -->
-    </div>
-    <!-- //container -->
-    <!-- Footer -->
-    <footer class="bs-footer" role="contentinfo">
-        <div class="container">
-            <ul class="footer-links muted">
-                <li><a href="http://daanbi12.dothome.co.kr">daanbi12.dothome.co.kr</a></li>
+  </div>
+  <!-- //nav -->
+
+  <!-- header -->
+  <div id="header">
+    <div class="container">
+      <div class="row">
+        <div class="span12" style="text-align:center;">
+          <div class="header_tit">
+            <a href="http://webstoryboy.co.kr"><img src="assets/img/main2.svg" alt="main"></a>
+            <h1>Professional web publishers</h1>
+          </div>
+          <div class="header_icon">
+            <ul>
+              <li><a href="https://twitter.com/webstoryboy" target="_blank"><i class="fa fa-twitter"
+                    aria-hidden="true"></i><span>twitter</span></a></li>
+              <li><a href="https://codepen.io/webstoryboy/" target="_blank"><i class="fa fa-codepen"
+                    aria-hidden="true"></i><span>codepen</span></a></li>
+              <li><a href="https://github.com/webstoryboy" target="_blank"><i class="fa fa-github"
+                    aria-hidden="true"></i><span>github</span></a></li>
+              <li><a href="https://www.youtube.com/channel/UCsvQSv7EeCMHyYb9ENKAJZw" target="_blank"><i
+                    class="fa fa-youtube-play" aria-hidden="true"></i><span>youtube</span></a></li>
+              <li><a href="https://dribbble.com/webstoryboy" target="_blank"><i class="fa fa-dribbble"
+                    aria-hidden="true"></i><span>dribbble</span></a></li>
+              <li><a href="https://www.instagram.com/webstoryboy/" target="_blank"><i class="fa fa-instagram"
+                    aria-hidden="true"></i><span>instagram</span></a></li>
             </ul>
+          </div>
         </div>
-    </footer>
-    <!-- //Footer -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
-    <script src="../assets/js/docs.min.js"></script>
-    <script src="../assets/js/prism.js"></script>
+      </div>
+    </div>
+  </div>
+  <!-- //header -->
+
+  <!-- contents_tit -->
+  <div id="contents_tit">
+    <div class="titt">
+      <p><a href="#" class="tit_btn">&quot;나는 조은경이다!&quot;</a></p>
+    </div>
+  </div>
+  <!-- //contents_tit -->
+
+  <!-- contents -->
+  <div id="customizing">
+    <div class="container">
+
+      <div class="row">
+        <div id="options" class="gridly">
+          <ul class="filter option-set" data-filter-group="color">
+            <li><a href="#filter-color-any" data-filter-value="" class="selected">ALL</a></li>
+            <li class="webstandard"><a href="#filter-color-webstandard" data-filter-value=".class">CLASS</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row" id="middle" style="margin-left:16px;">
+        <div id="container" class="clearfix">
+
+          <!-- box -->
+          <section class="color-shape class">
+            <a href="class/index.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-donut">CLASS</span>
+                  <span class="overlay-text-thumb-donut">클래스</span>
+                  <span class="overlay-text-thumb1-donut">클래스</span>
+                  <span class="overlay-text-thumb2-donut">CLASS</span>
+                </div>
+                <img src="../assets/img/svg-donut.svg" alt="portfolio">
+                <div class="img-text donutImg">
+                  <h5>CLASS</h5>
+                  <p>클래스</p>
+                  <span>CLASS</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape class">
+            <a href="javascript/index.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-cream">JAVASCRIPT</span>
+                  <span class="overlay-text-thumb-cream">자바스크립트</span>
+                  <span class="overlay-text-thumb1-cream">자바스크립트</span>
+                  <span class="overlay-text-thumb2-cream">JAVASCRIPT</span>
+                </div>
+                <img src="../assets/img/svg-cream.svg" alt="portfolio">
+                <div class="img-text creamImg">
+                  <h5>JAVASCRIPT</h5>
+                  <p>자바스크립트</p>
+                  <span>JAVASCRIPT</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+          <!-- box -->
+          <section class="color-shape class">
+            <a href="layout/index.html" target="_blank">
+              <div class="image-wrap">
+                <div class="hover-wrap">
+                  <span class="overlay-img-soft-ice-cream">HTML</span>
+                  <span class="overlay-text-thumb-soft-ice-cream">레이아웃 연습</span>
+                  <span class="overlay-text-thumb1-soft-ice-cream">레이아웃 </span>
+                  <span class="overlay-text-thumb2-soft-ice-cream">HTML</span>
+                </div>
+                <img src="../assets/img/svg-soft-ice-cream.svg" alt="portfolio">
+                <div class="img-text cherriesImg">
+                  <h5>HTML</h5>
+                  <p>레이아웃</p>
+                  <span>HTML</span>
+                </div>
+              </div>
+            </a>
+          </section>
+          <!-- //box -->
+
+        </div>
+        <!-- //container-->
+      </div>
+      <!-- //row -->
+    </div>
+    <!-- //container-->
+  </div>
+  <!-- //contents -->
+
+
+  <!-- footer -->
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h5>
+            <a href="http://daanbi12.dothome.co.kr" target="_blank">daanbi12</a>
+            <span id="clock"></span>
+            <span id="infor"></span>
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //footer -->
+
+
+  <!-- script -->
+  <script src="assets/js/jquery-1.9.1.min.js"></script>
+  <script src="assets/js/bootstrap-collapse.js"></script>
+  <script src="assets/js/bootstrap-transition.js"></script>
+  <script src="assets/js/jquery.isotope.min.js"></script>
+  <script>
+    //운영체제 정보 알아내기
+    let os = navigator.userAgent.toLowerCase();
+    let sw = screen.width;
+    let sh = screen.height;
+    let infor = document.getElementById("infor");
+
+    if (os.indexOf("windows") >= 0) {
+      infor.innerHTML = "현재 윈도우를 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+    } else if (os.indexOf("macintosh") >= 0) {
+      infor.innerHTML = "현재 맥을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+    } else if (os.indexOf("iphone") >= 0) {
+      infor.innerHTML = "현재 아이폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+    } else if (os.indexOf("android") >= 0) {
+      infor.innerHTML = "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+    }
+
+
+    //시간 표현
+    let clock = document.getElementById("clock");
+
+    setInterval(function () {
+      clock.innerHTML = new Date().toLocaleTimeString();
+    }, 1000);
+
+    $(function () {
+      var $container = $('#container'),
+        filters = {};
+
+      $container.isotope({
+        itemSelector: '.color-shape',
+        masonry: {
+          columnWidth: 57
+        }
+      });
+
+      // filter buttons
+      $('.filter a').click(function () {
+        var $this = $(this);
+        // don't proceed if already selected
+        if ($this.hasClass('selected')) {
+          return;
+        }
+
+        var $optionSet = $this.parents('.option-set');
+        // change selected class
+        $optionSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');
+
+        // store filter value in object
+        // i.e. filters.color = 'red'
+        var group = $optionSet.attr('data-filter-group');
+        filters[group] = $this.attr('data-filter-value');
+        // convert object into array
+        var isoFilters = [];
+        for (var prop in filters) {
+          isoFilters.push(filters[prop])
+        }
+        var selector = isoFilters.join('');
+        $container.isotope({
+          filter: selector
+        });
+
+        return false;
+      });
+
+      $('.tit_btn').on('click', function (e) {
+        e.preventDefault();
+        $('.nav_container').toggleClass('on');
+      });
+
+      $(".click").click(function () {
+        $(".view").fadeToggle();
+      });
+
+    });
+  </script>
 </body>
+
 </html>
