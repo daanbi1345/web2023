@@ -172,7 +172,8 @@ if(num == 100) {
 
                 <div id="sample06" class="sample">
                     <h3>06. switch문</h3>
-                    <p>입니다.</p>
+                    <p>조건식을 두고 조건의 진위 여부에 따라 동작을 수행하는 if문과는 다르게<br>
+                    switch문은 어떤 값을 가진 대상을 두고 조건값과 일치하는지를 확인하고 동작을 수행하는 방식입니다.</p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">const num = 100;
 
@@ -202,7 +203,8 @@ default:
 
                 <div id="sample07" class="sample">
                     <h3>07. while문</h3>
-                    <p>입니다.</p>
+                    <p>while문은 조건문이 참일 때 실행되는 반복문입니다.<br>
+                    조건은 문장안이 실행되기 전에 참, 거짓을 판단합니다.</p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">let num = 0; //초깃값
 while(num&lt;5){   //조건식
@@ -216,7 +218,8 @@ while(num&lt;5){   //조건식
 
                 <div id="sample08" class="sample">
                     <h3>08. do while문</h3>
-                    <p>입니다.</p>
+                    <p>do...while 문은 테스트 조건이 거짓으로 평가될 때까지 지정된 구문을 실행하는 루프를 만듭니다. <br>
+                    단, 구문이 실행된 뒤에 테스트 조건이 평가됨으로 구문은 무조건 한 번은 실행됩니다.</p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">let num2 = 0;
 do {
@@ -230,7 +233,7 @@ do {
 
                 <div id="sample09" class="sample">
                     <h3>09. for문</h3>
-                    <p>입니다.</p>
+                    <p>for 문은 괄호로 감싸고 세미콜론으로 구분한 세 개의 선택식과, 반복을 수행할 문(주로 블럭문)으로 이루어져 있습니다.</p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">for(let i =1; i&lt;=100; i++) {
     document.write(i, "&lt;br&gt;");
@@ -266,7 +269,7 @@ for(let i=1; i&lt;=arr.length; i++) {
 
                 <div id="sample10" class="sample">
                     <h3>10. 중첩 for문</h3>
-                    <p>입니다.</p>
+                    <p>중첩 반복문은 반복문 안에 반복문이 포함되어 있는 형태를 말합니다. </p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">for(let i =1; i&lt;=10; i++){
     document.write(i, "&lt;br&gt;");
@@ -291,26 +294,31 @@ for(let i=1; i&lt;=arr.length; i++) {
 
                 <div id="sample11" class="sample">
                     <h3>11. break문</h3>
-                    <p>입니다.</p>
+                    <p>break 문은 현재 반복문, switch 문, 또는 label 문을 종료하고, 그 다음 문으로 프로그램 제어를 넘깁니다.</p>
                     <div class="script">
 <pre class="line-numbers"><code class="language-js">for(let i =1; i&lt;20; i++){
     if(i == 10){
         break;
     }
-    document.write(i);  //->의 위치에 따라서 값이 다르게 나오기 때문에 위치 중요!
+    document.write(i);  // 위치에 따라서 값이 다르게 나오기 때문에 위치 중요!
 }
-document.write("&lt;br&gt;")  //10을 뺀 값이 나온다.
-
+document.write("&lt;br&gt;")  //10까지 10을 뺀 값이 나온다.
+    // 1,2,3,4~9
 </pre></code>
                     </div>
                     <!-- //sample11 -->
 
                 <div id="sample12" class="sample">
                     <h3>12. continue문</h3>
-                    <p>입니다.</p>
+                    <p>continue 문은 현재 또는 레이블이 지정된 루프의 현재 반복에서 명령문의 실행을 종료하고 반복문의 처음으로 돌아가여 루프문의 다음 코드를 실행합니다.</p>
                     <div class="script">
-<pre class="line-numbers"><code class="language-js">
-
+<pre class="line-numbers"><code class="language-js">for(let i =1; i&lt;20; i++){
+    if(i == 10){
+        continue;
+    }
+    document.write(i);  //20까지 10을 뺀 값이 나온다.
+}
+    // 1,2,3,4~9,11,12,13,14~20
 </pre></code>
                     </div>
                     <!-- //sample12 -->
@@ -326,124 +334,7 @@ document.write("&lt;br&gt;")  //10을 뺀 값이 나온다.
 
     <script src="assets/js/prism.js"></script>
     <script>
-        //01. if문
-        {
-            // null, undefined, "", 0, false를 적으면 false 값이 나온다.
-            // if(null){
-            //     document.write("실행되었습니다.(true)");
-            // } else {
-            //     document.write("실행되었습니다.(false)");
-            // }
-
-            // 중괄호를 생략할 수 있다.
-            // if(null) document.write("실행되었습니다.(true)");
-            // else document.write("실행되었습니다.(false)");
-            
-            //삼항연산자
-            // (null) ? document.write("실행되었습니다.(true)") :  document.write("실행되었습니다.(false)");
-
-        }
-        {
-            //04. 다중 if문 == switch
-            // const num = 100;
-
-            // if(num == 90) {
-            //     document.write("실행90");
-            // } else if (num == 80) {
-            //     document.write("실행80");
-            // } else if (num == 70) {
-            //     document.write("실행70");
-            // } else if (num == 60) {
-            //     document.write("실행60");
-            // } else if (num == 50) {
-            //     document.write("실행50");
-            // } else if (num == 0);
-            //     document.write("0");                 
-            
-        }
-        {
-            //05. 중첩 if문
-        }
-        {
-            //06.switch문
-            // 
-
-            
-        }
-        {
-            //07.while문
-
-            // for(let i=0; i<5; i++){
-            //     document.write(i);
-            // }
-
-            // let num = 0; //초깃값
-            // while(num<5){   //조건식
-            //     document.write(num);
-            //     num++;  //증감식
-            // }
-        }
-        {
-            //08.do while문    
-            // let num2 = 0;
-            // do {
-            //     document.write(num2);
-            //     num2++;
-            // } while(num2<5);
-        }
-        {
-            //09.
-            // for(let i=1; i<100; i++){
-            //     document.write(i);
-            // }
-            // document.write("<br>")
-
-            // // let num = [1,2,3,4,5,6,7,8,9];
-            // // for(let i = 0; i<num.length; i++){
-            // //     document.write(num[i]);
-            // // }   //배열 값 불러오기
-
-            // let num = [1,2,3,4,5,6,7,8,9];
-            // let sum = 0;
-
-            // for(let i = 0; i<num.length; i++){
-            //     document.write(num[i]);
-            //     sum = sum + num[i]; // 약식은 sum += num[i];
-            // }
-            // document.write("<br>")
-            // document.write(sum)              
-        }
-        {
-            //10.중첩 for문
-            // for(let i =1; i<=10; i++){
-            //     document.write(i, "<br>");
-            //     for(let j=1; j<=10; j++){
-            //         document.write(j);
-            //     }
-            // }
-
-            
-        }
-        {
-            //11.break문
-            // for(let i =1; i<20; i++){
-            //     if(i == 10){
-            //         break;
-            //     }
-            //     document.write(i);  //->의 위치에 따라서 값이 다르게 나오기 때문에 위치 중요!
-            // }
-            // document.write("<br>")  //10을 뺀 값이 나온다.
-        }
-        {
-        //     //12.continue문
-        //     for(let i =1; i<20; i++){
-        //         if(i == 10){
-        //             continue;
-        //         }
-        //         document.write(i);  //10을 뺀 값이 나온다.
-        //     }
-        }
-
+        
 
         
     </script>
