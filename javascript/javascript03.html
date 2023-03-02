@@ -56,12 +56,14 @@
                     <li><a href="#">05. 화살표 함수 : 선언적 함수</a></li>
                     <li><a href="#">06. 화살표 함수 : 익명 함수</li>
                     <li><a href="#">07. 화살표 함수 : 매개변수 함수</a></li>
-                    <li><a href="#">08. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
+                    <li><a href="#">08. 화살표 함수 : 리턴값 함수</a></li>
+                    <li><a href="#">09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</a></li>
+                    <li><a href="#">10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
+                    <li><a href="#">11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
+                    <li><a href="#">12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
 
-                    <li><a href="#">01. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
-                    <li><a href="#">01. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
-                    <li><a href="#">01. 함수 유형 : 함수와 매개변수를 이용한 형태</li>
-                    <li><a href="#">01. 함수 유형 : 함수와 변수를 이용한 형태</li>
+                    <li><a href="#">13. 함수 유형 : 함수와 매개변수를 이용한 형태</li>
+                    <li><a href="#">14. 함수 유형 : 함수와 변수를 이용한 형태</li>
                     <li><a href="#">01. 함수 유형 : 함수와 배열, 객체를 이용한 형태</li>
                     <li><a href="#">01. 함수 유형 : 객체와 변수와 함수를 이용한 형태</li>
                     <li><a href="#">01. 함수 유형 : 객체생성자 함수</li>
@@ -198,8 +200,8 @@ func("실행되었습니다<br>");
 
             <div class="main__sample">
                 <div id="sample08" class="sample">
-                    <h3>08. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
-                    <p>화살표 함수를 사용하면 기존의 함수 선언 방식에 비해 코드 길이가 짧아지는 장점이 있습니다.</p>
+                    <h3>08. 화살표 함수 : 리턴값 함수</h3>
+                    <p>화살표로 간결하게 표현한 리턴값 함수입니다.</p>
 <pre class="line-numbers"><code class="language-js">func = ( ) => {
 const str = "실행되었습니다<br>"
 return str;
@@ -209,7 +211,59 @@ document.write(func( ));
 </code></pre>
                 </div>
                 <!-- //sample08 -->
-                                
+
+            <div class="main__sample">
+                <div id="sample09" class="sample">
+                    <h3>09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
+                    <p>함수를 함께 쓸 수도 있습니다.<br>
+                    화살표 함수를 쓸 때 헷갈리기 쉬우니, 식을 잘 기억해야 합니다.</p>
+<pre class="line-numbers"><code class="language-js">const func = (str) => {
+return str; // 원래 모든 함수에는 리턴이 있는데, 생략해서 썼다.
+}
+document.write(func("실행되었습니다."));
+    // 실행되었습니다.
+</code></pre>
+                </div>
+                <!-- //sample09 -->
+
+            <div class="main__sample">
+                <div id="sample10" class="sample">
+                    <h3>10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
+                    <p>여러 함수를 쓸 때, 괄호를 생략해서 쓸 수도 있습니다.</p>
+<pre class="line-numbers"><code class="language-js">const func = str => {
+return str;
+}
+document.write(func("실행되었습니다."));  
+    // 실행되었습니다.
+</code></pre>
+                </div>
+                <!-- //sample10 -->
+
+            <div class="main__sample">
+                <div id="sample11" class="sample">
+                    <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
+                    <p>리턴값을 쓰지만 생략을 하는 표현방법이기 때문에 헷갈리기 쉽습니다.</p>
+<pre class="line-numbers"><code class="language-js">const func = str => str;              
+              
+document.write(func("실행되었습니다."));
+    // 실행되었습니다.
+</code></pre>
+                </div>
+                <!-- //sample11 -->
+
+                <div class="main__sample">
+                    <div id="sample12" class="sample">
+                        <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
+                        <p>마찬가지로 헷갈리기 쉽기 때문에 형태를 잘 기억해서 써야 간결한 표현 방법을 쓸 수 있습니다.</p>
+    <pre class="line-numbers"><code class="language-js">func = str => str;              
+              
+document.write(func("실행되었습니다."));
+    // 실행되었습니다.
+    </code></pre>
+                    </div>
+                    <!-- //sample12 -->
+
+                                                    
             </div>
         </div>
     </main>
