@@ -464,7 +464,7 @@
 
                 <div id="sample11" class="sample">
                     <h3>11. 배열: 데이터 불러오기 :map( )</h3>
-                    <p>배열 안에 있는 데이터를 다시 배열로 만들어 줍니다.</p>
+                    <p>배열 안에 있는 데이터를 다시 배열로 만들어 줍니다.(값,인덱스,배열)</p>
                     <div class="script">
 <pre><code class="language-js">{
     const num = [100, 200, 300, 400, 500];    
@@ -483,14 +483,19 @@
                             <div>
                                 100<br>
                                 0<br>
+                                100,200,300,400,500<br>
                                 200<br>
                                 1<br>
+                                100,200,300,400,500<br>
                                 300<br>
                                 2<br>
+                                100,200,300,400,500<br>
                                 400<br>
                                 3<br>
+                                100,200,300,400,500<br>
                                 500<br>
-                                4                                                             
+                                4<br>
+                                100,200,300,400,500                                                                                           
                             </div>
                         </details>
                     </div>
@@ -632,13 +637,13 @@
             }
             {
                 // 11. >배열 안에 있는 데이터를 다시 배열로 만들어 준다.
-                // const num = [100, 200, 300, 400, 500];
+                const num = [100, 200, 300, 400, 500];
                 
-                // num.map(function(el, i, a){
-                //     console.log(el);
-                //     console.log(i);
-                //     console.log(a);                   
-                // });
+                num.map(function(el, i, a){
+                    console.log(el);
+                    console.log(i);
+                    console.log(a);                   
+                });
             }
         
     </script>
