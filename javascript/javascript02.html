@@ -265,7 +265,10 @@
                  
                 <div id="sample07" class="sample">
                     <h3>07. 배열: 데이터 불러오기 :중첩 for( )문</h3>
-                    <p>for문을 중첩으로 써서 데이터를 불러오는 방법입니다.</p>
+                    <p>for문을 중첩으로 써서 데이터를 불러오는 방법입니다.
+                    i값을 먼저 정해줬기 때문에 i값이 가장 처음으로 출력이 되고, 그 다음 j값이 나옵니다.<br>
+                    그렇기 때문에 i값이 한 번 출력되고 j값이 모두 출력됩니다.<br>
+                    출력은 i값이 모두 출력될 때까지 나옵니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     for( let i=1; i&lt;=10; i++ ){
@@ -300,8 +303,10 @@
                 <div id="sample08" class="sample">
                     <h3>08. 배열: 데이터 불러오기 :forEach( )문</h3>
                     <p>배열 안의 데이터를 불러오는 방법입니다.<br>
-                    for문과 forEach문을 써서 점점 더 간략하게 쓸 수가 있습니다.
-                    </p>
+                    값, 자릿수, 배열 순으로 출력을 할 수 있습니다.<br>
+                    forEach는 콜백 함수입니다. 콜백 함수란, 다른 코드의 인수로서 넘겨주는 실행 가능한 코드를 말합니다.<br>                        
+                    콜백을 넘겨받는 코드는 이 콜백을 필요에 따라 즉시 실행할 수도 있고, 아니면 나중에 실행할 수도 있습니다.<br>
+                    for문과 forEach문을 써서 점점 더 간략하게 쓸 수가 있습니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const num = [100,200, 300, 400,500];
@@ -412,7 +417,9 @@
                 <div id="sample09" class="sample">
                     <h3>09. 배열: 데이터 불러오기 :for of</h3>
                     <p>for of문을 써서 배열에서 데이터를 불러오는 방법입니다.<br>
-                    최신 문법입니다.</p>
+                    최신 문법입니다.반복 가능한 객체(iterable)를 순회할 수 있도록 해줍니다. <br>
+                    for ...in문이 객체의 모든 열거 가능한 속성을 대상으로 하는 것과 달리, <br>
+                    for ...of문은 [Symbol.iterator] 속성을 가지는 것들만을 대상으로 합니다. </p>
                     <div class="script">
 <pre><code class="language-js">{
     const arr = [100, 200, 300, 400, 500];
@@ -441,7 +448,14 @@
                 <div id="sample10" class="sample">
                     <h3>10. 배열: 데이터 불러오기 :for in</h3>
                     <p>자릿수 값 즉, 인덱스 값이 나옵니다.<br>
-                    객체(키와 값) 때문에 만들었습니다.</p>
+                    객체(키와 값) 때문에 만들었습니다.
+                    객체의 모든 '열거할 수 있는 속성들'을 순회할 수 있도록 해준다. <br>
+                    for ...in 문은 객체의 key 값에는 접근 가능하지만, value 값에 직접적으로 접근하는 방법은 제공하지 않습니다.<br>
+                    value값이 궁금하다면 arr[i] 와 같이 key를 이용하는 방식을 사용해 간접적으로 접근할 수 있습니다.<br>
+                    for...in 문을 사용할 때는 몇 가지 주의할 점들이 있습니다.<br>
+                    첫번째는, for ...in문에서는 순서가 보장되지 않기 때문에, 속성들 간의 순서가 중요한 경우에는 for...in문을 사용하지 않는 것이 좋다는 것입니다.<br>
+                    두번째는, length 연산자를 사용 할 수 없다는 것이고<br>
+                    세번째는, value값은 string이라 연산이 불가능하다는 것입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
    const arr = [100, 200, 300, 400, 500];
@@ -469,7 +483,12 @@
 
                 <div id="sample11" class="sample">
                     <h3>11. 배열: 데이터 불러오기 :map( )</h3>
-                    <p>배열 안에 있는 데이터를 다시 배열로 만들어 줍니다.(값,인덱스,배열)</p>
+                    <p>배열 안에 있는 데이터를 다시 배열로 만들어 줍니다.(값,인덱스,배열)<br>
+                    배열에 있는 모든 요소들의 값을 변경해서 새로운 배열을 써야할 때 루프를 사용하여 수동으로 반복 처리하는 대신에 array.map()을 사용할 수 있습니다. <br>
+                    이 array.map() 메소드는 콜백 함수를 이용해 각 요소에 호출해서 그 값을 변환하게 도와줍니다.<br>                        
+                    일반적으로 array.map() 메소드는 특정 숫자를 곱하거나 애플리케이션에 필요한 다른 작업을 수행하는 등 요소에 어떤 변경 사항을 적용하는 데 사용됩니다.<br>                   
+                    el는 element의 약자로, 값을 뜻하고, i는 index의 약자로 자릿수를 뜻합니다. a는 array의 약자로 배열을 뜻합니다.따라서, 가장 첫 번 째 값인 100이 출력되고, 자릿수의 가장 첫 번 째 값인 0이 출력되며, 배열이 출력되었습니다.<br>
+                    그 후에는 연속적으로 그 다음 값들이 값,인덱스,배열의 순으로 출력된 것입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const num = [100, 200, 300, 400, 500];    
@@ -509,9 +528,11 @@
 
                 <div id="sample12" class="sample">
                     <h3>12. 배열: 데이터 불러오기 : 배열 펼침연산자</h3>
-                    <p> 배열 펼침연산자 (spread operator) 최신식이다.<br>
-                    배열, 객체, 문자열 등의 요소를 펼쳐서 개별요소로 분리하는 연산자이다.<br>
-                </p>
+                    <p> 배열 펼침연산자 (spread operator) 최신식입니다.<br>
+                    배열, 객체, 문자열 등의 요소를 펼쳐서 개별요소로 분리하는 연산자입니다.<br>
+                    pread operator는 반복 가능한(iterable) 객체에 적용할 수 있는 문법입니다.<br>
+                    배열이나 문자열 등을 아래처럼 풀어서 요소 하나 하나로 전개시킬 수 있습니다.<br>
+                    ...만 붙이면 자유롭게 그 객체를 펼칠 수 있어서 여러 곳에서 유용하게 사용할 수 있습니다.</p>
                     <div class="script">
 <pre><code class="language-js">{ 
    let arr1 = [100,200,300,400,500];
@@ -540,7 +561,8 @@
                 <div id="sample13" class="sample">
                     <h3>13. 배열: 데이터 불러오기 : 배열 구조분해할당</h3>
                     <p>배열의 요소를 개별 변수에 할당하는 방법 중 하나입니다.<br>
-                    이를 통해 벼열의 각 요소를 개별 변수로 분리해 사용할 수 있습니다.</p>
+                    이를 통해 벼열의 각 요소를 개별 변수로 분리해 사용할 수 있습니다.<br>
+                    구조 분해 할당 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 JavaScript 표현식입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     let a, b, c;
@@ -569,7 +591,8 @@
 
                 <div id="sample14" class="sample">
                     <h3>14. 객체: 데이터 불러오기 : 기본</h3>
-                    <p></p>
+                    <p>기본적인 객체에서 데이터를 불러오는 방식입니다.<br>
+                    기본적인 만큼 쉬운 식입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const obj = {
@@ -598,7 +621,9 @@
 
                 <div id="sample15" class="sample">
                     <h3>15. 객체: 데이터 불러오기 : Object</h3>
-                    <p></p>
+                    <p>Object.~를 이용해서 객체에서 데이터를 불러오는 방식입니다.<br>
+                    '~'에 keys를 넣으면 이름만 불러오고, values를 넣으면 값만 불러오며, entries를 넣으면 이름과 값 모두를 불러옵니다.<br>                        
+                    객체는 키와 값을 불러오기 때문에 둘 중에 하나 혹은 둘 다를 불러오고 싶을 때 쓰면 유용합니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const obj = {
@@ -629,7 +654,8 @@
 
                 <div id="sample16" class="sample">
                     <h3>16. 객체: 데이터 불러오기 : 변수</h3>
-                    <p></p>
+                    <p>변수를 정해서 객체에서 데이터를 불러올 수 있습니다.<br>
+                    const name의 값을 객체의 데이터 값으로 정해줘서 지정했습니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const obj = {
@@ -662,7 +688,8 @@
 
                 <div id="sample17" class="sample">
                     <h3>17. 객체: 데이터 불러오기 : for in</h3>
-                    <p></p>
+                    <p>객체에서도 for in문을 쓸 수 있습니다.<br>
+                    값을 불러올 때 키(key) 즉 이름을 불러올지 혹은 값(obj[key])을 불러올 지를 정해서 입력해주면 원하는 값들이 출력됩니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const obj = {
@@ -695,15 +722,16 @@
 
                 <div id="sample18" class="sample">
                     <h3>18. 객체: 데이터 불러오기 : map( )</h3>
-                    <p>자릿수 값 즉, 인덱스 값이 나옵니다.<br>
-                    객체(키와 값) 때문에 만들었습니다.</p>
+                    <p>객체에서 map문도 쓸 수 있습니다.<br>
+                    배열 안에 객체를 넣어서 불러올 수 있다는 뜻입니다.<br>                        
+                    map을 쓰는 방식을 잘 기억해서 헷갈리지 않도록 element를 잘 써주고, 객체에서 쓰던 형식을 이용해서 .키 값을 잘 써줍니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const obj = [
         { a: 100, b: 200, c: "javascript"}
     ]
 
-    obj.map(function(el){   // obj.map((el) =&lt; {})와 같음(화살표 함수)
+    obj.map(function(el){   // obj.map((el) =&gt; {})와 같음(화살표 함수)
             console.log(el.a)
             console.log(el.b)
             console.log(el.c)
@@ -727,8 +755,8 @@
 
                 <div id="sample19" class="sample">
                     <h3>19. 객체: 데이터 불러오기 : hasOwnProperty( )</h3>
-                    <p>자릿수 값 즉, 인덱스 값이 나옵니다.<br>
-                    객체(키와 값) 때문에 만들었습니다.</p>
+                    <p>객체에 지정된 이름을 가진 속성이 있는지 여부를 반환하는 함수입니다.<br>
+                    'own' 의 의미는 프로토타입 체인이 아닌, 객체 자체가 해당 속성을 가지고 있는지 여부를 나타내는듯 합니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const obj = {
@@ -765,8 +793,9 @@
 
                 <div id="sample20" class="sample">
                     <h3>20. 객체: 데이터 불러오기 : 객체 펼침연산자</h3>
-                    <p>자릿수 값 즉, 인덱스 값이 나옵니다.<br>
-                    객체(키와 값) 때문에 만들었습니다.</p>
+                    <p>배열에서 사용했던 것처럼 ...을 사용해서 써주면 됩니다.<br> 
+                    데이터를 추가해서 쓰는 것처럼 객체도 더 추가할 수가 있습니다.<br>                         
+                    배열과 다르게 객체는 추가를 하는 데에 부담이 덜합니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const obj = {
@@ -835,8 +864,8 @@
 
                 <div id="sample21" class="sample">
                     <h3>21. 객체: 데이터 불러오기 : 객체 구조분해할당</h3>
-                    <p>자릿수 값 즉, 인덱스 값이 나옵니다.<br>
-                    객체(키와 값) 때문에 만들었습니다.</p>
+                    <p>배열에서 쓴 것과 같이 객체에서도 구조분해할당을 쓸 수 있습니다.<br>
+                    구조분해할당은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 JavaScript 표현식입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
     const obj = {
