@@ -818,9 +818,15 @@
                             <div>
                                 100<br>
                                 200<br>
-                                300<br>
-                                400<br>
-                                500
+                                javascript<br>
+                                100<br>
+                                200<br>
+                                javascript<br>
+                                react<br>
+                                100<br>
+                                200<br>
+                                javascript<br>
+                                react
                             </div>
                         </details>
                     </div>
@@ -828,16 +834,27 @@
                 <!-- //sample20 -->
 
                 <div id="sample21" class="sample">
-                    <h3>10. 배열: 데이터 불러오기 :for in</h3>
+                    <h3>21. 객체: 데이터 불러오기 : 객체 구조분해할당</h3>
                     <p>자릿수 값 즉, 인덱스 값이 나옵니다.<br>
                     객체(키와 값) 때문에 만들었습니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-   const arr = [100, 200, 300, 400, 500];
-                
-   for(let i in arr){
-       document.write(arr[i],"&lt;br&gt;");
-   }   
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript"
+    }
+    const {a, b, c} = obj;                                  
+                                    
+    console.log(a); //키 값을 그대로 써줘야 출력됨
+    console.log(b);
+    console.log(c);
+
+    // {a:name1, b:name2, c:name3} 으로 쓸 수도 있음
+
+    // console.log(name1);
+    // console.log(name2);
+    // console.log(name3);
 }    
 </pre></code>
                     </div>
@@ -847,9 +864,7 @@
                             <div>
                                 100<br>
                                 200<br>
-                                300<br>
-                                400<br>
-                                500
+                                javascript
                             </div>
                         </details>
                     </div>
@@ -923,64 +938,23 @@
             // arr.map(el => console.log(el));
         }
        
-       
-       
-      
-        {
-            //20. 객체: 데이터 불러오기 : 객체 펼침연산자
-            // const obj = {
-            //     a: 100,
-            //     b: 200,
-            //     c: "javascript"
-            // }
-            // const spread = {...obj}
-
-            // console.log(spread.a);
-            // console.log(spread.b);
-            // console.log(spread.c);
-
-            // const obj = {
-            //     a: 100,
-            //     b: 200,
-            //     c: "javascript"
-            // }
-            // const spread = {...obj, d:"react"} //데이터 추가도 가능
-
-            // console.log(spread.a);
-            // console.log(spread.b);
-            // console.log(spread.c);
-            // console.log(spread.d);
-
-            const obj1 = {
-                a: 100,
-                b:200
-            }
-            const obj2 = {
-                c:"javascript",
-                d:"react"
-            }
-            const spread = {...obj1,...obj2}
-
-            console.log(spread.a);
-            console.log(spread.b);
-            console.log(spread.c);
-            console.log(spread.d);
-        }
         {
             //21. 객체: 데이터 불러오기 : 객체 구조분해할당
-            // const obj = {
-            //     a: 100,
-            //     b: 200,
-            //     c: "javascript"
-            // }
-            // const {a, b, c} = obj;  // {a:name1, b:name2, c:name3}으로 쓸 수도 있음
-                                    // console.log(name1);
-                                    // console.log(name2);
-                                    // console.log(name3);
-
-            // console.log(a); //키 값을 그대로 써줘야 출력됨
-            // console.log(b);
-            // console.log(c);
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+            const {a, b, c} = obj;                                  
+                                   
+                 
+            console.log(a); //키 값을 그대로 써줘야 출력됨
+            console.log(b);
+            console.log(c);
+            // {a:name1, b:name2, c:name3}으로 쓸 수도 있음
+            // console.log(name1);
+            // console.log(name2);
+            // console.log(name3);
         }
 
     </script>
