@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice on sunday</title>
+</head>
+<body>
+    <script>
+        //01 1-50까지 for문으로 출력
+        {
+            for(let i=1; i<=50; i++){
+                document.write(i);
+            }
+            document.write("<br>");
+        }        
+        //02 1-50까지 while문으로 출력
+        {
+            let num = 1;
+            while(num<=50){
+                document.write(num);
+                num++;
+            }
+            document.write("<br>");
+        }
+        //03 1-100까지 짝수로 출력(if문 사용X)
+        {
+            for(let i=2; i<=100; i+=2){
+                document.write(i);
+            }
+            document.write("<br>");
+        }
+        //04 1-100까지 홀수로 출력(if문 사용)
+        {
+            for(let i=1; i<100; i++){
+                if(i % 2 == 1){
+                    document.write(i);
+                }
+            }
+            document.write("<br>");
+        }
+        //05 테이블 50칸 출력(1-50숫자 출력)
+        {
+            let a = 1;
+            let table = "<table border='1'>";
+                for(let i=1; i<=10; i++){
+                    table += "<tr>";
+                        for(let j=1; j<=5; j++){
+                            table += "<td>"+a+"</td>";
+                            a++;
+                        }
+                        table += "</tr>";
+                }
+                table += "</table>";
+                document.write(table);
+                document.write("<br>");
+        }
+        //06 1-10까지 합 출력
+        {
+            let result = 0;
+            for(let i=1; i<=10; i++){
+                result = result + i;
+            }
+            document.write(result);
+            document.write("<br>");
+        }
+        //07 구구단 출력
+        {
+            for(let i=1; i<=9; i++){
+                for(let j=1; j<=9; j++){
+                    document.write(i+"*"+j+"="+(i+j),"<br>");
+                } 
+            }
+            document.write("<br>");
+        }
+        //08 함수 유형 4가지 작성
+        {
+            //선언
+            function func (){
+                document.write("안녕");
+            }
+            func();
+            document.write("<br>");
+        }
+        {
+            //익명
+            const func = function (){
+                document.write("하이");
+            }
+            func();
+            document.write("<br>");
+        }
+        {
+            //매개변수
+            function func (str){
+                document.write(str);
+            }
+            func("hi");
+            document.write("<br>");
+        }
+        {
+            //리턴값
+            function func (){
+                const str = "hello";
+                return str;
+            }
+            document.write(func());
+            document.write("<br>");
+        }
+        //09 화살표 함수유형 4가지 작성
+        {
+             //선언
+             func = () => {
+                document.write("안녕");
+            }
+            func();
+            document.write("<br>");
+        }
+        {
+            //익명
+            const func = () => {
+                document.write("하이");
+            }
+            func();
+            document.write("<br>");
+        }
+        {
+            //매개변수
+            func = (str) => {
+                document.write(str);
+            }
+            func("hi");
+            document.write("<br>");
+        }
+        {
+            //리턴값
+            func = () => {
+                const str = "hello";
+                return str;
+            }
+            document.write(func());
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>
