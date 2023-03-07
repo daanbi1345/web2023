@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top; /* 여백 없앰 */
+            width: 100%;
+        }
+
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+            text-align: center;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section__h2 {            
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;        
+        }
+        .section__small {
+            font-size: 14px;
+            color: white;
+            background-color: #714dff;
+            padding: 1px 23px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+            border-radius: 50px;            
+        }
+        /* text__wrap */
+        .text__wrap {
+
+        }
+        .text__inner {
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .text__inner .text {
+            width: 32.3333%;
+            border: 1px solid #f5f5f5;
+            padding: 90px 20px 20px 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition:  all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .text__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .text__desc {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .text__btn {
+            float: right;
+            position: relative;
+            padding-right: 20px;
+        }
+        .text__btn::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            background-image: url(../asset/img/icon_plus.svg);
+            transition: all 0.3s;
+        }
+        .text__btn:hover::before {
+            transform: rotate(360deg);
+        }
+        .text__inner .text:hover {
+            background-color: #f5f5f5;
+        }
+        .text__inner .text::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-color: #6b5151;
+            /* background-image: url(../asset/img/textType01.svg); */
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            border-radius: 50%;
+        }      
+        .text__inner .text.t1::before {
+            background-color: #74a6a1;
+            background-image: url(../asset/img/textType01.svg);
+        }
+        .text__inner .text.t2::before {
+            background-color: #99b19a;
+            background-image: url(../asset/img/textType02.svg);
+        }
+        .text__inner .text.t3::before {
+            background-color: #c8e6c9;
+            background-image: url(../asset/img/textType03.svg);
+        }
+        .text__inner .text.t4::before {
+            background-color: #e9d5b8;
+            background-image: url(../asset/img/textType04.svg);
+        }
+        .text__inner .text.t5::before {
+            background-color: #bcaaa4;
+            background-image: url(../asset/img/textType05.svg);
+        }
+        .text__inner .text.t6::before {
+            background-color: #9ccec9;
+            background-image: url(../asset/img/textType06.svg);
+        }
+    </style>
+</head>
+<body>
+    <section class="text__wrap section center nexon">
+        <div class="container">
+            <span class="section__small">Notice</span>
+            <h2 class="section__h2 mb70">해외 여행</h2>
+            <div class="text__inner">
+                <div class="text t1">
+                    <h3 class="text__title">여행 가방 꾸리기</h3>
+                    <p class="text__desc">여행의 가장 기본은 짐을 잘 챙기는 것입니다. 필요한 물건들을 빠짐없이 챙기는 것은 물론이고, 혹시 모를 비상사태를 대비해서 상비약 같은 물품들도 챙기는 것이 좋습니다. 잊지 말고 잘 챙기세요.    </p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                
+                <div class="text t2">
+                    <h3 class="text__title">휴대용 물건 챙기기</h3>
+                    <p class="text__desc">휴대용 손전등 같은 물건을 챙기면 좋습니다. 여행을 하다 보면, 길을 잃을 수도 있기 때문에 늦은 시간에 길을 비춰보거나 도움을 요청하는 신호를 보낼 수도 있는 유용한 도구이기 때문입니다.    </p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+
+                <div class="text t3">
+                    <h3 class="text__title">여행 가방 꾸리기</h3>
+                    <p class="text__desc">여행의 가장 기본은 짐을 잘 챙기는 것입니다. 필요한 물건들을 빠짐없이 챙기는 것은 물론이고, 혹시 모를 비상사태를 대비해서 상비약 같은 물품들도 챙기는 것이 좋습니다. 잊지 말고 잘 챙기세요.    </p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+
+                <div class="text t4">
+                    <h3 class="text__title">여행 가방 꾸리기</h3>
+                    <p class="text__desc">여행의 가장 기본은 짐을 잘 챙기는 것입니다. 필요한 물건들을 빠짐없이 챙기는 것은 물론이고, 혹시 모를 비상사태를 대비해서 상비약 같은 물품들도 챙기는 것이 좋습니다. 잊지 말고 잘 챙기세요.    </p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+
+                <div class="text t5">
+                    <h3 class="text__title">여행 가방 꾸리기</h3>
+                    <p class="text__desc">여행의 가장 기본은 짐을 잘 챙기는 것입니다. 필요한 물건들을 빠짐없이 챙기는 것은 물론이고, 혹시 모를 비상사태를 대비해서 상비약 같은 물품들도 챙기는 것이 좋습니다. 잊지 말고 잘 챙기세요.    </p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+
+                <div class="text t6">
+                    <h3 class="text__title">여행 가방 꾸리기</h3>
+                    <p class="text__desc">여행의 가장 기본은 짐을 잘 챙기는 것입니다. 필요한 물건들을 빠짐없이 챙기는 것은 물론이고, 혹시 모를 비상사태를 대비해서 상비약 같은 물품들도 챙기는 것이 좋습니다. 잊지 말고 잘 챙기세요.    </p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
