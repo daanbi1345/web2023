@@ -268,7 +268,7 @@ document.write(func("실행되었습니다."));
                     <h3>13. 함수 유형 : 함수와 매개변수를 이용한 형태</h3>
                     <p>매개변수를 이용해서 쓴 함수입니다.</p>
 <pre class="line-numbers"><code class="language-js"> function func(num, str1, str2){
-    document.write(num +". "+ str1 + "가 " + str2 + "되었습니다.","<br>");
+    document.write(num +". "+ str1 + "가 " + str2 + "되었습니다.","&lt;br&gt;");
 }
 func("1", "함수", "실행");
 func("2", "자바스크립트", "실행");
@@ -285,7 +285,7 @@ func("3", "리액트", "실행");
                     <h3>14. 함수 유형 : 함수와 변수를 이용한 형태</h3>
                     <p>변수를 정해줘서 함수를 실행했습니다.</p>
 <pre class="line-numbers"><code class="language-js">function func(num, str1, str2){
-    document.write(num +". "+ str1 + "가 " + str2 + "되었습니다.","<br>");
+    document.write(num +". "+ str1 + "가 " + str2 + "되었습니다.","&lt;br&gt;");
 }
 const youNum1 = 1;
 const youNum2 = 2;
@@ -311,7 +311,7 @@ func(youNum3, youStr3, youCom1);
                     <p>배열을 통애서 함수의 값을 불러왔습니다.<br>
                     배열의 순서대로 불러오면 됩니다.</p>
 <pre class="line-numbers"><code class="language-js">function func(num, str1, str2){
-    document.write(num +". "+ str1 + "가 " + str2 + "되었습니다.","<br>");
+    document.write(num +". "+ str1 + "가 " + str2 + "되었습니다.","&lt;br&gt;");
 }
 const num = [1,2,3];
 const info = [함수,자바스크립트,리액트,실행];
@@ -332,7 +332,7 @@ func(num[2],info[2],info[3]);
                     <p>객체를 통해서 함수를 불러왔습니다.<br>
                     객체의 형태를 활용하면 됩니다.</p>
 <pre class="line-numbers"><code class="language-js"> function func(num, str1, str2){
-    document.write(num +". "+ str1 + "가 " + str2 + "되었습니다.","<br>");
+    document.write(num +". "+ str1 + "가 " + str2 + "되었습니다.","&lt;br&gt;");
 }
 const info = {
     num1 : 1,
@@ -359,7 +359,7 @@ func(info.num3, info.name3, info.word);
                     <p>객체와 배열을 함께 활용해서 함수를 실행했습니다.<br>
                     배열 안에 객체를 넣어서 써줬기 때문에 배열을 먼저 불러오면 됩니다.</p>
 <pre class="line-numbers"><code class="language-js">function func(num, str1, str2){
-    document.write(num +". "+ str1 + "가 " + str2 + "되었습니다.","<br>");
+    document.write(num +". "+ str1 + "가 " + str2 + "되었습니다.","&lt;br&gt;");
  }
  const info = [
      {
@@ -399,13 +399,13 @@ func(info.num3, info.name3, info.word);
     name3 : "리액트",
     word : "실행",
     result1: function(){
-        document.write(info.num1 +". "+ info.name1 + "가 " + info.word + "되었습니다.","<br>");
+        document.write(info.num1 +". "+ info.name1 + "가 " + info.word + "되었습니다.","&lt;br&gt;");
     },
     result2: function(){
-        document.write(info.num2 +". "+ info.name2 + "가 " + info.word + "되었습니다.","<br>");
+        document.write(info.num2 +". "+ info.name2 + "가 " + info.word + "되었습니다.","&lt;br&gt;");
     },
     result3: function(){
-        document.write(info.num3 +". "+ info.name3 + "가 " + info.word + "되었습니다.","<br>");
+        document.write(info.num3 +". "+ info.name3 + "가 " + info.word + "되었습니다.","&lt;br&gt;");
     }
 }
 info.result1();
@@ -438,7 +438,7 @@ info.result3();
     this.word = word;
 
     this.result = function(){
-        document.write(this.num +". "+ this.name + "가 " + this.word + "되었습니다.","<br>")
+        document.write(this.num +". "+ this.name + "가 " + this.word + "되었습니다.","&lt;br&gt;")
     }
 }
 const info1 = new func(1, "함수", "실행"); // 인스턴스 생성, new를 붙여서 매개변수와 구별해서 씀(객채생성자 함수)
@@ -474,7 +474,7 @@ info3.result();
     this.word = word;
 }
 func.prototype.result = Function(){
-    document.write(this.num +". "+ this.name + "가 " + this.word + "되었습니다.","<br>");
+    document.write(this.num +". "+ this.name + "가 " + this.word + "되었습니다.","&lt;br&gt;");
 }
 const info1 = new func(1, "함수", "실행");
 const info2 = new func(2, "자바스크립트", "실행");
