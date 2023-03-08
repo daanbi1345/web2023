@@ -89,12 +89,12 @@
         quizAnswerResult.innerText = infoAnswer;        
 
         //정답 숨기기
-        quizAnswerResult.style.dispaly = "none";
+        quizAnswerResult.style.display = "none";
 
         //정답 확인
         quizAnswerConfirm.addEventListener("click",function(){ // 버튼을 클릭하면 함수 실행
-            quizAnswerResult.style.dispaly = "blcok";
-            quizAnswerConfirm.style.dispaly = "none"; // 정답 누르면 정답확인하기 버튼 없앰
+            quizAnswerResult.style.display = "block";
+            quizAnswerConfirm.style.display = "none"; // 정답 누르면 정답확인하기 버튼 없앰
         });
 
     </script>
