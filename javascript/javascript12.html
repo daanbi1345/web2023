@@ -54,13 +54,13 @@
                     <li><a href="#">03. 데이터 이펙트 : 1부터 100까지 짝수만 출력하기</a></li>
                     <li><a href="#">04. 데이터 이펙트 : 1부터 100까지 5의 배수만 출력하기</a></li>
                     <li><a href="#">05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</a></li>
-                    <li><a href="#">03. 데이터 이펙트 : 1부터 100까지 합 구하기</a></li>
+                    <li><a href="#">06. 데이터 이펙트 : 1부터 100까지 합 구하기</a></li>
 
-                    <li><a href="#">06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</a></li>
-                    <li><a href="#">07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</a></li>
-                    <li><a href="#">08. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수:파란색) 만들기</a></li>
-                    <li><a href="#">09. 데이터 이펙트 : 테이블 25칸(3의 배수(5의 배수는 빨간색)) 만들기</a></li>
-                    <li><a href="#">10. 데이터 이펙트 : 배열 데이터에서 10보다 큰 수 찾기</a></li>
+                    <li><a href="#">07. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</a></li>
+                    <li><a href="#">08. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</a></li>
+                    <li><a href="#">09. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수:파란색) 만들기</a></li>
+                    <li><a href="#">10. 데이터 이펙트 : 테이블 25칸(3의 배수(5의 배수는 빨간색)) 만들기</a></li>
+                    <li><a href="#">11. 데이터 이펙트 : 배열 데이터에서 10보다 큰 수 찾기</a></li>
                 </ul>
             </div>
             <div class="main__sample">
@@ -112,7 +112,8 @@
 
 for(let i =1; i&lt;=100; i++){ 
         if( i % 5 == 0){ // i는 5를 나눈 나머지값으로 조건을 정해준 것임.
-        console.log(i)  
+        console.log(i)
+        }  
 }
     // 5의 배수만 나눴을 때 나머지 값이 0이기 때문에 5의 배수만 출력됨.
     // 5,10,15 ~100
@@ -131,13 +132,26 @@ for(let i =1; i&lt;=100; i++){
         document.write("&lt;span style='color:red'&gt;"+i+"&lt;/span&gt;")
     }
 }   
-    // for문을 이용해서 1부터 99까지 짝수 (파란색)/ 홀수 (빨간색) 출력
+    // 1부터 99까지 짝수 (파란색)/ 홀수 (빨간색) 출력
 </code></pre>
                 </div>
                 <!-- //sample05 -->
 
                 <div id="sample06" class="sample">
-                    <h3>06. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</h3>
+                    <h3>06. 데이터 이펙트 : 1부터 100까지 합 구하기</h3>
+                    <p>for문과 sum을 이용해서 1부터 100까지의 합을 출력하는 방법입니다.</p>
+<pre class="line-numbers"><code class="language-js">let sum = 0;
+    for(let i = 1; i &gt;=100; i++){
+        sum = sum + i;
+    }
+    document.write(sum);
+    // 5050
+</code></pre>
+                </div>
+                <!-- //sample06 -->
+
+                <div id="sample07" class="sample">
+                    <h3>07. 데이터 이펙트 : for문을 이용해서 100칸 테이블 만들기</h3>
                     <p>for문을 이용해서 100칸 테이블을 만드는 방법입니다.</p>
 <pre class="line-numbers"><code class="language-js">let table = "&lt;table border='1'&gt;";
 
@@ -155,10 +169,10 @@ table += "&lt;/table&gt;";
 document.write(table);
 </code></pre>
                 </div>
-                <!-- //sample06 -->
+                <!-- //sample07 -->
 
-                <div id="sample07" class="sample">
-                    <h3>07. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</h3>
+                <div id="sample08" class="sample">
+                    <h3>08. 데이터 이펙트 : 중첩 for문을 이용해서 구구단 만들기</h3>
                     <p>for문을 이용해서 구구단을 만드는 방법입니다.</p>
 <pre class="line-numbers"><code class="language-js">for(let i=2; i&lt;=9; i++){
     document.write(i +"단","&lt;br&gt;");
@@ -195,39 +209,74 @@ document.write(table);
 
 </code></pre>
                 </div>
-                <!-- //sample07 -->
+                <!-- //sample08 -->
 
-                <div id="sample05" class="sample">
-                    <h3>05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</h3>
-                    <p>for문과 if문을 이용한 짝수와 홀수를 출력하는 방법입니다.</p>
-<pre class="line-numbers"><code class="language-js">for(let i=1; i&lt;100; i++){
-    if(i % 2 == 0 ){
-        document.write("&lt;span style='color:blue'&gt;"+i+"&lt;/span&gt;") 
-    }
-    if(i % 2 == 1 ){
-        document.write("&lt;span style='color:red'&gt;"+i+"&lt;/span&gt;")
-    }
-}   
+                <div id="sample09" class="sample">
+                    <h3>09. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수:파란색) 만들기</h3>
+                    <p>for문과 if문을 이용한 1~25까지의 수를 짝수(빨강)와 홀수(파랑)를 테이블로 출력하는 방법입니다.</p>
+<pre class="line-numbers"><code class="language-js">let table = "&lt;table border='1'&gt;";
+    let count = 0;
+
+    for(let i=0; i&lt;5; i++){
+        table += "&lt;tr&gt;";
+        for(let j=0; j&lt;5; j++){
+            count++;
+            if(count % 2 == 0){
+                table += "&lt;td style='color:red'&gt;"+count+"&lt;/td&gt;";
+            } else { 
+                table += "&lt;td style='color:blue'&gt;"+count+"&lt;/td&gt;";                    
+            } 
+        }
+        table += "&lt;/tr&gt;";
+    }            
+    table += "&lt;/table&gt;";
+
+    document.write(table)
+    // 1부터 25까지 짝수 (파란색)/ 홀수 (빨간색) 출력
+</code></pre>
+                </div>
+                <!-- //sample09 -->
+
+                <div id="sample10" class="sample">
+                    <h3>10. 데이터 이펙트 : 테이블 25칸(3의 배수(5의 배수는 빨간색)) 만들기</h3>
+                    <p>for문과 if문을 이용해서 3의 배수를 출력하는데, 그 중에서 5의 배수는 빨강색으로 출력하는 방법입니다.</p>
+<pre class="line-numbers"><code class="language-js">let table = "&lt;table border='1'&gt;";
+    let count = 0;
+
+    for(let i=1; i&lt;=5; i++){
+        table += "&lt;tr&gt;";
+        for(let j=1; j&lt;=5; j++){
+            count += 3;
+            if(count % 5 == 0){
+                table += "&lt;td style='color:red'&gt;"+count+"&lt;/td&gt;";
+            } else { 
+                table += "&lt;td&gt;"+count+"&lt;/td&gt;";                    
+            } 
+        }
+        table += "&lt;/tr&gt;";
+    }            
+    table += "&lt;/table&gt;";
+
+    document.write(table)
+    // 3부터 75까지의 숫자 중 5의 배수는 빨간색으로 출력
+</code></pre>
+                </div>
+                <!-- //sample10 -->
+
+                <div id="sample11" class="sample">
+                    <h3>11. 데이터 이펙트 : 배열 데이터에서 10보다 큰 수 찾기</h3>
+                    <p>배열 안에 있는 수들 중에서 10보다 큰 수를 출력하는 방법입니다.</p>
+<pre class="line-numbers"><code class="language-js">const arr = [1, 3, 5, 7, 9, 10, 11, 13, 15, 17, 19]
+    for(let i=[0]; i&lt;arr.length; i++){
+            if(arr[i]&gt;10){
+                document.write(arr[i]);
+            }       
+       }
+
     // for문을 이용해서 1부터 99까지 짝수 (파란색)/ 홀수 (빨간색) 출력
 </code></pre>
                 </div>
-                <!-- //sample05 -->
-
-                <div id="sample05" class="sample">
-                    <h3>05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기</h3>
-                    <p>for문과 if문을 이용한 짝수와 홀수를 출력하는 방법입니다.</p>
-<pre class="line-numbers"><code class="language-js">for(let i=1; i&lt;100; i++){
-    if(i % 2 == 0 ){
-        document.write("&lt;span style='color:blue'&gt;"+i+"&lt;/span&gt;") 
-    }
-    if(i % 2 == 1 ){
-        document.write("&lt;span style='color:red'&gt;"+i+"&lt;/span&gt;")
-    }
-}   
-    // for문을 이용해서 1부터 99까지 짝수 (파란색)/ 홀수 (빨간색) 출력
-</code></pre>
-                </div>
-                <!-- //sample05 -->
+                <!-- //sample11 -->
 
             </div>   
         </div>
@@ -240,28 +289,10 @@ document.write(table);
     <!-- //footer -->
     <script src="assets/js/prism.js"></script>
     <script>
-        //table 
-        // let table = "<table border='1'>";
-            // let count = 0;
-
-            // for(let i=0; i<5; i++){
-            //     table += "<tr>";
-            //     for(let j=0; j<5; j++){
-            //         count++;
-            //         if(count % 2 == 0){
-            //             table += "<td style='color:red'>"+count+"</td>";
-            //         } else { 
-            //             table += "<td style='color:blue'>"+count+"</td>";                    
-            //         } 
-            //     }
-            //     table += "</tr>";
-            // }            
-            // table += "</table>";
-
-            // document.write(table)
+       
+        
     
-    
-    
+   
     
     </script>
 
