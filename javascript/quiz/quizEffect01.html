@@ -12,6 +12,10 @@
 <body>
     <header id="header">
         <h1><a href="../javascript14.html"> Quiz </a> <em>정답 확인하기 유형</em></h1>
+        <ul>
+            <li class="active"><a href="quizEffect01.html">1</a></li>
+            <li><a href="quizEffect02.html">2</a></li>
+        </ul>
     </header>
     <!-- header -->
 
@@ -70,10 +74,11 @@
         const quizWrap = document.querySelector(".quiz__wrap");
         const quizTitle = quizWrap.querySelector(".quiz__title span"); // quizWrap는 wrap안에서 찾으라는 의미
         const quizTime = quizWrap.querySelector(".quiz__title em");
-        const quizQuestion = quizWrap.querySelector(".quiz__question span");
         const quizQuestionNum = quizWrap.querySelector(".quiz__question em");
+        const quizQuestion = quizWrap.querySelector(".quiz__question span");
         const quizAnswerResult = quizWrap.querySelector(".quiz__answer .result");
         const quizAnswerConfirm = quizWrap.querySelector(".quiz__answer .confirm");
+        const dogWrap = quizWrap.querySelector(".dog__wrap");
 
         //문제 정보
         const infoType = "웹디자인 기능사";
@@ -84,8 +89,8 @@
 
         quizTitle.innerText = infoType;
         quizTime.innerText = infoTime;
-        quizQuestion.innerText = infoQuestion;
         quizQuestionNum.innerText = infoNumber;
+        quizQuestion.innerText = infoQuestion;
         quizAnswerResult.innerText = infoAnswer;        
 
         //정답 숨기기
@@ -95,8 +100,66 @@
         quizAnswerConfirm.addEventListener("click",function(){ // 버튼을 클릭하면 함수 실행
             quizAnswerResult.style.display = "block";
             quizAnswerConfirm.style.display = "none"; // 정답 누르면 정답확인하기 버튼 없앰
+            dogWrap.classList.add("like");
         });
 
+        //"함수가 실행되었습니다." * 10 : 선언적 함수
+        // {            
+        //     function func (){
+        //         document.write("함수가 실행되었습니다.");
+        //     }
+        //     func();
+        //     func();
+        //     func();
+        //     func();
+        //     func();
+        //     func();
+        //     func();
+        //     func();
+        //     func();
+        //     func();
+        //     document.write("<br>");
+        // }
+        // {
+        //     //1~1000까지 합 구하기
+        //     let sum = 0;
+        //     for(let i=1; i<=1000; i++){
+        //         sum = sum + i;
+        //     }
+        //     document.write(sum);
+        //     document.write("<br>");
+        // }
+        // {
+        //     //1~1000까지 3의 배수 구하기
+        //     for(let i=1; i<=1000; i++){
+        //         if(i % 3 == 0){
+        //             document.write(i);
+        //         }
+        //     }
+        //     document.write("<br>");
+        // }
+        // {
+        //     let num1 = 16, num2 = 40;
+        //     let a = num1++; //후지라서 ++가 계산되지 않음, ++가 전치이면 값은 17
+        //     let b = --num2;
+
+        //     document.write(a+b); //15+40
+        //     document.write("<br>");
+        // }
+        // {
+        //     let a = 9;
+        //     let b = 11;
+        //     let c = a^b; //비트연산자 9와 11을 2진수로 바꿔서 계산함
+
+        //     document.write(c);
+        // }
+        // {
+        //     let num1 = 16, num2 = 80;
+        //     let result;
+
+        //     result = num1 > num2 ? num1 & num2 : num1 ^ num2;
+        //     document.write(result);
+        // }
     </script>
 </body>
 </html>
