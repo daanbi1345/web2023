@@ -12,7 +12,8 @@
 데이터 실행하기 : https://daanbi1345.github.io/web2023/javascript/javascript03.html   
 데이터 제어하기 : https://daanbi1345.github.io/web2023/javascript/javascript04.html   
 
-퀴즈 게임 01 : https://daanbi1345.github.io/web2023/javascript/quiz/quizEffect01.html
+퀴즈 게임 01 : https://daanbi1345.github.io/web2023/javascript/quiz/quizEffect01.html   
+퀴즈 게임 02 : https://daanbi1345.github.io/web2023/javascript/quiz/quizEffect02.html 
 
 # 사이트
 카드 유형 :   https://daanbi1345.github.io/web2023/site/cardType/cardType01.html   
