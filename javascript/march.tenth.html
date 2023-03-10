@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>march.tenth</title>
+</head>
+<body>
+    <script>
+        //0~100 for문
+    {
+        for(let  i=0; i<=100; i++){
+            document.write(i,"<br>");
+        }
+        document.write("<br>");
+    }
+    //100칸 테이블
+    {
+        let a = 1;
+        let table = "<table border = '1'>";
+        for(let i=1; i<=10; i++){
+            table += "<tr>";
+                for(let j=1; j<=10; j++){
+                    table += "<td>"+a+"</td>";
+                    a++;
+                }
+            table += "</tr>";
+        }
+        table += "</table>";
+        document.write(table);
+        document.write("<br>");
+    }
+    //20단
+    {
+        for(let i=20; i<=20; i++){
+            for(let j=1; j<=9; j++){
+                document.write(i+"*"+j+"="+(i*j),"<br>");
+            }
+        }
+        document.write("<br>");
+    }
+    //1~100까지 중 짝수의 합
+    {
+        let sum = 0;
+        for(let i=1; i<=100; i++){
+            if(i % 2 == 0){
+                sum = sum + i;
+            }
+        }
+        document.write(sum);
+        document.write("<br>");
+    }
+    // //1~100까지 짝수 파 홀 빨
+    {
+        for(let i=1; i<=100; i++){
+            if(i % 2 ==0){
+                document.write("<span style= 'color:blue'>"+i+"</span>","<br>");
+            } else {
+                document.write("<span style= 'color:red'>"+i+"</span>");
+            }
+        }
+        document.write("<br>");
+    }
+    // //배열안에 1-10까지 데이터가 있음 (forEach문을 통해 출력하시오)
+    {
+        const arr = [1,2,3,4,5,6,7,8,9,10];
+
+        arr.forEach(function(el){
+            document.write(el,"<br>");
+        });
+        document.write("<br>");
+    }
+    // //함수의 유형 4가지
+    {
+        function d(){
+            document.write("안녕");
+        }
+        d();
+        document.write("<br>");
+
+        const b = function(){
+            document.write("하이");
+        }
+        b();
+        document.write("<br>");
+
+        function c(str){
+            document.write(str);
+        }
+        c("hello");
+        document.write("<br>");
+
+        function func(){
+            const a = "hi";
+            return a;
+        }
+        document.write(func());
+        document.write("<br>");
+    }
+    // //7번을 화살표 함수로
+    {
+        d = () => {
+            document.write("안녕");
+        }
+        d();
+        document.write("<br>");
+
+        const b = () => {
+            document.write("하이");
+        }
+        b();
+        document.write("<br>");
+
+        c = (str) => {
+            document.write(str);
+        }
+        c("hello");
+        document.write("<br>");
+
+        func = () => {
+            const a = "hi";
+            return a;
+        }
+        document.write(func());
+        document.write("<br>");
+    }
+    </script>
+</body>
+</html>
