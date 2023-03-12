@@ -62,11 +62,13 @@
         {
             // 선언적 함수로 table
             function func () {
+                let a = 1;
                 let table = "<table border='1'>";
                     for(let i=1; i<=10; i++){
                             table += "<tr>";
                             for(let j=1; j<=10; j++){
-                                    table += "<td>"+i+"<td>";
+                                    table += "<td>"+a+"<td>";
+                                    a++;
                                 }
                             table += "</tr>";
                     }
@@ -74,7 +76,6 @@
                 document.write(table);
             }
             func();
-
         }
     </script>
 </body>
