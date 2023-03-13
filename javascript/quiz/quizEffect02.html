@@ -15,6 +15,7 @@
         <ul>
             <li><a href="quizEffect01.html">1</a></li>
             <li class="active"><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
         </ul>
     </header>
     <!-- header -->
@@ -58,10 +59,9 @@
                         <button class="confirm">정답 확인하기</button>                        
                         <div class="result">연변대비</div>
                     </div>
-                </div>
-                <div class="quiz__footer">
                     <div class="quiz__desc">설명</div>
                 </div>
+                
             </div>
         </div>
     </main>
@@ -90,9 +90,8 @@
         const infoDesc = "슬라이드는 프레젠테이션의 화면 전체를 말하고 개체는 화면을 구성하는 개개의 요소를 말한다.";
         const quizAnswerConfirm = quizWrap.querySelector(".quiz__answer .confirm");//버튼
         const quizAnswerResult = quizWrap.querySelector(".quiz__answer .result");
-        const quizAnswerInput = quizWrap.querySelector(".input");
+        const quizAnswerInput = quizWrap.querySelector(".quiz__answer .input");
         const dogWrap = quizWrap.querySelector(".dog__wrap");
-        const quizFooter = quizWrap.querySelector(".quiz__footer");
 
         //문제 출력
         quizTitle.textContent = infoType; //innerText와 textContent는 큰 차이가 없고 같은 역할을 함
@@ -104,7 +103,7 @@
 
         //정답 & 해설 숨기기
         quizAnswerResult.style.display = "none";
-        quizFooter.style.display = "none";       
+        quizDesc.style.display = "none";       
 
         //사용자 정답
         quizAnswerConfirm.addEventListener("click", function(){
@@ -112,7 +111,7 @@
             quizAnswerInput.style.display  = "none"; //인풋 박스 숨김
             quizAnswerConfirm.style.display = "none"; //정답 확인 버튼 숨김
             quizAnswerResult.style.display = "block"; //정답 보이기
-            quizFooter.style.display = "block"; //해설 보이기
+            quizDesc.style.display = "block"; //해설 보이기
             
             if(infoAnswer == userAnswer){
                 alert("정답입니다.")//정답 뒤에 빈 칸도 인식해서 오답으로 처리되는 버그가 있음 > trim()메서드를 쓰면 뒤에 것들을 잘라줌
