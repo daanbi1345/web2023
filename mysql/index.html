@@ -125,7 +125,7 @@
                 <!-- //intro1 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro1">MySQL 설치</h3> 
+                    <h3 id="intro2" class="page-header">MySQL 설치</h3> 
                     <div class="bs-callout bs-callout-info">
                         MAMP란 웹사이트를 개발할 때 쓰이는 기술 스택인 macOS, Apache, MySAL, PHP의 약어이자 솔루션 스택이다.<br>
                         <a href="https://www.mamp.info/en/downloads/" target="_blank">https://www.mamp.info/en/downloads/</a>
@@ -134,22 +134,197 @@
                 <!-- //intro2 -->
 
                 <div class="bs-docs-section">
-                    <h3 id="intro1">제목</h3>                    
+                    <h3 id="intro3" class="page-header">MySQL 실행</h3>      
+                    <div class="be-callout be-callout-info">
+                        윈도우 : cd c:\MAMP\bin\mysql\bin <br>
+                        로그인 : mysql -uroot -proot
+                    </div> 
+<pre><code class="language-js">c:\MAMP\bin\mysql\bin>mysql -uroot -proot
+mysql: [Warning] Using a password on the command line interface can be insecure.
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 3
+Server version: 5.7.24 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+</code></pre>
+                <div class="be-callout be-callout-info">
+                    맥 : cd Applications/MAMP/Library/bin<br>
+                    로그인 : ./mysql -uroot -proot
+                </div>    
+<pre><code class="language-js">Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 501
+Server version: 5.7.39 MySQL Community Server (GPL)
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+</code></pre>
                 </div>
                 <!-- //intro3 -->
+
+                <div class="bs-docs-section">
+                    <h3 id="intro4" class="page-header">데이터베이스</h3>  
+                        
+                    <h4 id="intro4-1" class="page-header">데이터베이스 보기</h4>                    
+                    <div class="be-callout be-callout-info">show databases;</div>
+<pre><code class="language-js">mysql> show databases;
++--------------------+
+| Database      |
++--------------------+
+| information_schema |
+| mysql       |
+| performance_schema |
+| sys        |
++--------------------+
+4 rows in set (0.00 sec)
+</code></pre>
+
+                    <h4 id="intro4-2" class="page-header">데이터베이스 만들기</h4> 
+                    <div class="be-callout be-callout-info">create database 데이터베이스 이름;</div>                                     
+<pre><code class="language-js">mysql> show databases;
++--------------------+
+| Database      |
++--------------------+
+| information_schema |
+| mysql       |
+| performance_schema |
+| sample01      |
+| sys        |
++--------------------+
+5 rows in set (0.00 sec)
+</code></pre>
+
+
+                    <h4 id="intro4-3" class="page-header">데이터베이스 사용</h4>                    
+                    <div class="be-callout be-callout-info">use 데이터베이스 이름;</div>
+<pre><code class="language-js">mysql> use sample01;
+Database changed
+</code></pre>
+
+                    <h4 id="intro4-4" class="page-header">데이터베이스 삭제</h4>                    
+                    <div class="be-callout be-callout-info">drop database 데이터베이스 이름;</div>
+<pre><code class="language-js">mysql> drop database sample01;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database      |
++--------------------+
+| information_schema |
+| mysql       |
+| performance_schema |
+| sys        |
++--------------------+
+4 rows in set (0.01 sec)
+</code></pre>
+
+                </div> 
+                    <!-- //intro4 -->
+
+                <div class="be-callout be-callout-info">
+                    <h3 id="intro5" class="page-header">테이블</h3>
+                    <div class="be-callout be-callout-info">create table;</div>
+<pre><code class="language-js">create table member (
+    myMemberID int(10) unsigned auto_increment,
+    youEmail varchar(40) NOT NULL,
+    youName varchar(20) NOT NULL,
+    youPass varchar(20) NOT NULL,
+    youBirth int(20) NOT NULL,
+    youAge int(5) NOT NULL,
+    regTime int(20) NOT NULL,
+    PRIMARY KEY (myMemberID)
+) charset=utf8;
+</code></pre>
+                    <h3 id="intro5-1" class="page-header">테이블 만들기</h3>
+                    <div class="be-callout be-callout-info">create table 테이블 이름;</div>
+<pre><code class="language-js">mysql> create table member (
+->   myMemberID int(10) unsigned auto_increment,
+->   youEmail varchar(40) NOT NULL,
+->   youName varchar(20) NOT NULL,
+->   youPass varchar(20) NOT NULL,
+->   youBirth int(20) NOT NULL,
+->   youAge int(5) NOT NULL,
+->   regTime int(20) NOT NULL,
+->   PRIMARY KEY (myMemberID)
+-> ) charset=utf8;
+Query OK, 0 rows affected (0.02 sec) 
+</code></pre>
+                    <h3 id="intro5-2" class="page-header">테이블 전체보기</h3>
+                    <div class="be-callout be-callout-info">show tables;</div>
+<pre><code class="language-js">mysql> show tables;
++--------------------+
+| Tables_in_sample01 |
++--------------------+
+| member       |
++--------------------+
+1 row in set (0.00 sec)
+</code></pre>
+                    <h3 id="intro5-3" class="page-header">테이블 보기</h3>
+                    <div class="be-callout be-callout-info">;</div>
+<pre><code class="language-js">mysql> desc member;
++------------+------------------+------+-----+---------+----------------+
+| Field   | Type       | Null | Key | Default | Extra     |
++------------+------------------+------+-----+---------+----------------+
+| myMemberID | int(10) unsigned | NO  | PRI | NULL  | auto_increment |
+| youEmail  | varchar(40)   | NO  |   | NULL  |        |
+| youName  | varchar(20)   | NO  |   | NULL  |        |
+| youPass  | varchar(20)   | NO  |   | NULL  |        |
+| youBirth  | int(20)     | NO  |   | NULL  |        |
+| youAge   | int(5)      | NO  |   | NULL  |        |
+| regTime  | int(20)     | NO  |   | NULL  |        |
++------------+------------------+------+-----+---------+----------------+
+7 rows in set (0.01 sec)
+</code></pre>
+                    <h3 id="intro5-4" class="page-header">테이블 삭제</h3>
+                    <div class="be-callout be-callout-info">drop table 테이블 이름;</div>
+<pre><code class="language-js">mysql> drop table member;
+Query OK, 0 rows affected (0.02 sec)
+</code></pre>
+                    <h3 id="intro5-5" class="page-header">테이블 복사</h3>
+                    <div class="be-callout be-callout-info">;</div>
+<pre><code class="language-js">
+
+</code></pre>
+                </div>
+                <!-- //intro5 -->
+
         </div>
             <div class="col-md-3">
                 <div class="bs-sidebar hidden-print affix-top" role="complementary">
                     <ul class="nav bs-sidenav">
                         <li class="active"><a href="#intro1">MySQL</a></li>                                           
-                        <li><a href="#intro1">MySQL 설치</a></li>                                           
-                        <li><a href="#intro1">이미지 유형</a></li>                                           
+                        <li><a href="#intro2">MySQL 설치</a></li>                                           
+                        <li><a href="#intro3">MySQL 실행</a></li>                                           
+                        <li><a href="#intro4">데이터베이스</a>
+                            <ul class="nav bs-sidenav">
+                                <li><a href="#intro4-1">데이터베이스 보기</a></li>
+                                <li><a href="#intro4-2">데이터베이스 만들기</a></li>
+                                <li><a href="#intro4-3">데이터베이스 사용</a></li>
+                                <li><a href="#intro4-4">데이터베이스 삭제</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">테이블</a>
+                        <ul class="nav bs_sidenav">
+                            <li><a href="#intro5-1">테이블 만들기</a></li>                          
+                            <li><a href="#intro5-2">>테이블 전체보기</a></li>                           
+                            <li><a href="#intro5-3">테이블 보기</a></li>                           
+                            <li><a href="#intro5-4">테이블 삭제</a></li>                           
+                            <li><a href="#intro5-5">테이블 복사</a></li>                          
+                        </ul>
+                        </li>                                           
                     </ul>
                 </div>
             </div>
-        
-        <!-- //row -->
+        </div>
     </div>
+    <!-- //row -->
     <!-- //container -->
     <!-- Footer -->
     <footer class="bs-footer" role="contentinfo">
