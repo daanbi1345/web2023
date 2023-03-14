@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 텍스트 유형01</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top; /* 여백 없앰 */
+            width: 100%;
+        }
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+            margin-top: 120px;
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+            text-align: center;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section__h2 {            
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;        
+        }
+        .inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .notice {
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 1.5;
+            padding: 0 30px;
+            border-radius: 50px;            
+            background-color: #714dff;
+            font-weight: normal;
+            width: 75px;
+            height: 30px;
+        }
+        .title {
+            font-size: 50px;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            color: black;
+        }
+        .desc {
+            font-size: 16px;
+            width: 374px;
+            color: #666;
+        }
+        .li {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+            text-align: left;
+        }
+        .food {           
+        }
+        .souvenir {     
+        }
+        .tips {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <section class="slider__wrap nexon">
+        <div class="container">
+            <div class="inner">
+                <article class="desc">
+                    <span class="notice">NOTICE</span>
+                    <h3 class="title">음식점과 기념품 가게 고르는 Tip</h3>
+                    <p class="tips">맛있는 음식을 맛보고 싶은 마음은 누구나 있습니다.<br>
+                    그리고 기념품을 사서 보관하거나 선물하는 일도 많죠.</p>
+                    <div class="li">
+                        <li>오소 부코</li>
+                        <li>프로슈토</li>
+                        <li>리볼리타</li>
+                        <li>살팀보카</li>
+                        <li>쿠샤리</li>
+                        <li>에이시</li>
+                        <li>하맘</li>
+                        <li>토르시</li>
+                        <li>마비스 치약</li>
+                        <li>낙타 인형</li>
+                        <li>시샤 도구</li>              
+                    </div>
+                </article>
+                <article class="food">
+                    <figure>
+                        <img src="../asset/img/food.jpg" alt="food">
+                    </figure>
+                </article>
+                <article class="souvenir">
+                    <figure>
+                        <img src="../asset/img/souvenir.jpg" alt="souvenir">
+                    </figure>
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
