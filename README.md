@@ -19,4 +19,5 @@
 카드 유형 :   https://daanbi1345.github.io/web2023/site/cardType/cardType01.html   
 이미지 유형 :   https://daanbi1345.github.io/web2023/site/imageType/imageType01.html   
 텍스트 유형 :   https://daanbi1345.github.io/web2023/site/textType/textType01.html   
-슬라이드 유형 :   https://daanbi1345.github.io/web2023/site/sliderType/sliderType01.html
+슬라이드 유형 :   https://daanbi1345.github.io/web2023/site/sliderType/sliderType01.html   
+이미지/텍스트 유형 : https://daanbi1345.github.io/web2023/site/image.textType/image.textType01.html
