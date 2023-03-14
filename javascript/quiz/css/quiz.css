@@ -147,7 +147,7 @@
 }
 
 .quiz__answer .confirm {
-    background-color: #b1d7ed;
+    background-color: #b1b4ed;
     border: 6px ridge #cacaca;
     width: 100%;
     font-family: 'SCoreDream';
@@ -199,8 +199,59 @@
     font-weight: bold;
 }
 
+.quiz__choice {
+    padding: 20px;
+    border-bottom: 6px ridge #cacaca;
+    font-family: 'SCoreDream';
+}
+
+.quiz__choice label {
+    display: flex;
+}
+.quiz__choice label input {
+    position:absolute;
+    clip:rect(0 0 0 0);
+    width:1px;
+    height:1px;
+    margin:-1px;
+    overflow:hidden
+}
+
+.quiz__choice label input:checked + span {
+    background-color: #e9e7ff;
+}
+
+.quiz__choice label input:checked + span::before {
+    box-shadow: inset 0 0 0 8px #576ce4;
+}
+.quiz__choice label span{
+    font-size: 20px;
+    line-height: 1.4;
+    padding: 6px;
+    display: flex;
+    cursor: pointer;
+    margin: 2px 0;
+}
+
+.quiz__choice label span::before {
+    content: '';
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: #fff;
+    box-shadow: inset 0 0 0 4px #575ce4;
+    transition: all 0.2s;
+}
 /* dog__wrap */
-.dog .tail,.dog .chin,.dog .tongue::before,.dog .tongue::after,.dog .mouth,.dog .nose,.dog .teardrop,.dog .eyes,.dog .face::before,.dog .face::after,.dog .ears::before,.dog .ears::after,.dog__wrap {
+.dog .tail,
+.dog .chin,
+.dog .tongue::before,
+.dog .tongue::after,
+.dog .mouth,.dog .nose,.dog .teardrop,.dog .eyes,
+.dog .face::before,.dog .face::after,
+.dog .ears::before,.dog .ears::after,
+.dog__wrap {
     transition: 0.2s ease-in;
 }
 
