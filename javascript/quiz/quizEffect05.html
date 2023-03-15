@@ -81,6 +81,13 @@
                 </div>                
             </div>            -->
         </div>
+        <div class="quiz__modal">
+            <div class="modal">
+                <h3>[축하합니다] or [다시 공부하세요!]</h3>
+                <p>총 몇 [60]문제 중에 [10]문제를 맞추었습니다.</p>
+                <p>40점입니다. 공부하세요</p>
+            </div>
+        </div>
     </main>
     <!-- main -->
 <img src="" alt="">
@@ -99,6 +106,7 @@
         const quizConfirm = quizWrap.querySelector(".quiz__answer .confirm");//정답 버튼
         const dogWrap = quizWrap.querySelector(".dog__wrap");
         const quizAnswer = quizWrap.querySelector(".quiz__answer")
+        let quizScore = 0;
 
        //문제 정보
        const quizInfo = [
@@ -293,6 +301,15 @@
            <div class="quiz__check">정답 확인</div>
         `);
         quizWrap.innerHTML = exam;
+
+        //설명 숨기기
+        
+            // document.querySelectorAll(".quiz__desc").forEach((el) => {
+            //     el.style.display = "none";
+            // });
+
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "none");
+      
     };
     updateQUiz();
 
@@ -310,11 +327,18 @@
             if(userAnswer == question.infoAnswer){
                 alert("정답")
                 dogWrap[number].classList.add("like");
+                quizScore++;
             } else {
                 alert("오답")
                 dogWrap[number].classList.add("dislike");
+                
             }
         });
+
+        //설명 보이기
+        document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "block");
+
+        alert (quizScore);
     }
 
     //정답 클릭

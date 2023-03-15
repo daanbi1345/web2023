@@ -260,6 +260,24 @@
     cursor: pointer;
     font-family: 'SCoreDream';
 }
+
+.quiz__modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz__modal .modal {
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+}
 /* dog__wrap */
 .dog .tail,
 .dog .chin,
