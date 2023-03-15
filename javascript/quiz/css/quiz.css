@@ -110,7 +110,7 @@
 }
 
 .quiz__title {
-    background-color: rgb(192, 153, 177);
+    background-color: rgb(217, 242, 232);
     border: 3px ridge #cacaca;
     border-bottom-width: 6px;
     padding: 5px;
@@ -255,8 +255,8 @@
     z-index: 1000;
     line-height: 150px;
     text-align: center;
-    background-color: #000;
-    color: #fff;
+    background-color: #8dbfdf;
+    color: #000;
     cursor: pointer;
     font-family: 'SCoreDream';
 }
@@ -265,14 +265,14 @@
     position: fixed;
     right: 27px;
     bottom: 200px;
-    background-color: #f08787;
+    background-color: #ace4f1;
     text-align: center;
     width: 130px;
     height: 50px;
     border-radius: 10px;
     line-height: 50px;
     font-family: 'SCoreDream';
-    color: #fff;
+    color: #000;
 }
 
 .quiz__info::after {
@@ -281,7 +281,7 @@
     left: 50%;
     margin-left: -10px;
     bottom: -9px;
-    border-top: 10px solid #f08787;
+    border-top: 10px solid #ace4f1;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
 }
@@ -327,7 +327,7 @@ html, body, .dog__wrap {
     width: 120px;
     height: 120px;
     line-height: 120px;
-    background-color: #a28888;
+    background-color: #d39190;
     border-radius: 50%;
     color: #fff;
     text-align: center;
@@ -341,7 +341,7 @@ html, body, .dog__wrap {
     width: 120px;
     height: 120px;
     line-height: 120px;
-    background-color: #a28888;
+    background-color: #8b88a2;
     border-radius: 50%;
     color: #fff;
     text-align: center;
@@ -679,7 +679,7 @@ html, body, .dog__wrap {
 }
 
 .like {
-    background: #f2f2a7;
+    background: #f7e4e9;
 }
 .like .face::before {
      margin-top: 10px;
