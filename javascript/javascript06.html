@@ -47,11 +47,62 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">01. 변수 : 데이터 저장</a></li>
-                    <li><a href="#">01. 상수: 데이터 저장</a></li>
-                    <li><a href="#">01. 배열: 데이터 저장</a></li>
-                    <li><a href="#">01. 객체: 데이터 저장</a></li>
+                    <li><a href="#">배열 메서드 : join()</a></li>
+                    <li><a href="#">배열 메서드 : push() : 배열 마지막 요소에 요소를 추가</a>🦩</li>
+                    <li><a href="#">배열 메서드 : pop() : 배열 마지막 요소를 삭제</a></li>
+                    <li><a href="#">배열 메서드 : unshift() : 배열 처음 요소에 요소를 추가</a></li>
+                    <li><a href="#">배열 메서드 : shift() : 배열 처음 요소를 삭제</a></li>
+                    <li><a href="#">배열 메서드 : reverse()</a></li>
+                    <li><a href="#">배열 메서드 : sort()</a>🦩</li>
+                    <li><a href="#">배열 메서드 : concat()</a></li>
+                    <li><a href="#">배열 메서드 : reduce()</a></li>
+                    <li><a href="#">배열 메서드 : reduceRight()</a></li>
+                    <li><a href="#">배열 메서드 : slice()</a>🍭🦩</li>
+                    <li><a href="#">배열 메서드 : splice()</a>🍭🦩</li>
+                    <li><a href="#">배열 메서드 : indexof()</a>🦩</li>//검색하는 기능
+                    <li><a href="#">배열 메서드 : lastindexof()</a></li>
+                    <li><a href="#">배열 메서드 : includes()</a></li>
+                    <li><a href="#">배열 메서드 : find()</a></li>
+                    <li><a href="#">배열 메서드 : findIndex()</a></li>
+                    <li><a href="#">배열 메서드 : filter()</a></li>
+                    <li><a href="#">배열 메서드 : map()</a></li>
+                    
                 </ul>
+            </div>
+            <div class="main__sample">
+                <div id="sample01" class="sample">
+                    <h3>배열 메서드 : push()</h3>
+                    <p>push() 메서드는 배열 마지막 요소에 요소를 추가하고, pop() 메서드는 배열 마지막 요소를 삭제합니다.</p>
+<pre class="line-numbers"><code class="language-js"> const arrNum1 = [100,200,300,400,500];
+const arrPush1 = arrNum1.push(600);
+
+console.log(arrNum1) // [100,200,300,400,500,600]
+
+const arrNum2 = [100,200,300,400,500];
+const arrPush2 = arrNum2.push(); 
+
+console.log(arrNum2) //[100,200,300,400]   
+</code></pre>
+                </div>
+                <!-- //sample01 -->
+
+                <div id="sample02" class="sample">
+                    <h3>배열 메서드 : shift()</h3>
+                    <p>unshift() 메서드는 배열 처음 요소에 요소를 추가하고, shift() 메서드는 배열 처음 요소를 삭제합니다.</p>
+<pre class="line-numbers"><code class="language-js">const arrNum1 = [100,200,300,400,500];
+const arrPush1 = arrNum1.unshift(600);
+
+console.log(arrNum1) // [600,100,200,300,400,500]
+
+const arrNum2 = [100,200,300,400,500];
+const arrPush2 = arrNum2.shift();
+
+console.log(arrNum2) //[200,300,400,500]
+</code></pre>
+                </div>
+                <!-- //sample02 -->
+
+                </div>
             </div>
         </div>
     </main>
@@ -63,6 +114,26 @@
     <!-- //footer -->
 
     <script>
+        // const arrNum1 = [100,200,300,400,500];
+        // const arrPush1 = arrNum1.push(600);
+        
+        // console.log(arrNum1) // [100,200,300,400,500,600]
+
+        // const arrNum2 = [100,200,300,400,500];
+        // const arrPush2 = arrNum2.push();
+
+        // console.log(arrNum2) //[100,200,300,400]
+
+        // const arrNum1 = [100,200,300,400,500];
+        // const arrPush1 = arrNum1.unshift(600);
+        
+        // console.log(arrNum1) // [600,100,200,300,400,500]
+
+        // const arrNum2 = [100,200,300,400,500];
+        // const arrPush2 = arrNum2.shift();
+
+        // console.log(arrNum2) //[200,300,400,500]
+
         
     </script>
 
