@@ -247,8 +247,8 @@
 
 .quiz__check {
     position: fixed;
-    right: 5%;
-    bottom: 5%;
+    right: 20px;
+    bottom: 20px;
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -261,22 +261,29 @@
     font-family: 'SCoreDream';
 }
 
-.quiz__modal {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+.quiz__info {
     position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    right: 27px;
+    bottom: 200px;
+    background-color: #f08787;
+    text-align: center;
+    width: 130px;
+    height: 50px;
+    border-radius: 10px;
+    line-height: 50px;
+    font-family: 'SCoreDream';
+    color: #fff;
 }
 
-.quiz__modal .modal {
-    width: 500px;
-    height: 500px;
-    background-color: #fff;
+.quiz__info::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    bottom: -9px;
+    border-top: 10px solid #f08787;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 /* dog__wrap */
 .dog .tail,

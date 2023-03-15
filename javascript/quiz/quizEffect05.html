@@ -80,14 +80,7 @@
                     <div class="quiz__desc"></div>
                 </div>                
             </div>            -->
-        </div>
-        <div class="quiz__modal">
-            <div class="modal">
-                <h3>[축하합니다] or [다시 공부하세요!]</h3>
-                <p>총 몇 [60]문제 중에 [10]문제를 맞추었습니다.</p>
-                <p>40점입니다. 공부하세요</p>
-            </div>
-        </div>
+        </div>        
     </main>
     <!-- main -->
 <img src="" alt="">
@@ -291,16 +284,17 @@
                             <span>${question.infoChoice[4]}</span>
                         </label>                        
                     </div>                    
-                    <div class="quiz__desc">${question.infoDesc}</div>
+                    <div class="quiz__desc"><em>${question.infoAnswer}</em>번 입니다.<br>${question.infoDesc}</div>
                 </div>                
             </div> 
             `);
 
         });
         exam.push(`
-           <div class="quiz__check">정답 확인</div>
+            <div class="quiz__info">??점</div>
+            <div class="quiz__check">정답 확인</div>
         `);
-        quizWrap.innerHTML = exam;
+        quizWrap.innerHTML = exam.join(" ");
 
         //설명 숨기기
         
@@ -338,7 +332,8 @@
         //설명 보이기
         document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "block");
 
-        alert (quizScore);
+        //점수 보이기
+        document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";        
     }
 
     //정답 클릭

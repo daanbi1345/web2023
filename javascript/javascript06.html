@@ -47,7 +47,7 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">배열 메서드 : join()</a></li>
+                    <li><a href="#">배열 메서드 : join() : 배열 요소 문자열 결합</a></li>
                     <li><a href="#">배열 메서드 : push() : 배열 마지막 요소에 요소를 추가</a>🦩</li>
                     <li><a href="#">배열 메서드 : pop() : 배열 마지막 요소를 삭제</a></li>
                     <li><a href="#">배열 메서드 : unshift() : 배열 처음 요소에 요소를 추가</a></li>
@@ -70,8 +70,24 @@
                 </ul>
             </div>
             <div class="main__sample">
+
                 <div id="sample01" class="sample">
-                    <h3>배열 메서드 : push()</h3>
+                    <h3>배열 메서드 : shift()</h3>
+                    <p>join() 메서드는 배열 요소를 문자열로 결합합니다. 반환은 문자열입니다.</p>
+<pre class="line-numbers"><code class="language-js">const arrNum1 = [100,100,300,400,500];
+const text1 = arrNum1.join(''); //100200300400500
+const text2 = arrNum1.join(' '); //100 200 300 400 500
+const text3 = arrNum1.join('*'); //100*200*300*400*500
+const text4 = arrNum1.join('-'); //100-200-300-400-500
+const text5 = arrNum1.join('🦊'); //100🦊200🦊300🦊400🦊500
+
+console.log(text5)
+</code></pre>
+                </div>
+                <!-- //sample01 -->
+
+                <div id="sample02" class="sample">
+                    <h3>배열 메서드 : push() / pop()</h3>
                     <p>push() 메서드는 배열 마지막 요소에 요소를 추가하고, pop() 메서드는 배열 마지막 요소를 삭제합니다.</p>
 <pre class="line-numbers"><code class="language-js"> const arrNum1 = [100,200,300,400,500];
 const arrPush1 = arrNum1.push(600);
@@ -84,10 +100,10 @@ const arrPush2 = arrNum2.push();
 console.log(arrNum2) //[100,200,300,400]   
 </code></pre>
                 </div>
-                <!-- //sample01 -->
+                <!-- //sample02 -->
 
-                <div id="sample02" class="sample">
-                    <h3>배열 메서드 : shift()</h3>
+                <div id="sample03" class="sample">
+                    <h3>배열 메서드 : unshift() / shift()</h3>
                     <p>unshift() 메서드는 배열 처음 요소에 요소를 추가하고, shift() 메서드는 배열 처음 요소를 삭제합니다.</p>
 <pre class="line-numbers"><code class="language-js">const arrNum1 = [100,200,300,400,500];
 const arrPush1 = arrNum1.unshift(600);
@@ -100,7 +116,9 @@ const arrPush2 = arrNum2.shift();
 console.log(arrNum2) //[200,300,400,500]
 </code></pre>
                 </div>
-                <!-- //sample02 -->
+                <!-- //sample03 -->
+
+                
 
                 </div>
             </div>
@@ -134,7 +152,15 @@ console.log(arrNum2) //[200,300,400,500]
 
         // console.log(arrNum2) //[200,300,400,500]
 
-        
+
+        const arrNum1 = [100,200,300,400,500];
+        const text1 = arrNum1.join(''); //100200300400500
+        const text2 = arrNum1.join(' '); //100 200 300 400 500
+        const text3 = arrNum1.join('*'); //100*200*300*400*500
+        const text4 = arrNum1.join('-'); //100-200-300-400-500
+        const text5 = arrNum1.join('🦊'); //100🦊200🦊300🦊400🦊500
+
+        console.log(text5)
     </script>
 
 </body>
