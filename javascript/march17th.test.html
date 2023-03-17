@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       {
+            //1-10
+            for(let i=1; i<=10; i++){
+               document.write(i);
+            }
+            document.write("<br>");
+        }
+        {
+            //1-10 짝
+            for(let i=1; i<=10; i++){
+                if(i % 2 == 0){
+                    document.write(i);
+                }
+            }
+            document.write("<br>");
+        }
+        {
+            //1-10 홀빨 짝파
+            for(let i=1; i<=10; i++){
+                if(i % 2 == 0){
+                    document.write("<span style = 'color:blue'>"+i+"</span>");
+                } else {
+                    document.write("<span style = 'color:red'>"+i+"</span>");
+
+                }
+            }
+            document.write("<br>");
+        }
+        {
+            //num 배열 100 - 900
+            const num = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            for(let i=0; i<num.length; i++){
+                document.write(num[i]);
+            }
+            document.write("<br>");
+        }
+        {
+            const num = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            num.forEach(function(el){
+                document.write(el);
+            });
+            document.write("<br>");
+        }
+        {
+            const num = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            for(let index in num){
+                document.write(num[index]);
+            }
+            document.write("<br>");
+        }
+        {
+            const num = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            for(let el of num){
+                document.write(el);
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>
