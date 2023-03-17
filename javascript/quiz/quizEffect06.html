@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트 06</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../javascript14.html"> Quiz </a> <em>객관식 확인하기(여러 문제) 유형</em></h1>
+        <ul>
+            <li><a href="quizEffect01.html">1</a></li>
+            <li><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
+            <li><a href="quizEffect04.html">4</a></li>
+            <li><a href="quizEffect05.html">5</a></li>
+            <li class="active"><a href="quizEffect06.html">6</a></li>
+        </ul>
+    </header>
+    <!-- header -->
+
+    <main id="main">
+        <div class="quiz__wrap">
+            <!-- <div class="quiz">
+                <div class="quiz__header">
+                    <h2 class="quiz__title"></h2>                    
+                </div>
+                <div class="quiz__main">
+                    <div class="quiz__question"></div>
+                    <div class="quiz__view">
+                        <div class="dog__wrap">
+                        <div class="true">정답입니다!</div>
+                        <div class="false">오답입니다!</div>
+                            <div class="card-container">
+                                <div class="dog">
+                                    <div class="head">
+                                        <div class="ears"></div>
+                                        <div class="face"></div>
+                                        <div class="eyes">
+                                            <div class="teardrop"></div>
+                                        </div>
+                                        <div class="nose"></div>
+                                        <div class="mouth">
+                                            <div class="tongue"></div>
+                                        </div>
+                                        <div class="chin"></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="tail"></div>
+                                        <div class="legs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__choice">
+                        <label for="choice1">
+                            <input type="radio" id="choice1" name="choice" value="1">
+                            <span></span>
+                        </label>
+                        <label for="choice2">
+                            <input type="radio" id="choice2" name="choice" value="2">
+                            <span></span>
+                        </label>
+                        <label for="choice3">
+                            <input type="radio" id="choice3" name="choice" value="3">
+                            <span></span>
+                        </label>
+                        <label for="choice4">
+                            <input type="radio" id="choice4" name="choice" value="4">
+                            <span></span>
+                        </label>                        
+                    </div>
+                    <div class="quiz__answer">                        
+                        <button class="confirm">정답 확인하기</button>                        
+                    </div>
+                    <div class="quiz__desc"></div>
+                </div>                
+            </div>            -->
+        </div>        
+    </main>
+    <!-- main -->
+<img src="" alt="">
+    <footer id="footer">
+        <a href="mailto:daanbi1345@gmail.com">daanbi1345@gmail.com</a>
+    </footer>
+    <!-- footer -->
+    <script>
+        //선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const quizTitle = quizWrap.querySelector(".quiz__title");
+        const quizQuestion = quizWrap.querySelector(".quiz__question");
+        const quizChoice = quizWrap.querySelectorAll(".quiz__choice span");
+        const quizSelect = quizWrap.querySelectorAll(".quiz__choice input");
+        const quizDesc = quizWrap.querySelector(".quiz__desc");
+        const quizConfirm = quizWrap.querySelector(".quiz__answer .confirm");//정답 버튼
+        const dogWrap = quizWrap.querySelector(".dog__wrap");
+        const quizAnswer = quizWrap.querySelector(".quiz__answer")
+        let quizScore = 0;
+
+       //문제 정보
+       const quizInfo = [
+        {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110501",
+            infoQuestion : "다음 중 커뮤니케이션 디자인의 설명으로 틀린 것은?",
+            infoChoice : {
+                1: "라틴어 'Communicare'를 어원으로 한다.",
+                2: "두 개 이상의 개체가 기호를 매개로 무언가를 공유하는 것이다.",
+                3: "운동과 시선을 중시하는 디자인이다.",
+                4: "사람과 사람사이에 기호에 의해서 의미를 전달하는 과정이다.",
+            },
+            infoAnswer : "3",
+            infoDesc : "커뮤니케이션은 대화나 상호작용을 의미하는데 '다'의 경우는 거리가 멀죠?"
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110502",
+            infoQuestion : "망막에서 일어나는 변화에 관계없이 그 사물에 대해 지속적으로 고정적인 인식을 하고 있는 현상은?",
+            infoChoice : {
+                1: "운동시",
+                2: "형태시",
+                3: "항상성",
+                4: "지각성",
+            },
+            infoAnswer : "3",
+            infoDesc : "생체가 여러 가지 환경 변화에 대응하여 생명 현상이 제대로 일어날 수 있도록 일정한 상태를 유지하는 성질 또는 그런 현상.<br>여러 가지 조건이 바뀌어도 친숙한 대상은 항상 같게 지각되는 현상.<br> 물체의 크기·모양·빛깔, 또는 소리를 들은 거리나 빛의 명암 따위의 조건에 따라 달라지는 것이 원칙이지만, 생리적 자극과는 관계없이 항상 같게 지각되는 경향이다."
+        } ,{
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110503",
+            infoQuestion : "빅터 파파넥(Papanek victor)이 주장한 디자인의 복합 기능에 포함되지 않는 것은?",
+            infoChoice : {
+                1: "방법",
+                2: "연상",
+                3: "효과",
+                4: "미학",
+            },
+            infoAnswer : "3",
+            infoDesc : "인간을 위한 디자인<br>Vitor Papanek (1927-1999)<br>빅터 파파텍은 디자인계에 디자이너의 윤리의식과 사회적 책임으로써 디자인, 생태디자인의 개념을 도입하고 실천한 교육자이자 이론가이다.<br>그는 사회와 환경에 책임을 지는 제품디자인, 도구의 디자인, 커뮤니티 기반의 디자인의 옹호자였다.<br>그는 안전하지 않고, 보기에 좋은 제품, 사용하기에 부적합한 제품 혹은 필요하지도 않으면서 생산되는 제품의 대량생산을 비난했다.<br>그의 생산품(작품)과, 글과, 강의는 많은 디자이너들에게 셈플로 고려되었고, 자극을 주었다.<br>파파넥은 미국의 대량생산제품들이 얼마나 폐(해)가 되는가를 느꼈다. 그런 디자인을 경박하거나 심지어는 안전하지도 않다고 그는 역설했다.<br>복합기능주의- 기능과 미의 복합기능,<br>6가지 디자인의 목적- 용도, 필요성, 연상, 미학, 목적지향성, 방법"
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110504",
+            infoQuestion : "다음 설명에 해당하는 조형운동이자 사회운동은?<br><table border='1'><tr><td>1910년에서 1935년 사이에 러시아에서 일어난 새로운 조형운동으로 조형의 추상성과 기하학적 간결함, 형태의 경제성에 입각한 디자인을 추구했으나, 스탈린의 탄압으로 종결되었다.</td></tr></table>",
+            infoChoice : {
+                1: "기능주의",
+                2: "구성주의",
+                3: "역사주의",
+                4: "미래주의",
+            },
+            infoAnswer : "2",
+            infoDesc : "러시아에서 일어난 디자인 운동은 구성주의 밖에 없음."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110505",
+            infoQuestion : "다음 설명들과 관계있는 디자인은?<br><table border='1'><tr><td>- 인터넷 상에서 이루어진다.<br>- 시/공간을 초월하여 세계 각국에 정보 전달이 가능하다.<br>- 사용 편의성에 입각한 사용자 중심의 인터페이스가 있어야 한다.<br>- 쌍방향, 일관성, 통일성을 고여해야 한다.<br>- CF, 출판, 애니메이션 등 새로운 적용 분야가 계속 늘어나고 있다.</td></tr></table>",
+            infoChoice : {
+                1: "제품 디자인",
+                2: "그린 디자인",
+                3: "웹 디자인",
+                4: "금속 디자인",
+            },
+            infoAnswer : "3",
+            infoDesc : "인터넷에서 이루어지므로 시/공간의 제약이 없다.<br>베너등으로 좀더 다양한 광고가 생겨나고있다.<br>다수의 사용자가 이용하므로 편의성을 고려하여야 하며,<br>쌍방향, 일관성, 통일성등의 문제도 고려하여 제작하여야 한다.<br>현재 웹표준을 중시하지 않고 액티브X를 남용하여 문제가 제기되고있다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110506",
+            infoQuestion : "게슈탈트(Gestalt)의 형태에 관한 시각 기본 법칙에 해당되지 않는 것은?",
+            infoChoice : {             
+                1: "통일",
+                2: "근접",
+                3: "유사",
+                4: "연속",
+            },
+            infoAnswer : "1",
+            infoDesc : "게슈탈트 시지각 기본법칙엔 근접, 유사, 연속, 폐쇄등이 있다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110507",
+            infoQuestion : "오스트발트(Ostwald)색상환은 무채색 축을 중심으로 몇 색상이 배열되어 있는가?",
+            infoChoice : {
+                1: "9",
+                2: "10",
+                3: "11",
+                4: "24",
+            },
+            infoAnswer : "4",
+            infoDesc : "오스트발트의 색상환은 황(yellow), 남(ulteramarine blue), 적(red), 청록(sea green)의 4색에다 그 사이 사이에 주황(orange), 청(turquoise), 보라(purple), 황록(leaf green)을 배치하여 8색이다.<br>최종적으로 이것을 다시 3등분하여 우측 회전순으로 번호를 붙이면 24색상이 된다. <br>이러한 무채색 축을 중심으로 24색상을 가진 등색상 삼각형이 배열되어 오스트발트의 복원추체 색입체가 구성되었다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110508",
+            infoQuestion : "디자인의 원리에서 율동에 해당되는 것은?",
+            infoChoice : {
+                1: "유사, 대비",
+                2: "대칭, 비례",
+                3: "통일, 변화",
+                4: "점이, 반복",
+            },
+            infoAnswer : "4",
+            infoDesc : "율동(Rhythm)에 해당하는것은 반복, 교차, 방사, 점이(그라데이션) 등이 있습니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110509",
+            infoQuestion : "색의 주목성에 관한 설명으로 틀린 것은?",
+            infoChoice : {
+                1: "명시성이 높은 색은 주목성도 높아지게 된다.",
+                2: "주목성은 색이 우리의 시선을 끄는 힘을 말한다.",
+                3: "차가운 한색은 따뜻한 난색보다 주목성이 높다.",
+                4: "명도와 채도가 높은 색은 주목성이 높다.",
+            },
+            infoAnswer : "3",
+            infoDesc : "색은 명시성이 높고, 명도와 채도가 높을수록 주목성이 높아집니다.<br>따뜻한 난색(빨강,주황,노랑)은 차가운 한색(초록,파랑,남색)보다 주목성이 높습니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110510",
+            infoQuestion : "망막에 다른 색광이 자극하여 혼합되는 현상으로 색 점이 서로 가깝게 있어 명도와 채도가 떨어지지 않는 혼합방식은?",
+            infoChoice : {
+                1: "보색혼합",
+                2: "병치혼합",
+                3: "가산혼합",
+                4: "감산혼합",
+            },
+            infoAnswer : "2",
+            infoDesc : "병치혼합 : 서로 색을 섞어서 새로운 색을 만드는것이 아니라, 원색들을 나란히 세워놔서 보는 사람으로 하여금 눈의 망막위에서 서로 혼합되어 보여지는 방식입니다.<br>따라서 색 자체를 섞지 않고 원색 그대로 유지되어서 원래의 명도와 채도가 유지됩니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110511",
+            infoQuestion : "다음 설명과 같은 특성을 가지는 선은?<br><table border='1'><tr><td>우아, 매력, 모호, 유연, 복잡함의 상징으로, 여성적인 섬세하고 동적인 표정을 나타낸다.</td></tr></table>",
+            infoChoice : {
+                1: "직선",
+                2: "절선",
+                3: "점선",
+                4: "곡선",
+            },
+            infoAnswer : "4",
+            infoDesc : "여성적인 섬세함은 곡선이 가지는 특성입니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110512",
+            infoQuestion : "디자인 원리 중 서로 다른 부분의 조합에 의해 생기는 것으로 시각적 힘의 강약에 의한 형의 감정효과를 주는 것은?",
+            infoChoice : {
+                1: "대비",
+                2: "변칙",
+                3: "통일",
+                4: "반복",
+            },
+            infoAnswer : "1",
+            infoDesc : "대비(대조): 서로 다른 영역이 대립되는 것으로 음영이나 색상등에 대비를 주면 강렬한 디자인을 제작 가능"
+        } ,{
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110513",
+            infoQuestion : "다음 중 웹 디자인에 관한 설명과 거리가 먼 것은?",
+            infoChoice : {
+                1: "웹페이지를 디자인하고 제작하는 것을 의미한다.",
+                2: "웹디자인은 개인용 홈페이지 외 기업용, 상업용 등 매우 다양하다",
+                3: "웹디자인은 웹과 디자인이라는 두 가지 개념이 결합된 것이다.",
+                4: "기업, 단체, 행사의 특징과 성격에 맞는 시각적 상징물을 말한다.",
+            },
+            infoAnswer : "4",
+            infoDesc : "4번은 시각 디자인에 대한 설명입니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110514",
+            infoQuestion : "흰색의 바탕 위에서 빨강색을 20초 정도 보고난 후, 빨강색을 치우면 앞에서 본 빨강색과 동일한 크기의 청록색이 나타나 보이는 현상은?",
+            infoChoice : {
+                1: "보색잔상",
+                2: "망막의 피로",
+                3: "계시대비",
+                4: "동시대비",
+            },
+            infoAnswer : "1",
+            infoDesc : "빨강색(Red)의 보색은 청록색(Cyan)입니다. <br>따라서 빨강색과 청록색은 보색관계이므로 보색잔상에 해당합니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110515",
+            infoQuestion : "다음 중 기계적 질감에 해당되지 않는 것은?",
+            infoChoice : {
+                1: "사진의 망점",
+                2: "인쇄상의 스크린 톤",
+                3: "나뭇잎",
+                4: "텔레비전 주사선",
+            },
+            infoAnswer : "3",
+            infoDesc : "나뭇잎은 자연적(유기적) 질감에 해당합니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110516",
+            infoQuestion : "색체 조화의 공통원리에 관한 설명으로 틀린 것은?",
+            infoChoice : {             
+                1: "질서의 원리 - 색채조화는 의식할 수 있으며 효과적인 반응을 일으키는 질서 있는 계획에 따라 선택된 색채들에서 생긴다.",
+                2: "비모호성의 원리 - 색채조화는 두 색 이상의 배색에 있어서 모호함이 없는 명료한 배색에서만 얻어진다.",
+                3: "동류의 원리 - 가장 가까운 색채끼리의 배색은 보는 사람에게 친근감을 주며 조화를 느끼게 한다.",
+                4: "대비의 원리 - 배색된 색채들이 서로 공통되는 상태와 속성을 가질 때 그 색채는 조화 된다.",
+            },
+            infoAnswer : "4",
+            infoDesc : "대비의 원리 - 모호한 점 없이 서로 반대되어지는 상태와 속성에 의한 배색군의 조화이다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110517",
+            infoQuestion : "배색에 대한 설명으로 틀린 것은?",
+            infoChoice : {
+                1: "사물의 성능이나 기능에 부합되는 배색을 하여 주변과 어울릴 수 있도록 한다.",
+                2: "사용자 성별, 연령을 고려하여 편안한 느낌을 가질 수 있도록 한다.",
+                3: "색의 이미지를 통해서 전달하려는 목적이나 기능을 기준으로 배색한다.",
+                4: "목적에 관계없이 아름다움을 우선으로 하고 타 제품에 비해 눈에 띄는 색으로 배색하여야 한다.",
+            },
+            infoAnswer : "4",
+            infoDesc : "목적에 맞게 해야합니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110518",
+            infoQuestion : "다음 두 개의 꽃 모양 중심에 있는 원의 실제 크기는 동일하다. 그런데 왼쪽의 원이 오른쪽보다 커 보이는 현상은?<br><img style = 'width:100px' src='../quiz/quiz.image/2009.9.27.18번 문제1.png'><img style = 'width:100px' src='../quiz/quiz.image/2009.9.27.18번 문제2.png'>",
+            infoChoice : {
+                1: "주변과의 대비에 의한 착시현상",
+                2: "반복원리에 의한 착시현상",
+                3: "폐쇄원리에 의한 착시현상",
+                4: "연속원리에 의한 착시현상",
+            },
+            infoAnswer : "1",
+            infoDesc : "주변과의 대비에 의한 착시현상의 이미지를 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110519",
+            infoQuestion : "다음과 같은 형상이 나타내는 디자인 원리는?<br><img style = 'width:100px' src='../quiz/quiz.image/2009.9.27.19번 문제.png'>",
+            infoChoice : {
+                1: "조화",
+                2: "강조",
+                3: "율동",
+                4: "비대칭",
+            },
+            infoAnswer : "4",
+            infoDesc : "비대칭의 이미지를 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110520",
+            infoQuestion : "굿 디자인(Good Design)의 조건으로 옳은 것은?",
+            infoChoice : {
+                1: "합목적성, 실용성, 경제성, 효용성",
+                2: "합목적성, 심미성, 모방성, 경제성",
+                3: "합목적성, 경제성, 심미성, 독창성",
+                4: "합목적성, 심미성, 질서성, 독창성",
+            },
+            infoAnswer : "3",
+            infoDesc : "굿 디자인의 조건을 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110521",
+            infoQuestion : "웹페이지에서 특정한 문장을 가장 큰 글씨로 화면에 출력하고자 할 때 사용되는 HTML 태그는?",
+            infoChoice : {
+                1: "<H1>",
+                2: "<H3>",
+                3: "<H5>",
+                4: "<H6>",
+            },
+            infoAnswer : "1",
+            infoDesc : "H1~H6까지 사용가능하며 H1이 가장 크고 H6이 가장 작습니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110522",
+            infoQuestion : "비대칭 디지털 가입자 회선인 ADSL에 대한 설명으로 틀린 것은?",
+            infoChoice : {
+                1: "Asymmetric Digital Subscriber Line의 약자로 미국 ‘발코어’사에서 개발한 기술이다.",
+                2: "고속 데이터 통신과 일반 전화를 동시에 이용할 수 있지만 데이터통신 속도가 절반으로 떨어지게 된다.",
+                3: "ADSL은 가입자와 전화국간의 데이터 교환 속도가 서로 다르다.",
+                4: "하나의 회선으로 데이터 통신과 일반 전화의 이용이 가능하다.",
+            },
+            infoAnswer : "2",
+            infoDesc : "비대칭 디지털 가입자 회선인 ADSL은 전화와 데이터통신을 동시에 이용할 수 있으며 일반적으로 전화는 저속으로 데이터통신은 고속으로 이용합니다. 따라서 데이터통신은 전화통신보다 속도가 더 빠릅니다.<br>ISDN : 전화하면서도 통신은 가능하지만 속도가 떨어진다.<br>ADSL : 일반 전화선을 사용하면서도 속도 변화없이 고속의 데이터 전송 가능"
+        } ,{
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110523",
+            infoQuestion : "웹에서 하이퍼텍스트 문서 전송을 위한 통신 규약은?",
+            infoChoice : {
+                1: "HTTP",
+                2: "TELNET",
+                3: "USENET",
+                4: "FTP",
+            },
+            infoAnswer : "1",
+            infoDesc : "HTTP : 웹에서 하이퍼텍스트 문서 전송을 위한 프로토콜(통신규약)<br>TELNET:원격접속 프로토콜(통신규약)<br>USENET : 뉴스그룹 --> 뉴스그룹 프로토콜(통신규약) : NNTP<br>FTP : 파일전송 프로토콜(통신규약)"
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110524",
+            infoQuestion : "다음 중 인터넷 쇼핑몰의 특징으로 볼 수 없는 것은?",
+            infoChoice : {
+                1: "언제 어디서든 쇼핑몰의 이용이 가능하다.",
+                2: "구매자와 판매자간의 신뢰를 구축하는 것이 중요하다.",
+                3: "고객의 취향을 파악하여 정확한 Target 마케팅이 가능하다.",
+                4: "인터넷 쇼핑몰의 활성화는 지역사회를 활성화 시키는 계기가 된다.",
+            },
+            infoAnswer : "4",
+            infoDesc : "인터넷 쇼핑몰은 해당 지역사회를 벗어나 전국적으로 전세계적으로 활성화시키는 계기가 됩니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110525",
+            infoQuestion : "컴퓨터통신을 하기 위하여 서로 간에 미리 정의된 약속은?",
+            infoChoice : {
+                1: "접속(Connection)",
+                2: "레이어(layer)",
+                3: "프로토콜(Protocol)",
+                4: "브라우저(browser)",
+            },
+            infoAnswer : "3",
+            infoDesc : "컴퓨터 통신을 하기 위한 약속은 프로토콜이라고 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110526",
+            infoQuestion : "검색엔진과 그에 해당된 서비스가 틀리게 연결된 것은?",
+            infoChoice : {             
+                1: "야후 - 거기",
+                2: "옥션 - 메일 및 메신저",
+                3: "네이버 - 지식검색",
+                4: "네이트 - 보는 검색 체험하기",
+            },
+            infoAnswer : "2",
+            infoDesc : "옥션 : 쇼핑, 경매"
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110527",
+            infoQuestion : "Java 스크립트 언어에 대한 설명으로 틀린 것은?",
+            infoChoice : {
+                1: "Java 스크립트 언어에서 변수명은 숫자 및 특수 문자로 시작할 수 없다.",
+                2: "Java 스크립트 언어는 HTML과 웹 브라우저와는 상호작용 할 수 있지만, VRML과 같은 인터넷 자원과는 상호작용 할 수 없다.",
+                3: "Java 스크립트 언어는 대소문자를 구분한다.",
+                4: "함수 eval()는 Java 스크립트의 내장함수이다.",
+            },
+            infoAnswer : "2",
+            infoDesc : "VRML브라우저는 사용자를 도착하기로 되어있는 이미지와 장면으로 구성된 다른 사이트로 보낼 수 있다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110528",
+            infoQuestion : "스팸메일(spam mail)에 대한 설명으로 옳은 것은?",
+            infoChoice : {
+                1: "수신자의 허가 하에 전달되는 전자 우편을 말한다.",
+                2: "사용자 그룹의 구성원을 가리키는 수단으로 사용되는 대체명이다.",
+                3: "불특정 다수의 사람에게 일방적으로 전달되는 대량의 광고성 전자우편을 말한다.",
+                4: "어떤 그룹에 소속된 사람들에게 정기적으로 메시지를 보내는 전자우편을 말한다.",
+            },
+            infoAnswer : "3",
+            infoDesc : "스팸메일에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110529",
+            infoQuestion : "HTML을 이용한 웹페이지 제작에 대한 설명으로 틀린 것은?",
+            infoChoice : {
+                1: "Markup 태그를 이용하여 제작한다.",
+                2: "다양한 멀티미디어 포맷의 파일을 연결시킬 수 있다.",
+                3: "하나의 그림에는 하나의 문서나 사이트만 연결할 수 있다.",
+                4: "위지윅(WYSLWYG)방식은 직접 코드를 입력하지 않아도 웹페이지구성이 가능하다.",
+            },
+            infoAnswer : "3",
+            infoDesc : "하나의 이미지에 이미지맵 링크를 이용하여 여러문서나 여러 사이트를 링크시킬수 있습니다. <br>특히 지도 이미지의 경우 이미지맵 링크를 이용하여 각 지역별 링크가 가능합니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110530",
+            infoQuestion : "HTML태그의 특징에 대해 올바르게 설명한 것은?",
+            infoChoice : {
+                1: "여는 태그는 있으나 닫는 태그는 없다.",
+                2: "대소문자 구별을 명확히 해야 한다.",
+                3: "들여쓰기가 가능하며 웹브라우저에 들여쓰기가 적용된다.",
+                4: "태그 안에 속성을 정의할 수 있다.",
+            },
+            infoAnswer : "4",
+            infoDesc : "HTML의 특징<br>① 대문자와 소문자를 구별하지 않는다.<br>② tag라는 명령어들로 이루어져 있다.<br>③ tag는 < >(각괄호) 안에 작성하며 여는 tag와 닫는 tag가 있다.<br>④ 파일 확장자명을 반드시 HTML 또는 HTM으로 지정해 주어야 한다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110531",
+            infoQuestion : "미디어 데이터를 처리하고 재생함으로서 웹브라우저의 기능을 확장시켜 주는 것은?",
+            infoChoice : {
+                1: "쿠키",
+                2: "플러그인",
+                3: "책갈피",
+                4: "다이어그램",
+            },
+            infoAnswer : "2",
+            infoDesc : "	<문제 해설><br>플러그인이란 본래의 프로그램의 기능에 작은 기능들을 더하여 주는 프로그램이라 할 수 있다.<br> 대표적인 플러그인은 Active X 프로그램들과 플래시가 대표적이나, 최근(2021년)에는 거의 모두 퇴출되어 키보드 보안 프로그램이나 암호화 프로그램 등이 쓰이고 있다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110532",
+            infoQuestion : "별도의 Plug-In 프로그램이 없어도 웹브라우저에서 재생 가능한 것은?",
+            infoChoice : {
+                1: "MOV 파일",
+                2: "PDF 문서",
+                3: "VRML 파일",
+                4: "XML 문서",
+            },
+            infoAnswer : "4",
+            infoDesc : "XML 문서에 대해서 외우세요."
+        } ,{
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110533",
+            infoQuestion : "IP 주소를 대신하여 쉽게 기억할 수 있고, 이용하기 쉽도록 만든 것은?",
+            infoChoice : {
+                1: "파일이름",
+                2: "도메인 이름",
+                3: "주소 클래스",
+                4: "패킷",
+            },
+            infoAnswer : "2",
+            infoDesc : "도메인 이름에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110534",
+            infoQuestion : "웹 페이지 검색 방식에 대한 설명으로 틀린 것은?",
+            infoChoice : {
+                1: "주제별 검색 방식은 웹 페이지를 주제별로 정리하여 디렉토리 형태로 제공한다.",
+                2: "포탈(Portal)검색 방식은 웹 페이지를 방문하여 읽어 온 모든 내용을 인덱스 형태로 제공한다.",
+                3: "키워드(Keyword)검색은 사용자가 찾고자 하는 정보의 단어를 입력하여 찾는 방식이다.",
+                4: "메타(meta)검색은 여러 검색 엔진에서 정보를 찾고 난후, 결과를 통합하는 방식이다.",
+            },
+            infoAnswer : "2",
+            infoDesc : "웹 페이지 검색 방식에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110535",
+            infoQuestion : "인터넷 익스플로러 6.0에서 다음과 같이 개인정보 설정을 하고자 한다. 선택해야 할 보안 수준으로 옳은 것은?<br><table border='1'><tr><td>- 압축 정책(컴퓨터가 읽을 수 있는 압축된 개인 정보 보호정책)을 갖고 있지 않은 모든 웹사이트의 쿠키를 차단합니다.<br>- 사용자의 명시적 동의 없이 개인 식별 정보를 사용하는 모든 웹사이트의 쿠키를 차단합니다.</td></tr></table>",
+            infoChoice : {
+                1: "높음",
+                2: "보통 높음",
+                3: "보통",
+                4: "낮음",
+            },
+            infoAnswer : "1",
+            infoDesc : "인터넷 익스플로러 6.0의 보안 수준 높음에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110536",
+            infoQuestion : "관련성 있는 페이지 사이를 자유롭게 이동할 수 있는 구조를 가진 컴퓨터상이 문서는?",
+            infoChoice : {             
+                1: "워드문서",
+                2: "하이퍼텍스트",
+                3: "그림문서",
+                4: "자바스크립트",
+            },
+            infoAnswer : "2",
+            infoDesc : "하이퍼텍스트에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110537",
+            infoQuestion : "“일반적으로 드림위버에서 웹문서에 자바스크립트 소스를 삽입하여 인터렉티브한 페이지를 만들 수 있도록 제공해 주는 것은?",
+            infoChoice : {
+                1: "Layer",
+                2: "Behaviors",
+                3: "Form",
+                4: "CSS",
+            },
+            infoAnswer : "2",
+            infoDesc : "Behaviors에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110538",
+            infoQuestion : "다음 중 웹 브라우저의 종류가 아닌 것은?",
+            infoChoice : {
+                1: "넷스케이프",
+                2: "익스플로러",
+                3: "모자이크",
+                4: "드림위버",
+            },
+            infoAnswer : "4",
+            infoDesc : "어도비 드림위버 (Adobe Dreamweaver)는 매크로미디어가 개발한 웹 개발 응용 프로그램이며, 현재는 2005년에 매크로미디어를 인수하였던 어도비 시스템즈 소유입니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110539",
+            infoQuestion : "인터넷 서비스 중 원격의 컴퓨터를 인터넷으로 접속하여 마치 자신의 컴퓨터처럼 사용할 수 있도록 해주는 것은?",
+            infoChoice : {
+                1: "FTP",
+                2: "TELNET",
+                3: "E-MAIL",
+                4: "www",
+            },
+            infoAnswer : "2",
+            infoDesc : "TELNET에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110540",
+            infoQuestion : "웹 페이지를 제작할 때 사용하는 웹에디터의 종류가 아닌 것은?",
+            infoChoice : {
+                1: "ActiveX",
+                2: "Notepad",
+                3: "UltraEdit",
+                4: "Dreamweaver",
+            },
+            infoAnswer : "1",
+            infoDesc : "ActiveX - 일반 응용프로그램과 웹을 연결시키기 위해 제공되는 기술."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110541",
+            infoQuestion : "다음 중 Illustrator9.0에서 원하는 각도를 입력해 선택한 오브젝트(Object)를 기울여 주는 메뉴는?",
+            infoChoice : {
+                1: "Move",
+                2: "Scale",
+                3: "Rotate",
+                4: "Shear",
+            },
+            infoAnswer : "4",
+            infoDesc : "Shear에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110542",
+            infoQuestion : "다음 중 웹 디자인 프로세스(Process)를 순차적으로 옳게 나열한 것은?",
+            infoChoice : {
+                1: "주제선정 → 자료수집 → 콘티 및 스토리보드 제작 → 레이아웃 구성 → 그래픽 작업 및 기술적 요소구현 → 결과물 수정 보완 → 서버에 자료 업로드 → 검색엔진 등록",
+                2: "주제선정 → 자료수집 → 레이아웃구성 → 콘티 및 스토리보드 제작→그래픽작업 및 기술적 요소구현 → 결과물 수정 보완 → 검색엔진 등록→서버에 자료 업로드",
+                3: "자료수집 → 주제선정 → 콘티 및 스토리보드 제작 → 레이아웃구성 → 그래픽 작업 및 기술적 요소 구현 → 서버에 자료 업로드 → 결과물 수정 보완 → 검색엔진 등록",
+                4: "자료수집 → 주제선정 → 레이아웃 구성 →콘티 및 스토리보드 제작 →그래픽 작업 및 기술적 요소 구현 → 검색엔진 등록 → 결과물 수정 보완 → 검색엔진 등록 → 서버에 자료 업로드",
+            },
+            infoAnswer : "1",
+            infoDesc : "웹 디자인 프로세스(Process)에 대해서 외우세요."
+        } ,{
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110543",
+            infoQuestion : "웹문서에서 텍스트나 이미지 또는 멀티미디어 요소를 클릭하면 외부의 텍스트나 이미지 또는 기타 다른 멀티미디어 요소로 변경되는 것은?",
+            infoChoice : {
+                1: "테이블",
+                2: "하이퍼링크",
+                3: "프레임",
+                4: "태그",
+            },
+            infoAnswer : "2",
+            infoDesc : "하이퍼링크에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110544",
+            infoQuestion : "플래시MX에서 문자를 이용하여 버튼을 만들 경우 글자와 글자 사이의 공백부분에서 마우스가 위치했을 때 버튼이 작동하도록 만드는 방법으로 가장 옳은 것은?",
+            infoChoice : {
+                1: "스테이지에서 사각형의 그래픽심벌을 만들어 버튼 심벌 밑에 놓는다.",
+                2: "문자를 그래픽 심벌로 만들어서 버튼 심벌을 만든다.",
+                3: "버튼 심벌의 히트(Hit)영역에 사각형을 그려준다.",
+                4: "버튼 심벌에서 레이어를 추가한다.",
+            },
+            infoAnswer : "3",
+            infoDesc : "버튼 심벌의 히트(Hit)영역에 사각형을 그려주는 것에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110545",
+            infoQuestion : "다음 중 GIF 파일 포맷의 설명으로 틀린 것은?",
+            infoChoice : {
+                1: "이미지의 일부분을 투명하게 만들 수 있다.",
+                2: "1670만 가지의 색상을 인덱스 색상으로 사용할 수 있다.",
+                3: "애니메이션 효과를 만들 수 있다.",
+                4: "이미지가 점진적으로 나타나는 Interlace 효과를 낼 수 있다.",
+            },
+            infoAnswer : "2",
+            infoDesc : "GIF 파일은 픽셀당 최대 8비트까지 지원하며, 256가지의 색상을 표현할 수 있습니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110546",
+            infoQuestion : "애니메이션 도구인 플래시(FLASH)가 가지고 있는 특징이 아닌 것은?",
+            infoChoice : {             
+                1: "파일 크기가 비교적 작으면서 좋은 품질의 무비를 만들어 준다.",
+                2: "비트맵 형식이기 때문에 고품질 이미지 제작이 가능하다.",
+                3: "사운드 및 다양한 파일 포맷을 지원한다.",
+                4: "웹브라우저에서 자체적으로 플래시 무비가 실행된다.",
+            },
+            infoAnswer : "2",
+            infoDesc : "비트맵 형식은 고품질 이미지에 적합하지 않습니다.<br>고화질 이미지에는 벡터(Vector) 이미지가 적합합니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110547",
+            infoQuestion : "다음과 같은 설명에 해당되는 리샘플링 알고리즘은?<br><table border='1'><tr><td>- 사진처럼 복잡한 음영과 색의 변화가 심한 이미지에 적합하다.<br>- 새로 생성해야 할 픽셀의 색채 값을 추출하기 위해 방사형의 주변으로부터 픽셀들의 평균적인 색채 값을 찾는 것이다.<br>- 가장 사실적인 세부 묘사를 얻을 수 있다.</td></tr></table>",
+            infoChoice : {
+                1: "Bilinear",
+                2: "Bicubic",
+                3: "Resolution",
+                4: "Nearest Neighbor",
+            },
+            infoAnswer : "2",
+            infoDesc : "Bicubic에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110548",
+            infoQuestion : "컴퓨터그래픽스 시스템의 입력 장치가 아닌 것은?",
+            infoChoice : {
+                1: "키보드",
+                2: "마우스",
+                3: "플로터",
+                4: "스캐너",
+            },
+            infoAnswer : "3",
+            infoDesc : "플로터는 설계도면 등을 출력하는 대형 출력장치 입니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110549",
+            infoQuestion : "벡터 이미지에 대한 설명으로 틀린 것은?",
+            infoChoice : {
+                1: "수학적으로 행렬을 사용하여 좌표변환을 통해 정의된 선과 곡선으로 구성되어 있다.",
+                2: "그래픽의 품질을 그대로 유지하면서 선의 색상, 이동, 크기를 변경할 수 있다.",
+                3: "해상도에 영향을 받지 않는다.",
+                4: "전문 용어로 래스터 이미지라 한다.",
+            },
+            infoAnswer : "4",
+            infoDesc : "래스터 이미지는 비트맵 이미지를 일컫는 말"
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110550",
+            infoQuestion : "웹페이지에서 사용되는 버튼을 가장 부적절하게 제작한 것은?",
+            infoChoice : {
+                1: "문자 버튼의 색상과 배경이 변한다.",
+                2: "애니메이션 효과로 움직이는 버튼을 제작한다.",
+                3: "모든 버튼이 자연스럽게 사라진다.",
+                4: "흔들리는 이미지가 메뉴로 바뀐다.",
+            },
+            infoAnswer : "3",
+            infoDesc : "모든 버튼이 사라지면 불편할 것입니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110551",
+            infoQuestion : "3차원 컴퓨터 그래픽의 모델링 방식 중 물체의 면과 면이 만나서 구성되는 모서리 선을 사용하여 물체의 형상을 표현하는 방식으로 점, 꼭짓점을 연결하는 선 또는 곡선만으로 표현하는 방식은?",
+            infoChoice : {
+                1: "와이어프레임(Wire Frame)모델링 방식",
+                2: "솔리드(Solid)모델링 방식",
+                3: "CSG(constructive Solid Geometry)모델링 방식",
+                4: "B-Reps(Boundary Representation)모델링 방식",
+            },
+            infoAnswer : "1",
+            infoDesc : "와이어프레임(Wire Frame)모델링 방식에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110552",
+            infoQuestion : "웹디자인 프로세스 중 Pre-Production 단계에 해당되지 않는 것은?",
+            infoChoice : {
+                1: "이미지 제작",
+                2: "디자인 계획 수립",
+                3: "컨셉 구상",
+                4: "디자인 구체화",
+            },
+            infoAnswer : "1",
+            infoDesc : "이미지 제작은 Production 단계로 실제 제작 단계에 해당합니다."
+        } ,{
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110553",
+            infoQuestion : "사용자가 그래픽을 통해 컴퓨터와 정보를 교환하는 작업 환경을 의미하는 것은?",
+            infoChoice : {
+                1: "AVI(Audio Video Interface)",
+                2: "PUI(Process User Interface)",
+                3: "GUI(Graphic User Interface)",
+                4: "MUI(Multi User Interface)",
+            },
+            infoAnswer : "3",
+            infoDesc : "GUI(Graphic User Interface)에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110554",
+            infoQuestion : "다음 중 PNG 파일 포맷의 성명으로 틀린 것은?",
+            infoChoice : {
+                1: "압축 기법을 사용하지 않는 포맷으로 높은 이미지의 품질을 그대로 유지할 수 있다.",
+                2: "GIF와 JPEG의 장점을 합친 포맷으로 무손실 압축을 사용한다.",
+                3: "8비트의 256컬러나, 24비트의 트루컬러를 선택하여 저장할 수 있어 효율적이다.",
+                4: "인터레이스 로딩기법과 디더링 옵션, 투명도를 지정할 수 있다.",
+            },
+            infoAnswer : "1",
+            infoDesc : "압축 기법을 사용하지 않는 포맷으로 높은 이미지의 품질을 그대로 유지할 수 없습니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110555",
+            infoQuestion : "다음 중 웹 그래픽 제작 툴과 가장 거리가 먼 것은?",
+            infoChoice : {
+                1: "포토샵(Photoshop)",
+                2: "일러스트레이터(Illustrator)",
+                3: "오토캐드(Autocad)",
+                4: "페인트샵(Paintshop)",
+            },
+            infoAnswer : "3",
+            infoDesc : "오토캐드(Autocad)는 컴퓨터를 이용하여 정교하고 복잡한 설계 도면을 모델링하는 소프트 프로그램입니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110556",
+            infoQuestion : "다음 중 Flash MX에서 쉐이프트위닝을 할 때 도형이 원하지 않는 모양으로 꼬이는 현상이 발생 되는데, 이를 해결할 수 있는 기능은?",
+            infoChoice : {             
+                1: "Motion Tweening",
+                2: "Shape Hint",
+                3: "Expand Fill",
+                4: "Break Apart",
+            },
+            infoAnswer : "2",
+            infoDesc : "Shape Hint에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110557",
+            infoQuestion : "일반적으로 “해상도가 높다”라는 말의 의미로 틀린 것은?",
+            infoChoice : {
+                1: "이미지가 선명하다.",
+                2: "이미지 질(Quality)이 좋다.",
+                3: "이미지의 용량이 적다.",
+                4: "일정 단위의 크기에 많은 픽셀을 포함한다.",
+            },
+            infoAnswer : "3",
+            infoDesc : "이미지의 용량이 많다는 의미입니다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110558",
+            infoQuestion : "두 개의 서로 다른 이미지나 3차원 모델 사이의 변화하는 과정을 서서히 나타내는 것은?",
+            infoChoice : {
+                1: "모핑",
+                2: "로토스코핑",
+                3: "미립자 시스템",
+                4: "중첩액션",
+            },
+            infoAnswer : "1",
+            infoDesc : "모핑에 대해서 외우세요."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110559",
+            infoQuestion : "웹페이지 제작을 도와주는 위지위그(WYSIWYG)프로그램이 아닌 것은?",
+            infoChoice : {
+                1: "프론트페이지(Frontpage)",
+                2: "드림위버(Dreamweaver)",
+                3: "나모(Namo Web Editor)",
+                4: "피디에프(PDF; Portable Document Format)",
+            },
+            infoAnswer : "4",
+            infoDesc : "피디에프(PDF; Portable Document Format)는 미국 어도비사가 포스트스크립트를 기반으로 개발한 소용량의 전자문서 파일형식이다."
+        }, {
+            infoType : "웹디자인 기능사",
+            infoTime : "2011년 5회",
+            infoNumber : "20110560",
+            infoQuestion : "웹페이지를 작성할 때 배경이미지와 메뉴에 관한 설명으로 틀린 것은?",
+            infoChoice : {
+                1: "스타일시트를 이용하여 배경 이미지의 반복 횟수를 증가시킨다.",
+                2: "배경 이미지가 클 경우 용량 증가로 로딩이 늦어진다.",
+                3: "메뉴는 메타포를 이용하여 디자인한다.",
+                4: "배경의 색상을 분화시켜 사용하면 프레임이 사용된 것처럼 보인다.",
+            },
+            infoAnswer : "1",
+            infoDesc : "웹페이지를 작성법에 대해서 외우세요."
+        }
+       ]
+
+    //    quizQuestion.innerHTML = "<em>"+quizInfo[0].infoNumber+"</em>" +". "+quizInfo[0].infoQuestion;
+
+       //
+    //    console.log(quizInfo[2].infoChoice[1])
+
+    //문제 출력
+    const updateQUiz = () => {
+        const exam = [];
+
+        quizInfo.forEach((question, number) => {
+            exam.push(`
+            <div class="quiz">
+                <div class="quiz__header">
+                    <h2 class="quiz__title">${question.infoType} ${question.infoTime}</h2>                    
+                </div>
+                <div class="quiz__main">
+                    <div class="quiz__question"><em>${number+1}</em>. ${question.infoQuestion}</div>
+                    <div class="quiz__view">
+                        <div class="dog__wrap">
+                        <div class="true">정답입니다!</div>
+                        <div class="false">오답입니다!</div>
+                            <div class="card-container">
+                                <div class="dog">
+                                    <div class="head">
+                                        <div class="ears"></div>
+                                        <div class="face"></div>
+                                        <div class="eyes">
+                                            <div class="teardrop"></div>
+                                        </div>
+                                        <div class="nose"></div>
+                                        <div class="mouth">
+                                            <div class="tongue"></div>
+                                        </div>
+                                        <div class="chin"></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="tail"></div>
+                                        <div class="legs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__choice">
+                        <label for="choice1${number}">
+                            <input type="radio" id="choice1${number}" name="choice${number}" value="1">
+                            <span>${question.infoChoice[1]}</span>
+                        </label>
+                        <label for="choice2${number}">
+                            <input type="radio" id="choice2${number}" name="choice${number}" value="2">
+                            <span>${question.infoChoice[2]}</span>
+                        </label>
+                        <label for="choice3${number}">
+                            <input type="radio" id="choice3${number}" name="choice${number}" value="3">
+                            <span>${question.infoChoice[3]}</span>
+                        </label>
+                        <label for="choice4${number}">
+                            <input type="radio" id="choice4${number}" name="choice${number}" value="4">
+                            <span>${question.infoChoice[4]}</span>
+                        </label>                        
+                    </div>                    
+                    <div class="quiz__desc"><em>${question.infoAnswer}</em>번 입니다.<br>${question.infoDesc}</div>
+                </div>                
+            </div> 
+            `);
+
+        });
+        exam.push(`
+            <div class="quiz__info">??점</div>
+            <div class="quiz__check">정답 확인</div>
+        `);
+        quizWrap.innerHTML = exam.join(" ");
+
+        //설명 숨기기
+        
+            // document.querySelectorAll(".quiz__desc").forEach((el) => {
+            //     el.style.display = "none";
+            // });
+
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "none");
+      
+    };
+    updateQUiz();
+
+    //정답 확인
+    const answerQuiz = () => {
+        const quizChoices = document.querySelectorAll(".quiz__choice");
+
+        //사용자가 체크한 정답 == 문제 정답
+        quizInfo.forEach((question, number) => {
+            const userSelector = `input[name=choice${number}]:checked`; //choice${number}는 속성 선택자
+            const quizSelectorWrap = quizChoices[number];
+            const userAnswer = (quizSelectorWrap.querySelector(userSelector) || {}).value;
+            const dogWrap = quizWrap.querySelectorAll(".dog__wrap");
+
+            if(userAnswer == question.infoAnswer){
+                // alert("정답")
+                dogWrap[number].classList.add("like");
+                quizScore++;
+            } else {
+                // alert("오답")
+                dogWrap[number].classList.add("dislike");
+                
+            }
+        });
+
+        //설명 보이기
+        document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "block");
+
+        //점수 보이기
+        document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";        
+    }
+
+    //정답 클릭
+    document.querySelector(".quiz__check").addEventListener("click", answerQuiz);
+
+
+    </script>
+</body>
+</html>
