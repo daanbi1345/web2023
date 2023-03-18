@@ -366,7 +366,7 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES
 <pre><code class="language-js">SELECT * FROM member LIMIT 5, 5;</code></pre> // 앞의 5는 시작점이라서 포함x
                     <h4>회원 이메일을 기준으로 10개만 불러오기(11-20)</h4>
 <pre><code class="language-js">SELECT youEmail FROM member LIMIT 10, 10;</code></pre>
-                    <h4>회원 이메일을 기준으로 10개만 불러오기(11-20)</h4>
+                    <h4>회원 나이를 기준으로 겹치지 않는 나이 불러오기(11-20)</h4>
 <pre><code class="language-js">SELECT DISTINCT youAge FROM member;</code></pre>
             
                     <h4 id="intro6-3" class="page-header">데이터 수정하기</h4>                    
