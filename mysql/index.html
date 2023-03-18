@@ -378,7 +378,7 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES
                     <h4>아이디가 5~10번인 회원만 비밀번호를 7777로 수정하기</h4>
 <pre><code class="language-js">UPDATE member SET youPass = 7777 WHERE memberID BETWEEN 5 AND 10;</code></pre>
                     <h4>이름을 내림차순으로 해서 5명의 비밀번호를 9999로 변경하기</h4>
-<pre><code class="language-js">UPDATE member SET youPass = 9999 ORDER BY youName DESC LIMIT 5;</code></pre>
+<pre><code class="language-js">UPDATE member SET youPass = 9999 ORDER BY youName DESC LIMIT 5;</code></pre>// descdent<>asecdant
 
                     <h4 id="intro6-4" class="page-header">데이터 삭제하기</h4>                    
                     <div class="bs-callout bs-callout-info"><code>DELETE</code> <code>FROM</code> 테이블명<code>WHERE</code> 조건;</div>
