@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지/텍스트 유형01</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        li {
+            list-style: none;
+        }
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0,0,0,0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        /* imgText__wrap */
+        .imgText__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .imgText__inner article {
+            width: 31.333%;
+        }
+        .imgText__inner .text span {
+            background-color: #FF7C7C;
+            font-size: 14px;
+            color: #fff;
+            padding: 1px 20px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .imgText__inner .text h3 {
+            font-size: 50px;
+            margin-bottom: 17px;
+        }
+        .imgText__inner .text p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .imgText__inner .text li {
+            position: relative;
+            padding-left: 14px;
+        }
+        .imgText__inner .text li::before {
+            content: "";
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #666;
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+        .imgText__inner .text li a {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .imgText__inner .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+            border-radius: 10px;
+            position: relative;
+        }
+        .imgText__inner .img a {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 40px;
+        }
+        .imgText__inner .img.i1 {
+            background-image: url(../asset/img/imgText01_01.jpg);
+        }
+        .imgText__inner .img.i2 {
+            background-image: url(../asset/img/imgText01_02.jpg);
+        }
+        .imgText__inner .img.i1 a {
+            background-color: #37150A;
+        }
+        .imgText__inner .img.i2 a {
+            background-color: #112C32;
+        }
+    </style>
+</head>
+<body>
+    <section class="imgText__wrap section nexon">
+        <h2 class="blind">300종 이상의 반려견</h2>
+        <div class="container">
+            <div class="imgText__inner">
+                <article class="text">
+                    <span>NOTICE</span>
+                    <h3>300종 이상의 반려견</h3>
+                    <p>세계적으로 약 300종 이상의 반려견이 있습니다. 일부 인기 있는 반려견 종류는 다음과 같습니다.</p>
+                    <ul>
+                        <li><a href="#">비글(Beagle)</a></li>
+                        <li><a href="#">닥스훈트(Dachshund)</a></li>
+                        <li><a href="#">보스턴 테리어(Boston Terrier)</a></li>
+                        <li><a href="#">불독(Bulldog)</a></li>
+                        <li><a href="#">불리(Bull Terrier)</a></li>
+                        <li><a href="#">사모예드(Samoyed)</a></li>
+                        <li><a href="#">시베리안 허스키(Siberian Husky)</a></li>
+                        <li><a href="#">슈나우저(Schnauzer)</a></li>
+                        <li><a href="#">요크셔 테리어(Yorkshire Terrier)</a></li>
+                        <li><a href="#">골든 리트리버(Golden Retriever)</a></li>
+                        <li><a href="#">코카 스파니엘(Cocker Spaniel)</li></a></li>
+                    </ul>
+                </article>
+                <article class="img i1">
+                    <a href="#">충성심 넘치는 반려견 </a>
+                </article>
+                <article class="img i2">
+                    <a href="#">똑똑한 반려견 </a>
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

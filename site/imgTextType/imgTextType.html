@@ -86,9 +86,27 @@
             line-height: 1.5;
             text-align: left;
         }
-        .food {           
+        .inner .img {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+            border-radius: 10px;
+            position: relative;
         }
-        .souvenir {     
+        .inner .img a {
+            border-radius: 40px;
+            color: #fff;
+            position: absolute;
+            left: 20px;
+            bottom: 20px; 
+            padding: 10px 20px;
+            border-radius: 40px;
+        }
+        .inner .img.food a {         
+            background-color: #A57D64;
+        }
+        .inner .img.souvenir a {     
+            background-color: #874317;
         }
         .tips {
             margin-bottom: 15px;
@@ -105,25 +123,27 @@
                     <p class="tips">맛있는 음식을 맛보고 싶은 마음은 누구나 있습니다.<br>
                     그리고 기념품을 사서 보관하거나 선물하는 일도 많죠.</p>
                     <div class="li">
-                        <li>오소 부코</li>
-                        <li>프로슈토</li>
-                        <li>리볼리타</li>
-                        <li>살팀보카</li>
-                        <li>쿠샤리</li>
-                        <li>에이시</li>
-                        <li>하맘</li>
-                        <li>토르시</li>
-                        <li>마비스 치약</li>
-                        <li>낙타 인형</li>
-                        <li>시샤 도구</li>              
+                        <li><a href="#">오소 부코</a></li>
+                        <li><a href="#">프로슈토</a></li>
+                        <li><a href="#">리볼리타</a></li>
+                        <li><a href="#">살팀보카</a></li>
+                        <li><a href="#">쿠샤리</a></li>
+                        <li><a href="#">에이시</a></li>
+                        <li><a href="#">하맘</a></li>
+                        <li><a href="#">토르시</a></li>
+                        <li><a href="#">마비스 치약</a></li>
+                        <li><a href="#">낙타 인형</a></li>
+                        <li><a href="#">시샤 도구</a></li>              
                     </div>
                 </article>
-                <article class="food">
+                <article class="img food">
+                    <a href="#">음식점</a>
                     <figure>
                         <img src="../asset/img/food.jpg" alt="food">
                     </figure>
                 </article>
-                <article class="souvenir">
+                <article class="img souvenir">
+                    <a href="#">기념품 가게</a>
                     <figure>
                         <img src="../asset/img/souvenir.jpg" alt="souvenir">
                     </figure>
