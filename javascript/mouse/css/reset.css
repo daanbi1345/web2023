@@ -1,0 +1,78 @@
+/* reset */
+@import url('https://webfontworld.github.io/TheJamsil/TheJamsil.css');
+@import url('https://webfontworld.github.io/NexonMabinogi/MabinogiClassic.css');
+@import url('https://webfontworld.github.io/earlyfont/EF_Hyunygothic.css');
+@import url('https://webfontworld.github.io/amore/AritaDotum.css');
+@import url('https://webfontworld.github.io/ssf/BeanPole.css');
+@import url('https://webfontworld.github.io/vitro/VitroPride.css');
+@import url('https://webfontworld.github.io/jeju/JejuGothic.css');
+@import url('https://webfontworld.github.io/yangheeryu/GowunDodum.css');
+@import url('https://webfontworld.github.io/score/SCoreDream.css');
+@import url('https://webfontworld.github.io/ridi/RidiBatang.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+li,ul,ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal; /*기울기체로 나와서 기울기체 해제*/
+}
+.font01 {
+    font-family: 'TheJamsil';
+    font-weight: 300;
+}
+.font02 {
+    font-family: 'MabinogiClassic';
+    font-weight: 300;
+}
+.font03 {
+    font-family: 'EF_Hyunygothic';
+    font-weight: 300;
+}
+.font04 {
+    font-family: 'AritaDotum';
+    font-weight: 300;
+}
+.font05 {
+    font-family: 'BeanPole';
+    font-weight: 300;
+}
+.font06 {
+    font-family: 'VitroPride';
+    font-weight: 300;
+}
+.font07 {
+    font-family: 'JejuGothic';
+    font-weight: 300;
+}
+.font08 {
+    font-family: 'GowunDodum';
+    font-weight: 300;
+}
+.font09 {
+    font-family: 'SCoreDream';
+    font-weight: 300;
+}
+.font10 {
+    font-family: 'RidiBatang';
+    font-weight: 300;
+}
