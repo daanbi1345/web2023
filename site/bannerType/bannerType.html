@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형01</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top; /* 여백 없앰 */
+            width: 100%;
+        }
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+            text-align: center;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section__h2 {            
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;        
+        }
+        /* banner__wrap */
+        .banner__wrap{
+            background-image: url(../asset/img/bannerType01_01.jpg);
+            height: 500px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .banner__inner .title {
+            font-size: 50px;
+            margin-top: 120px;
+        }
+        .banner__inner .p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 50px;
+            margin-bottom: 90px;
+        }
+        .banner__inner > a {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <section class="section banner__wrap nexon">
+        <div class="banner__inner">
+            <h3 class="title">좋은 추억 남기시길 바랍니다</h3>
+            <p class="p">새로운 환경이 주어지면, 새로운 추억을 쌓고 싶은 마음은 누구에게나 있습니다.<br>
+                그런 의미에서 여행은 좋은 기회가 되기도 합니다.</p>
+            <a href="#">https://jongyung.tistory.com</a>
+        </div>
+    </section>
+</body>
+</html>
+
