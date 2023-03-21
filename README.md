@@ -18,7 +18,9 @@
 
 
 
-마우스 01 : https://daanbi1345.github.io/web2023/javascript/mouse/mouseEffect01.html
+마우스 01 : https://daanbi1345.github.io/web2023/javascript/mouse/mouseEffect01.html   
+마우스 02 : https://daanbi1345.github.io/web2023/javascript/mouse/mouseEffect02.html   
+마우스 03 : https://daanbi1345.github.io/web2023/javascript/mouse/mouseEffect03.html
 
 # 사이트
 카드 유형 :   https://daanbi1345.github.io/web2023/site/cardType/cardType01.html   
