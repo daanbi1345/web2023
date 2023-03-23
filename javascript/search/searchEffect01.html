@@ -37,7 +37,7 @@
                     <input type="text" name="search" id="search" placeholder="CSS 속성을 입력해주세요">
                 </div>
                 <div class="search__info">
-                    <div class="num">
+                    <div>
                         CSS 속성 갯수 : <span>0</span>개
                     </div>
                 </div>
@@ -287,7 +287,6 @@
         //선택자
         const searchBox = document.querySelector(".search__box input"); //검색
         const searchList = document.querySelectorAll(".search__list li");   //목록 리스트
-        const searchInfo = document.querySelectorAll(".search__info");
 
         //검색
         searchBox.addEventListener("keyup", () => {
@@ -311,12 +310,11 @@
                     //데이터가 없으면 실행
                     el.classList.remove("hide");
                 }
-            })
-            searchInfo.forEach((el,i) => {
-                el. = 
-            });
-
+            })            
         });
+
+        document.querySelector(".search__info span").innerHTML = searchList.length;
+        
     </script>
 
 </body>
