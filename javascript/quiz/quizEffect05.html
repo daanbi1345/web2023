@@ -102,8 +102,8 @@
         const quizAnswer = quizWrap.querySelector(".quiz__answer")
         let quizScore = 0;
 
-       //문제 정보
-       const quizInfo = [
+        //문제 정보
+        const quizInfo = [
         {
             infoType : "정보처리 기능사",
             infoTime : "2011년 5회",
@@ -885,11 +885,10 @@
             infoAnswer : "4",
             infoDesc : "CATV는 AM방식입니다."
         }
-       ]
+        ]
 
     //    quizQuestion.innerHTML = "<em>"+quizInfo[0].infoNumber+"</em>" +". "+quizInfo[0].infoQuestion;
 
-       //
     //    console.log(quizInfo[2].infoChoice[1])
 
     //문제 출력
@@ -966,8 +965,7 @@
             //     el.style.display = "none";
             // });
 
-            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "none");
-      
+            document.querySelectorAll(".quiz__desc").forEach(el => el.style.display = "none");      
     };
     updateQUiz();
 
@@ -988,8 +986,7 @@
                 quizScore++;
             } else {
                 // alert("오답")
-                dogWrap[number].classList.add("dislike");
-                
+                dogWrap[number].classList.add("dislike");                
             }
         });
 
@@ -1002,8 +999,6 @@
 
     //정답 클릭
     document.querySelector(".quiz__check").addEventListener("click", answerQuiz);
-
-
     </script>
 </body>
 </html>
