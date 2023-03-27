@@ -31,6 +31,7 @@
                     <h2 class="quiz__title"></h2>                    
                 </div>
                 <div class="quiz__main">
+                    <h4>몇 문제 째인지</h4>
                     <div class="quiz__question"></div>
                     <div class="quiz__view">
                         <div class="dog__wrap">
@@ -153,7 +154,7 @@
         const quizAnswer = quizWrap.querySelector(".quiz__answer")
         const quizNext = quizWrap.querySelector(".quiz__answer .next");//정답 버튼
         const quizDesc = quizWrap.querySelector(".quiz__desc");
-
+        const quizMainH4 = quizWrap.querySelector(".quiz__main h4");
 
         let quizCount = 0;
         let quizScore = 0;
@@ -193,10 +194,16 @@
                 ${quizInfo[index].infoDesc}
             `;
 
+            let h4Tag = `
+                ${quizInfo.length - index} 문제 남았습니다.
+            `;
+
             quizTitle.innerHTML = typeTag;
             quizChoice.innerHTML = choiceTag;
             quizQuestion.innerHTML = questionTag;
             quizDesc.innerHTML = descTag;
+            quizMainH4.innerHTML = h4Tag;
+
 
             //보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
@@ -226,6 +233,7 @@
             if(userAnswer == currentAnswer){
                 console.log("정답입니다.");
                 dogWrap.classList.add("like");
+                quizScore++;
             } else {
                 console.log("오답입니다.");
                 dogWrap.classList.add("dislike");
@@ -235,8 +243,11 @@
             quizAnswer.style.display = "block";
             quizDesc.style.display = "block";
 
-        };
+            if(quizInfo.length - quizCount == 1){
+                alert(quizScore + "개 맞았습니다. 점수는" + Math.ceil((quizScore/quizInfo.length)*100)+ "점 입니다.");
+            }
 
+        };
 
         //정답 확인
         quizNext.addEventListener("click", () => {
@@ -245,16 +256,7 @@
 
             dogWrap.classList.remove("like", "dislike");
         });
-
-        const answerQuiz = () => {
-        const quizChoices = document.querySelectorAll(".quiz__choice");
-        //점수 보이기
-        document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";
-        }
-        
-
-
-        
+               
     </script>
 </body>
 </html>
