@@ -161,6 +161,21 @@
 .quiz__answer .confirm:hover {
     background-color: #d0e6e9;
 }
+.quiz__answer .next {
+    background-color: #c4b1ed;
+    border: 6px ridge #cacaca;
+    width: 100%;
+    font-family: 'Cafe24Oneprettynight';
+    padding: 10px 20px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.quiz__answer .next:hover {
+    background-color: #d0e9e6;
+}
 
 .quiz__answer .result {
     background-color: #fff;
