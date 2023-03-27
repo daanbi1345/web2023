@@ -244,7 +244,7 @@
             quizDesc.style.display = "block";
 
             if(quizInfo.length - quizCount == 1){
-                alert(quizScore + "개 맞았습니다. 점수는" + Math.ceil((quizScore/quizInfo.length)*100)+ "점 입니다.");
+                alert(quizScore + "개 맞았고, " + (quizInfo.length - quizScore) +"개 틀렸습니다. " + "점수는 " + Math.ceil((quizScore/quizInfo.length)*100) + "점입니다.");
             }
 
         };
