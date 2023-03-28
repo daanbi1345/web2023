@@ -14,6 +14,10 @@
 
 퀴즈 게임 01 : https://daanbi1345.github.io/web2023/javascript/quiz/quizEffect01.html   
 퀴즈 게임 02 : https://daanbi1345.github.io/web2023/javascript/quiz/quizEffect02.html   
+퀴즈 게임 03 : https://daanbi1345.github.io/web2023/javascript/quiz/quizEffect03.html   
+퀴즈 게임 04 : https://daanbi1345.github.io/web2023/javascript/quiz/quizEffect04.html   
+퀴즈 게임 05 : https://daanbi1345.github.io/web2023/javascript/quiz/quizEffect05.html   
+퀴즈 게임 06 : https://daanbi1345.github.io/web2023/javascript/quiz/quizEffect06.html
 
 
 
