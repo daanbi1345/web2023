@@ -1,0 +1,96 @@
+.text__inner {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.text__inner .text {
+    width: 32.3333%;
+    border: 1px solid #f5f5f5;
+    padding: 90px 20px 20px 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition:  all 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+.text__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.text__desc {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.text__btn {
+    float: right;
+    position: relative;
+    padding-right: 20px;
+}
+.text__btn::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/icon_plus.svg);
+    transition: all 0.3s;
+}
+.text__btn:hover::before {
+    transform: rotate(360deg);
+}
+.text__inner .text:hover {
+    background-color: #f5f5f5;
+}
+.text__inner .text::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background-color: #6b5151;
+    /* background-image: url(../asset/img/textType01.svg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    border-radius: 50%;
+}      
+.text__inner .text.t1::before {
+    background-color: #74a6a1;
+    background-image: url(../img/textType01.svg);
+}
+.text__inner .text.t2::before {
+    background-color: #99b19a;
+    background-image: url(../img/textType02.svg);
+}
+.text__inner .text.t3::before {
+    background-color: #c8e6c9;
+    background-image: url(../img/textType03.svg); 
+}
+.text__inner .text.t4::before {
+    background-color: #e9d5b8;
+    background-image: url(../img/textType04.svg);
+}
+.text__inner .text.t5::before {
+    background-color: #bcaaa4;
+    background-image: url(../img/textType05.svg);
+}
+.text__inner .text.t6::before {
+    background-color: #9ccec9;
+    background-image: url(../img/textType06.svg);
+}
+
+@media (max-width: 960px){
+    .text__inner .text {
+        width: 49%;
+    }
+}
+@media (max-width: 600px){
+    .text__inner .text {
+        width: 100%;
+    }
+}

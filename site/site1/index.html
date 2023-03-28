@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 만들기 1</title>
+
+    <!-- SEO -->
+    <meta name="author" content="조은경">
+    <meta name="description" content="사이트 만들기 튜토리얼">
+    <meta name="keyword" content="사이트, 사이트 만들기, 튜토리얼">
+    <meta name="robots" content="all">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/favicon.png"/>  
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/favicon.png"/> 
+    <link rel="apple-touch-icon" href="assets/ico/favicon.png"/> 
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">     
+</head>
+<body>
+    <div id="skip">
+        <a href="#">헤더 영역 바로가기</a>
+        <a href="#">슬라이드 영역 바로가기</a>
+        <a href="#">이미지 영역 바로가기</a>
+        <a href="#">이미지/텍스트 영역 바로가기</a>
+        <a href="#">카드 영역 바로가기</a>
+        <a href="#">베너 영역 바로가기</a>
+        <a href="#">텍스트 영역 바로가기</a>
+        <a href="#">푸터 영역 바로가기</a>
+    </div>
+    <!-- skip -->
+
+    <header id="headerType" style="display: none;">
+        <h1>사이트 로고</h1>
+    </header>
+    <!-- headerType -->
+
+    <main id="mainType">
+        <section id="sliderType" class="nexon">
+            <h2 class="blind">슬라이드 영역</h2>
+            <div class="slider__inner">
+                <div class="slider">
+                    <div class="slider__info container">
+                        <span class="small">event</span>
+                        <h3 class="title">이탈리아로 떠나는 여행</h3>
+                        <p class="desc">이탈리아로 떠나는 여행이 궁금하시지 않으세요? 지금부터 이탈리아로 떠나는 여행이 얼마나 즐거울지 소개합니다.</p>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">상담 신청</a>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <a href="#"><span class="blind">이전 이미지</span></a>
+                        <a href="#"><span class="blind">다음 이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="#" class="dot active"><span class="blind"></span></a>
+                        <a href="#" class="dot"><span class="blind"></span></a>
+                        <a href="#" class="dot"><span class="blind"></span></a>
+                        <a href="#" class="play"><span class="blind"></span></a>
+                        <a href="#" class="stop"><span class="blind"></span></a>
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <!-- sliderType -->
+
+        <section id="imageType" class="nexon section">
+            <h2 class="blind">이미지 영역</h2>
+            <div class="image__inner container">
+                <article class="image">
+                    <figure class="image__inner">
+                        <img src="assets/img/imageType_01.jpg" alt="이탈리아">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">이탈리아</h3>
+                        <p class="desc">해외 여행이 생각나요?<br> 이탈리아를 소개합니다.</p>
+                        <a href="#" class="btn1">자세히 보기</a>
+                    </div>
+                </article>
+                <article class="image">
+                    <figure class="image__header">
+                        <img src="assets/img/imageType_02.jpg" alt="이집트">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">이집트</h3>
+                        <p class="desc">해외여행 가고 싶지 않나요?<br>이집트를 소개합니다.</p>
+                        <a href="#" class="btn2">자세히 보기</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- imageType -->
+
+        <section id="imgTextType" class="nexon section gray">
+            <h2 class="blind">이미지텍스트 영역</h2>
+            <div class="inner container">
+                <article class="desc">
+                    <span class="notice">NOTICE</span>
+                    <h3 class="title">음식점과 기념품 가게 고르는 Tip</h3>
+                    <p class="tips">맛있는 음식을 맛보고 싶은 마음은 누구나 있습니다.<br>
+                    그리고 기념품을 사서 보관하거나 선물하는 일도 많죠.</p>
+                    <div class="li">
+                        <li><a href="#">오소 부코</a></li>
+                        <li><a href="#">프로슈토</a></li>
+                        <li><a href="#">리볼리타</a></li>
+                        <li><a href="#">살팀보카</a></li>
+                        <li><a href="#">쿠샤리</a></li>
+                        <li><a href="#">에이시</a></li>
+                        <li><a href="#">하맘</a></li>
+                        <li><a href="#">토르시</a></li>
+                        <li><a href="#">마비스 치약</a></li>
+                        <li><a href="#">낙타 인형</a></li>
+                        <li><a href="#">시샤 도구</a></li>              
+                    </div>
+                </article>
+                <article class="img food">
+                    <a href="#">음식점</a>
+                    <figure>
+                        <img src="assets/img/food.jpg" alt="food">
+                    </figure>
+                </article>
+                <article class="img souvenir">
+                    <a href="#">기념품 가게</a>
+                    <figure>
+                        <img src="assets/img/souvenir.jpg" alt="souvenir">
+                    </figure>
+                </article>
+            </div>
+        </section>
+        <!-- imgTextType -->
+
+        <section id="cardType" class="nexon section">
+            <h2 class="blind">카드 영역</h2>
+            <div class="card__inner">
+                <article class="card">
+                    <figure>
+                        <img src="assets/img/square.jpg" alt="광장">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">광장</h3>
+                        <p class="desc">쇼핑과 거리 구경을 할 수 있는 쇼핑몰의 광장을 소개합니다. 장인들의 전통이 녹아 있는 가게들부터 명품을 살 수 있는 거리까지 전부 놓칠 순 없죠. 전통과 문화를 즐겨보세요. </p>
+                        <a href="#" class="btn">자세히 보기</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure>
+                        <img src="assets/img/street.jpg" alt=" 거리 축제">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title"> 거리 축제</h3>
+                        <p class="desc">거리에서 시간마다 마차를 몰고 소공연을 펼치고 있습니다. 작은 축제이지만 그곳이 아니면 볼 수 없는 기회를 놓치지 마세요. 어디에서 사진을 찍든 아름다운 추억을 남길 수 있습니다.</p>
+                        <a href="#" class="btn">자세히 보기</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure>
+                        <img src="assets/img/hotel.jpg" alt="호텔">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">호텔</h3>
+                        <p class="desc">그 나라의 전통과 현대 양식이 함께 어우러져 있는 이색 호텔들을 경험 해보세요. 일반적인 호텔보다 더 기억에 남고 즐거운 여행의 추억을 만들어 줄겁니다. </p>
+                        <a href="#" class="btn">자세히 보기</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- cardType -->
+
+        <section id="bannerType" class="nexon section banner__wrap center">
+            <h2 class="blind">배너 영역</h2>
+            <div class="banner__inner container">
+                <h3 class="title">좋은 추억 남기시길 바랍니다</h3>
+                <p class="p">새로운 환경이 주어지면, 새로운 추억을 쌓고 싶은 마음은 누구에게나 있습니다.<br>
+                    그런 의미에서 여행은 좋은 기회가 되기도 합니다.</p>
+                <a href="#">https://jongyung.tistory.com</a>
+            </div>
+        </section>
+        <!-- bannerType -->
+
+        <section id="textType" class="nexon section">
+            <h2 class="blind">텍스트 영역</h2>
+            <div class="text__inner">
+                <div class = "text t1">
+                    <h3 class="text__title">여행 가방 꾸리기</h3>
+                    <p class="text__desc">여행의 가장 기본은 짐을 잘 챙기는 것입니다. 필요한 물건들을 빠짐없이 챙기는 것은 물론이고, 혹시 모를 비상사태를 대비해서 상비약 같은 물품들도 챙기는 것이 좋습니다. 잊지 말고 잘 챙기세요.    </p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                
+                <div class="text t2">
+                    <h3 class="text__title">휴대용 물건 챙기</h3>
+                    <p class="text__desc">휴대용 손전등 같은 물건을 챙기면 좋습니다. 여행을 하다 보면, 길을 잃을 수도 있기 때문에 늦은 시간에 길을 비춰보거나 도움을 요청하는 신호를 보낼 수도 있는 유용한 도구이기 때문입니다.    </p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+
+                <div class="text t3">
+                    <h3 class="text__title">여행 계획 세우기</h3>
+                    <p class="text__desc">여행지의 어디를 갈 지를 정하는 일이 여행의 질을 결정합니니다. 여행지의 분위기와 음식, 숙소소 등을 고려해서 계획을 세운다면, 조금 더 만족스러운 여행이 될 수 있습니다. </p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+
+                <div class="text t4">
+                    <h3 class="text__title">여행지 탐방하기 </h3>
+                    <p class="text__desc">여행의 계획을 따르는 것도 좋지만, 가끔은 계획과 관련없는 탐방을 즐기는 것도 좋습니다. 계획 이외의 부분들을 발견할 수 있기 때문입니다. 의외인 만큼 더 새롭게 와닿을 수 있습니다. </p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+
+                <div class="text t5">
+                    <h3 class="text__title">여행지에서 추억 남기기</h3>
+                    <p class="text__desc">여행은 추억으로 남는 것입니다. 새로운 문화를 경험해보기 위해 가는 것도, 새로운 사람들을 만나러 가는 것도 모두 추억으로 남기 마련입니다. 좋은 추억을 바란다면, 사진으로 남기는 것도 좋습니다.    </p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+
+                <div class="text t6">
+                    <h3 class="text__title">길 숙지 하기</h3>
+                    <p class="text__desc">여행지에서 길을 잃는 다면, 절망적인 기분을 느낄 수 있습니다. 낯선 곳에서 언어도 잘 통하지 않는다면 도움을 청하기조차 어려울 수도 있게 됩니다. 따라서 미리 정보를 알아보는 것이 중요합니다.     </p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+            </div>
+        </section>
+        <!-- textType -->
+    </main>
+    <!-- main -->
+    
+    <footer id="footerType" class="nexon section gray">
+        <h2 class="blind">푸터 영역</h2>
+        <div class="footer__inner container">
+            <div class="footer__menu">
+                <div>
+                    <h3>여행 가방 꾸리기</h3>
+                    <ul>
+                        <li><a href="#">체계적으로 물건 담는 법</a></li>
+                        <li><a href="#">최소한의 물건 담기</a></li>
+                        <li><a href="#">가벼운 물건 위주로 챙기기</a></li>
+                        <li><a href="#">체크 리스트 작성하기</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>휴대용 물건 챙기기</h3>
+                    <ul>
+                        <li><a href="#">휴대용품 챙기기</a></li>
+                        <li><a href="#">필수로 챙겨야 하는 물건</a></li>
+                        <li><a href="#">현지에서 구하기 힘든 물건</a></li>
+                        <li><a href="#">위급한 상황 대비하기</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>여행 계획 세우기</h3>
+                    <ul>
+                        <li><a href="#">가고 싶은 여행지 꼽기</a></li>
+                        <li><a href="#">관광 장소 알아보기</a></li>
+                        <li><a href="#">숙소 알아보기</a></li>
+                        <li><a href="#">숙소 근처 식당 알아보기</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>여행지 탐방하기</h3>
+                    <ul>
+                        <li><a href="#">계획에서 조금 벗어나보기</a></li>
+                        <li><a href="#">현지인에게 추천 받기</a></li>
+                        <li><a href="#">숙소 근처에서 산책하기</a></li>
+                        <li><a href="#">시장 구경하기</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>여행지의 추억 남기기</h3>
+                    <ul>
+                        <li><a href="#">사진 찍기</a></li>
+                        <li><a href="#">현지인과 어울리기</a></li>
+                        <li><a href="#">여행객과 어울리기</a></li>
+                        <li><a href="#">자연을 즐겨보기</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>길 숙지하기</h3>
+                    <ul>
+                        <li><a href="#">계획한 곳들 위치 숙지</a></li>
+                        <li><a href="#">숙소 주소 외우기</a></li>
+                        <li><a href="#">숙소 근처 위치 숙지</a></li>
+                        <li><a href="#">대사관 위치 숙지</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__sitename">2023 jongyung travel site</div>
+        </div>
+    </footer>
+    <!-- footer -->
+</body>
+</html>

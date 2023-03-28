@@ -20,6 +20,7 @@
             <li><a href="quizEffect05.html">5</a></li>
             <li><a href="webdesignQuiz.html">WebDQuiz</a></li>
             <li class="active"><a href="quizEffect06.html">6</a></li>
+            <li><a href="quizEffect07.html">7</a></li> 
         </ul>
     </header>
     <!-- header -->
@@ -30,13 +31,13 @@
                 <div class="quiz__header">
                     <h2 class="quiz__title"></h2>                    
                 </div>
-                <div class="quiz__main">
-                    <h4>몇 문제 째인지</h4>
+                <div class="quiz__main">                   
                     <div class="quiz__question"></div>
                     <div class="quiz__view">
                         <div class="dog__wrap">
-                        <div class="true">정답입니다!</div>
-                        <div class="false">오답입니다!</div>
+                            <div class="count"></div>
+                            <div class="true">정답입니다!</div>
+                            <div class="false">오답입니다!</div>
                             <div class="card-container">
                                 <div class="dog">
                                     <div class="head">
@@ -134,14 +135,6 @@
                 infoChoice : ["0100", "1000", "0010", "1010"],
                 infoAnswer : "0100",
                 infoDesc : "1의 보수는 1은 0으로, 0은 1로 바꾸어 주면 답이 됩니다."
-            }, {
-                infoType : "정보처리 기능사",
-                infoTime : "2011년 5회",
-                infoNumber : "20110506",
-                infoQuestion : "다음 진리표에 해당하는 GATE는 어느 것인가? <br><img style = 'width:340px; padding-left:110px' src='../quiz/quiz.image/2011.10.09.6번 문제.png'>",
-                infoChoice : ["<img src='../quiz/quiz.image/2011.10.09.6번 객관식 1.png'>", "<img src='../quiz/quiz.image/2011.10.09.6번 객관식 2.png'>", "<img src='../quiz/quiz.image/2011.10.09.6번 객관식 3.png'>", "<img src='../quiz/quiz.image/2011.10.09.6번 객관식 4.png'>]"],
-                infoAnswer : "2",
-                infoDesc : "같으면 0다르면 1인 XOR 게이트 입니다."
             }
         ];
 
@@ -151,13 +144,14 @@
         const quizChoice = quizWrap.querySelector(".quiz__choice");
         const quizQuestion = quizWrap.querySelector(".quiz__question");
         const dogWrap = quizWrap.querySelector(".dog__wrap");
+        const dogWrapCount = quizWrap.querySelector(".dog__wrap .count");
         const quizAnswer = quizWrap.querySelector(".quiz__answer")
         const quizNext = quizWrap.querySelector(".quiz__answer .next");//정답 버튼
         const quizDesc = quizWrap.querySelector(".quiz__desc");
-        const quizMainH4 = quizWrap.querySelector(".quiz__main h4");
 
-        let quizCount = 0;
-        let quizScore = 0;
+        let quizCount = 0; //퀴즈 번호
+        let quizScore = 0; //현재 점수
+        
 
         //문제 출력
         const updateQuiz = (index) => {
@@ -201,9 +195,10 @@
             quizTitle.innerHTML = typeTag;
             quizChoice.innerHTML = choiceTag;
             quizQuestion.innerHTML = questionTag;
-            quizDesc.innerHTML = descTag;
-            quizMainH4.innerHTML = h4Tag;
+            quizDesc.innerHTML = descTag;            
 
+            let quizLength = quizInfo.length - quizCount;
+            dogWrapCount.innerHTML = "총 " + quizLength + "문제 중에 " + (quizLength - 1) + "문제 남았습니다.";
 
             //보기 선택자
             const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
@@ -247,6 +242,20 @@
                 alert(quizScore + "개 맞았고, " + (quizInfo.length - quizScore) +"개 틀렸습니다. " + "점수는 " + Math.ceil((quizScore/quizInfo.length)*100) + "점입니다.");
             }
 
+            let countLast = Math.ceil((quizScore/quizInfo.length) * 100);
+            let countResult = (countLast > 60) ? "<span>"+"합격"+"</span>" : "불합격"; //삼항 연산자로 간결하게 쓰기 가능
+
+            // if(countLast > 60){
+            //     console.log("합격입니다.");
+            // } else {
+            //     console.log("불합격입니다.");
+            // }
+
+            //마지막 문제일 때
+            if(quizCount + 1 == quizInfo.length){
+                quizAnswer.style.display = "none";
+                dogWrapCount.innerHTML = "총" + quizScore + "문제를 맞추었습니다. 점수는 " + countLast + "점입니다. 합격입니다.";
+            }
         };
 
         //정답 확인
