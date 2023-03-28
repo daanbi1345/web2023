@@ -33,4 +33,4 @@
 슬라이드 유형 :   https://daanbi1345.github.io/web2023/site/sliderType/sliderType01.html   
 헤더 유형 : https://daanbi1345.github.io/web2023/site/headerType/headerType01.html   
 이미지/텍스트 유형 : https://daanbi1345.github.io/web2023/site/imgTextType/imgTextType01.html   
-푸터 유형 : https://daanbi1345.github.io/web2023/site/footerType/footerType.html
+푸터 유형 : https://daanbi1345.github.io/web2023/site/footerType/footerType01.html
