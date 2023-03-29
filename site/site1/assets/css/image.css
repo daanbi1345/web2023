@@ -3,7 +3,7 @@
     justify-content: space-between;
 }
 .image__inner .image {
-    width: 570px;
+    width: 49%;
     background-color: #ccc;
     position: relative;  /* 기준점 잡을 때 씀 */
 }       
@@ -41,7 +41,7 @@
 
 /* 미디어쿼리 */
 @media (max-width: 960px){
-    .image__body {
+    .image__body .desc {
         display: none;
     }
 }
@@ -57,7 +57,11 @@
         font-size: 22px;
         margin-bottom: 10%;
     }
-    .image__body .btn {
+    .image__body .btn1 {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .image__body .btn2 {
         padding: 10px 20px;
         font-size: 14px;
     }
