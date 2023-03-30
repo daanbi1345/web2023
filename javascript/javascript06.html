@@ -77,7 +77,7 @@
                     <li><a href="#sample26">26. <strong>array.prototype.reverse()       </strong>    메서드는 배열 요소의 순서를 반대로 하고, 반대로 된 배열을 반환합니다.</a></li>
                     <li><a href="#sample27">27. <strong>array.prototype.shift()         </strong>    메서드는 배열 처음 요소를 제거하고, 제거한 요소를 반환합니다.</a></li>
                     <li><a href="#sample28">28. <strong>array.prototype.unshift()       </strong>    메서드는 배열 앞에 요소를 추가하고, 배열의 새로운 길이 값을 반환합니다.</a></li>
-                    <li><a href="#sample29">29. <strong>array.prototype.slice()         </strong>    메서드는 배열 시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을 반환합니다.🍭</a></li>
+                    <li><a href="#sample29">29. <strong>array.prototype.slice()         </strong>    메서드는 배열 시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을 반환합니다.🍭🦩</a></li>
                     <li><a href="#sample30">30. <strong>array.prototype.splice()        </strong>    메서드는 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경합니다.🍭</a></li>
                     <li><a href="#sample31">31. <strong>array.prototype.sort()          </strong>    메서드는 배열의 요소를 적절한 위치에 정렬한 후, 그 배열을 반환합니다🍭</a></li>
                     <li><a href="#sample32">32. <strong>array.prototype.toLocaleString()</strong>    메서드는 배열의 요소를 문자열로 반환합니다.</a></li>
@@ -87,10 +87,14 @@
             </div>
             <div class="main__sample">
                                
-                <div id="sample21" class="sample">
-                    <h3>21. 배열 메서드 : join()</h3>                    
-                        <li>join() 메서드는 배열 요소를 문자열로 결합합니다.</li> 
-                        <li>배열의 요소를 추가하여, 하나의 문자열로 반환합니다.</li>                   
+                <!-- <div id="sample21" class="sample">
+                    <h3>21. join()</h3> 
+                    <div class="notice">
+                        <ul>
+                            <li>join() 메서드는 배열 요소를 문자열로 결합합니다.</li> 
+                            <li>배열의 요소를 추가하여, 하나의 문자열로 반환합니다.</li>                   
+                        </ul>
+                    </div>                   
 <pre class="line-numbers"><code class="language-js">const arrNum1 = [100,100,300,400,500];
 const text1 = arrNum1.join(''); //100200300400500
 const text2 = arrNum1.join(' '); //100 200 300 400 500
@@ -101,10 +105,10 @@ const text5 = arrNum1.join('🦊'); //100🦊200🦊300🦊400🦊500
 console.log(text1~5)
 </code></pre>
                 </div>
-                <!-- //sample21 -->
+                //sample21 -->
 
-                <div id="sample22" class="sample">
-                    <h3>22. 배열 메서드 : pop()</h3>
+                <!-- <div id="sample22" class="sample">
+                    <h3>22. pop()</h3>
                     <li>pop() 메서드는 배열 마지막 요소를 삭제합니다.</li>
 <pre class="line-numbers"><code class="language-js">const arrNum2 = [100,200,300,400,500];
 const arrPush2 = arrNum2.pop(); 
@@ -112,10 +116,10 @@ const arrPush2 = arrNum2.pop();
 console.log(arrNum2) //[100,200,300,400]   
 </code></pre>
                 </div>
-                <!-- //sample22 -->
+                //sample22 -->
 
-                <div id="sample23" class="sample">
-                    <h3>23. 배열 메서드 : push()</h3>
+                <!-- <div id="sample23" class="sample">
+                    <h3>23. push()</h3>
                     <li>push() 메서드는 배열 마지막 요소에 요소를 추가합니다.</li>
 <pre class="line-numbers"><code class="language-js">const arrNum1 = [100,200,300,400,500];
 const arrPush1 = arrNum1.push(600);
@@ -123,10 +127,10 @@ const arrPush1 = arrNum1.push(600);
 console.log(arrNum1) // [100,200,300,400,500,600]   
 </code></pre>
                 </div>
-                <!-- //sample23 -->
+                //sample23 -->
 
-                <div id="sample28" class="sample">
-                    <h3>28. 배열 메서드 : unshift()</h3>
+                <!-- <div id="sample28" class="sample">
+                    <h3>28. unshift()</h3>
                     <li>unshift() 메서드는 배열 처음 요소에 요소를 추가</li>
 <pre class="line-numbers"><code class="language-js">const arrNum1 = [100,200,300,400,500];
 const arrPush1 = arrNum1.unshift(600);
@@ -134,7 +138,99 @@ const arrPush1 = arrNum1.unshift(600);
 console.log(arrNum1) // [600,100,200,300,400,500]
 </code></pre>
                 </div>
-                <!-- //sample28 -->                             
+                 //sample28 -->    
+                
+                <div id="sample29" class="sample">
+                    <h3>29. slice()</h3>
+                    <div class="notice">"배열".slice(시작 위치, [끝나는 위치])</div>
+                    <ul>
+                        <li>시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을 반환합니다.</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(0); //['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(1); //['a', 'v', 'a', 's', 'c', 'r', 'i','p','t']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(2); //['v', 'a', 's', 'c', 'r', 'i','p','t']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(0, 1); //['j']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(1, 2); //['a']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(0, 2); //['j', 'a']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(0, 3); //['j', 'a', 'v']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(5, 10); //['c', 'r', 'i', 'p', 't']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(5, -1); //['c', 'r', 'i', 'p']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(5, -2); //['c', 'r', 'i']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(-1); //['t']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(-2); //['p','t']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(-3); //['i, 'p','t']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(-3, -1); //['i', 'p']
+['j', 'a', 'v', 'a', 's', 'c', 'r', 'i','p','t'].slice(-3, -2); //['i']
+"javascript".slice(0); //javascript
+"javascript".slice(1); //avascript
+"javascript".slice(2); //vascript
+"javascript".slice(0, 1); //j
+"javascript".slice(1, 2); //a
+"javascript".slice(0, 2); //ja
+"javascript".slice(0, 3); //jav
+"javascript".slice(5, 10); //cript
+"javascript".slice(5, -1); //crip
+"javascript".slice(5, -2); //cri
+</code></pre>
+                </div>
+                <!-- //sample29 -->   
+
+                <div id="sample30" class="sample">
+                    <h3>30. splice()</h3>
+                    <div class="notice">"배열".splice(시작 위치, [삭제 갯수], 요소)</div>
+                    <ul>
+                        <li> 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경합니다.</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">const arrNum1 = [100, 200, 300, 400, 500];
+const result1 = arrNum1.splice(1);
+
+console.log(arrNum1); //[100]
+console.log(result1); //[200, 300, 400, 500]
+
+const arrNum2 = [100, 200, 300, 400, 500];
+const result2 = arrNum2.splice(1, 2);
+
+console.log(arrNum2); //[100, 400, 500]
+console.log(result2); //[200, 300]
+
+const arrNum3 = [100, 200, 300, 400, 500];
+const result3 = arrNum3.splice(1, 4);
+
+console.log(arrNum3); //[100]
+console.log(result3); //[200, 300, 400, 500]
+
+const arrNum4 = [100, 200, 300, 400, 500];
+const result4 = arrNum4.splice(1, 2, "javascript");
+
+console.log(arrNum4); //[100, 'javascript', 400, 500]
+console.log(result4); //[200, 300]
+
+const arrNum5 = [100, 200, 300, 400, 500];
+const result5 = arrNum5.splice(1, 0, "javascript");
+
+console.log(arrNum5); //[100, 'javascript', 200, 300, 400, 500]
+console.log(result5); //[]
+
+const arrNum6 = [100, 200, 300, 400, 500];
+const result6 = arrNum6.splice(0, 4, "javascript");
+
+console.log(arrNum6); //['javascript', 500]
+console.log(result6); //[100, 200, 300, 400]
+
+const arrNum7 = [100, 200, 300, 400, 500];
+const result7 = arrNum7.splice(2, 2, "javascript", "react");
+
+console.log(arrNum7); //[100, 200, 'javascript', 'react', 500]
+console.log(result7); //[300, 400]
+
+const arrNum8 = [100, 200, 300, 400, 500];
+const result8 = arrNum8.splice(-2, 2, "javascript");
+
+console.log(arrNum8); //[100, 200, 300, 'javascript'] 마이너스는 -1부터 셈
+console.log(result8); //[400, 500]
+</code></pre>
+                </div>
+                <!-- //sample30 --> 
 
                 </div>
             </div>
@@ -150,35 +246,8 @@ console.log(arrNum1) // [600,100,200,300,400,500]
     <script src="assets/js/prism.js"></script>
 
     <script>
-        // const arrNum1 = [100,200,300,400,500];
-        // const arrPush1 = arrNum1.push(600);
         
-        // console.log(arrNum1) // [100,200,300,400,500,600]
 
-        // const arrNum2 = [100,200,300,400,500];
-        // const arrPush2 = arrNum2.push();
-
-        // console.log(arrNum2) //[100,200,300,400]
-
-        // const arrNum1 = [100,200,300,400,500];
-        // const arrPush1 = arrNum1.unshift(600);
-        
-        // console.log(arrNum1) // [600,100,200,300,400,500]
-
-        // const arrNum2 = [100,200,300,400,500];
-        // const arrPush2 = arrNum2.shift();
-
-        // console.log(arrNum2) //[200,300,400,500]
-
-
-        const arrNum1 = [100,200,300,400,500];
-        const text1 = arrNum1.join(''); //100200300400500
-        const text2 = arrNum1.join(' '); //100 200 300 400 500
-        const text3 = arrNum1.join('*'); //100*200*300*400*500
-        const text4 = arrNum1.join('-'); //100-200-300-400-500
-        const text5 = arrNum1.join('🦊'); //100🦊200🦊300🦊400🦊500
-
-        console.log(text5)
     </script>
 
 </body>

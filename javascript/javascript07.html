@@ -7,6 +7,8 @@
     <title>javascript : 수학 객체</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript180x180.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
@@ -47,11 +49,85 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">수학 메서드 : Math.round() : 반올림</a></li>
-                    <li><a href="#">수학 메서드 : Math.floor() : 반내림</a></li>
-                    <li><a href="#">수학 메서드 : Math.ceil() : 올림</a></li>
+                    <li><a href="#sample01">수학 메서드 : Math.random() : 랜덤값(0~1 사이의 난수 값 변환) : 반환(숫자)</a></li>
+                    <li><a href="#sample02">수학 메서드 : Math.round() : 반올림 : 반환(숫자)</a></li>
+                    <li><a href="#sample03">수학 메서드 : Math.floor() : 버림 : 반환(숫자)</a></li>
+                    <li><a href="#sample04">수학 메서드 : Math.ceil() : 올림 : 반환(숫자)</a></li>
+                    <li><a href="#sample05">수학 메서드 : Math.max() : 가장 큰 값 : 반환(숫자)</a></li>
+                    <li><a href="#sample06">수학 메서드 : Math.min() : 가장 작은 값 : 반환(숫자)</a></li>
+                    <li><a href="#sample07">수학 메서드 : Math.abs() : 절대값 : 반환(숫자)</a></li>
+                    <li><a href="#sample08">수학 메서드 : Math.trunc() : 값의 정수 부분만 : 반환(숫자)</a></li>
+                    <li><a href="#sample09">수학 메서드 : Math.PI() : 원의 둘레에 대한 지름의 비율(π)을 나타내며 약 3.1459... : 반환(숫자)</a></li>
+                    <li><a href="#sample10">수학 메서드 : Math.sqrt() : 값의 제곱근을 반환 : 반환(숫자)</a></li>
                     
                 </ul>
+            </div>
+            <div class="main__sample">
+
+                <div id="sample01" class="sample">
+                    <h3>01. Math.random()</h3>   
+                    <div class="notice">Math.random()</div>                 
+                    <ul>
+                        <li>0~1 사이의 난수 값을 변환합니다.</li>
+                    </ul>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                                <th>클릭</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample01_N1"></td>
+                                <td class="sample01_Q1"></td>
+                                <td class="sample01_M1"></td>
+                                <td class="sample01_P1"></td>
+                                <td class="sample01_B1"><button>클릭</button></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N2"></td>
+                                <td class="sample01_Q2"></td>
+                                <td class="sample01_M2"></td>
+                                <td class="sample01_P2"></td>
+                                <td class="sample01_B2"><button>클릭</button></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N3"></td>
+                                <td class="sample01_Q3"></td>
+                                <td class="sample01_M3"></td>
+                                <td class="sample01_P3"></td>
+                                <td class="sample01_B3"><button>클릭</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+<pre class="line-numbers"><code class="language-js">document.querySelector(".sample01_N1").innerHTML = "1";
+document.querySelector(".sample01_Q1").innerHTML = "0~1(난수)";
+document.querySelector(".sample01_M1").innerHTML = "Math.random()";
+document.querySelector(".sample01_B1").addEventListener("click", () => {
+    document.querySelector(".sample01_P1").innerHTML = Math.random();
+});
+
+document.querySelector(".sample01_N2").innerHTML = "2";
+document.querySelector(".sample01_Q2").innerHTML = "0~9(정수)";
+document.querySelector(".sample01_M2").innerHTML = "Math.random()";
+document.querySelector(".sample01_B2").addEventListener("click", () => {
+    document.querySelector(".sample01_P2").innerHTML = Math.floor(Math.random()*10);
+});
+
+document.querySelector(".sample01_N3").innerHTML = "3";
+document.querySelector(".sample01_Q3").innerHTML = "1~100(정수)";
+document.querySelector(".sample01_M3").innerHTML = "Math.random()";
+document.querySelector(".sample01_B3").addEventListener("click", () => {
+    document.querySelector(".sample01_P3").innerHTML = Math.floor((Math.random()*100) + 1);
+});
+</code></pre>
+                </div>
+                <!-- //sample01 --> 
+
             </div>
         </div>
     </main>
@@ -61,8 +137,35 @@
     <a href="mailto:daanbi1345@gmail.com">daanbi1345@gmail.com</a>
     </footer>
     <!-- //footer -->
+    
+    <script src="assets/js/prism.js"></script>
 
     <script>
+        document.querySelector(".sample01_N1").innerHTML = "1";
+        document.querySelector(".sample01_Q1").innerHTML = "0~1(난수)";
+        document.querySelector(".sample01_M1").innerHTML = "Math.random()";
+        document.querySelector(".sample01_B1").addEventListener("click", () => {
+            document.querySelector(".sample01_P1").innerHTML = Math.random();
+        });
+
+        // const sample01B1 = document.querySelector(".table .sample01_B1");
+        // sample01B1.addEventListener("click", function(){
+        //     alert("경고");
+        // });
+      
+        document.querySelector(".sample01_N2").innerHTML = "2";
+        document.querySelector(".sample01_Q2").innerHTML = "0~9(정수)";
+        document.querySelector(".sample01_M2").innerHTML = "Math.random()";
+        document.querySelector(".sample01_B2").addEventListener("click", () => {
+            document.querySelector(".sample01_P2").innerHTML = Math.floor(Math.random()*10);
+        });
+
+        document.querySelector(".sample01_N3").innerHTML = "3";
+        document.querySelector(".sample01_Q3").innerHTML = "1~100(정수)";
+        document.querySelector(".sample01_M3").innerHTML = "Math.random()";
+        document.querySelector(".sample01_B3").addEventListener("click", () => {
+            document.querySelector(".sample01_P3").innerHTML = Math.floor((Math.random()*100) + 1);
+        });
         
     </script>
 
