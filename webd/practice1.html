@@ -4,126 +4,170 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>4월 2일 연습</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
         a {
-            list-style: none;
-            color: black;
             text-decoration: none;
+            color: black;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
         }
         #wrap {
-            width: 1200px;
             margin: 0 auto;
+            width: 1000px;
         }
         #header {
-            justify-content: space-between;
             display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
         }
-        #header img {
-            width: 150px;
+        #header .logo img {
+            width: 100px;
+            vertical-align: top;
         }
-        #header nav li {
-            display: inline-block;           
+        #nav li {
             list-style: none;
-            text-align: right;
-            margin-top: 30px;
+            display: inline-block;
+            align-items: flex-end;
+        }
+        #nav li a {
+            display: inline-block;
             padding: 20px;
         }
-        #header nav {
-            display: inline-block            
+        #banner {
+            margin-bottom: 20px;
         }
-        #nav {
+        #notice {
             display: flex;
             justify-content: space-between;
         }
-        #not1 {
-            width: 45%;
-            border: 1px solid #ccc;
-            
+        #notice .not1 {
+            position: relative;
+            width: 44%;
+            border: 1px solid #000;
+            padding: 30px 30px 25px 30px;
         }
-        #not1 li {
+        #notice .not1 h3 {
+            margin-bottom: 10px;
+        }
+        #notice .not1 li {
             list-style: none;
+            display: flex;
         }
-        #not2 {
-            width: 45%;
+        #notice .not1 li a {
+            width: 70%;
+            padding: 5px 0;
+}
+        #notice .not1 li span {
+            width: 30%;
+            text-align: right;
         }
-        #not2 img {
-            width: 700px;
+        #notice .not2 {
+            width: 49%;
+        }       
+        #notice .more {
+            position: absolute;
+            right: 30px; top: 35px;
         }
-  
-        #card__inner {
-            display: flex;     
-            justify-content: space-between;       
+        #card h2 {
+            padding: 20px 0 10px 0;
         }
-        #card__inner > div {
-            width: 24.3%;
+        #card .card__inner {
+            display: flex;
+            justify-content: space-between;
         }
-        #main img {
-            width: 100%;
+        .card1 {
+            width: 24%;
+            margin-bottom: 10px;
         }
-        #footer {}
+        #card .card1 a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        #footer {
+            padding: 50px 0;
+            border-top: 1px solid #000;
+            margin-top: 50px;
+        }
+        #footer address {
+            font-style: normal;
+
+        }
+        #footer strong {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
     <div id="wrap">
         <header id="header">
-            <img src="img/logo.jpg" alt="로고">
-            <nav>
+            <div class="logo">
+                <img src="img/logo.jpg" alt="logo">
+            </div>
+            <nav id="nav">
                 <ul>
-                    <li><a href="#">즐길거리</a></li>
-                    <li><a href="#">요금/우대혜택</a></li>
-                    <li><a href="#">참여프로그램</a></li>
-                    <li><a href="#">이용가이드</a></li>
-                    <li><a href="#">소통서비스</a></li>            
+                    <li><a href="#"><strong>즐길거리</strong></a></li>
+                    <li><a href="#"><strong>요금/우대혜택</strong></a></li>
+                    <li><a href="#"><strong>참여프로그램</strong></a></li>
+                    <li><a href="#"><strong>이용가이드</strong></a></li>
+                    <li><a href="#"><strong>소통서비스</strong></a></li>
                 </ul>
             </nav>
         </header>
-        <main id="main">
-            <img src="img/banner.jpg" alt="미라클있수마수">
+        <main>
+            <section id="banner">
+                <img src="img/banner.jpg" alt="banner">
+            </section>
+            <section id="notice">
+                <div class="not1">
+                    <h3><strong>롯데월드 소식 |</strong>뉴스 공지</h3>
+                    <ul>
+                        <li><a href="#">그럴싸진관 미라클</a><span>2018.01.01</span></li>
+                        <li><a href="#">드림스테이지</a><span>2018.01.01</span></li>
+                        <li><a href="#">음원 발매</a><span>2018.01.01</span></li>
+                        <li><a href="#">이용 요금 조정 안내</a><span>2018.01.01</span></li>
+                    </ul>
+                    <a href="#" class="more">더보기</a>
+                </div>
+                <div class="not2">
+                    <img src="img/banner02.jpg" alt="banner02">
+                </div>
+            </section>
+            <section id="card">
+                <h2><strong>특별한 경험</strong></h2>
+                <div class="card__inner">
+                    <div class="card1">
+                        <img src="img/notice01.jpg" alt="notice01">
+                        <a href="#">연간회원안내</a>
+                    </div>
+                    <div class="card1">
+                        <img src="img/notice02.jpg" alt="notice02">
+                        <a href="#">프리미엄투어</a>
+                    </div>
+                    <div class="card1">
+                        <img src="img/notice03.jpg" alt="notice03">
+                        <a href="#">공연참여프로그램</a>
+                    </div>
+                    <div class="card1">
+                        <img src="img/notice04.jpg" alt="notice04">
+                        <a href="#">단체프로그램</a>
+                    </div>
+                </div>
+            </section>
         </main>
-        <nav id="nav">
-            <section id="not1">
-                <h3><strong>롯데월드 소식 |</strong> 뉴스 공지</h3>
-                <ul>
-                    <li><a href="#">그럴싸진관 미라클</a><span>2011.03.30</span></li>
-                    <li><a href="#">드림스테이지</a><span>2011.03.30</span></li>
-                    <li><a href="#">응원 발매</a><span>2011.03.30</span></li>
-                    <li><a href="#">이용 요금 조정 안내</a><span>2011.03.30</span></li>                
-                </ul>
-                <div id="more">더보기</div>
-            </section>
-            <section id="not2">
-                <img src="img/banner02.jpg" alt="온종일혜택">
-            </section>
-        </nav>
-        <section id="card">
-            <h3><strong>특별한 경험</strong></h3>   
-            <div id="card__inner">
-                <div>
-                    <img src="img/notice01.jpg" alt="">
-                    <strong>oooo</strong>
-                </div>
-                <div>
-                    <img src="img/notice02.jpg" alt="">
-                    <strong>oooo</strong>
-                </div>
-                <div>
-                    <img src="img/notice03.jpg" alt="">
-                    <strong>oooo</strong>
-                </div>
-                <div>
-                    <img src="img/notice04.jpg" alt="">
-                    <strong>oooo</strong>
-                </div>
-            </div>
-        </section>
         <footer id="footer">
-            <address>서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드 | 대표자 : 박동기<br>
-            사업자등록번호 : 123-45-67890 | 통신판매법신고번호: 송파 제1234조 | 전화 : 1234-1233</address>
+            <address>서울특별시 웅앵 롯데월드 대표자: 웅앵<br>
+            사업자등록번호 웅앵 통신판매업신고번호 웅앵 전화 번호 웅앵
+            <strong>COPYRIGHT 2018LOTTEWORLD ALL RIGHTS RESERVED</strong>
+        </address>
         </footer>
     </div>
 </body>
