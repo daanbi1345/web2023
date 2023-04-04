@@ -103,15 +103,15 @@
         "desc": "목적에 맞게 해야합니다."
     }, {
         "subject": "웹디자인 기능사",
-        "question": "다음 두 개의 꽃 모양 중심에 있는 원의 실제 크기는 동일하다. 그런데 왼쪽의 원이 오른쪽보다 커 보이는 현상은?<br><img style = 'width:100px' src='../quiz/img/2009.9.27.18번 문제1.png'><img style = 'width:100px' src='../quiz/img/2009.9.27.18번 문제2.png'>",
-        "question_img": "2009.9.27.18번 문제1.png, 2009.9.27.18번 문제2.png",
+        "question": "다음 두 개의 꽃 모양 중심에 있는 원의 실제 크기는 동일하다. 그런데 왼쪽의 원이 오른쪽보다 커 보이는 현상은?",
+        "question_img": "gineungsaWD2009_05_18-1, gineungsaWD2009_05_18-2",
         "correct_answer": "주변과의 대비에 의한 착시현상",
         "incorrect_answer": ["반복원리에 의한 착시현상", "폐쇄원리에 의한 착시현상", "연속원리에 의한 착시현상"],
         "desc": "주변과의 대비에 의한 착시현상의 이미지를 외우세요."
     }, {
         "subject": "웹디자인 기능사",
-        "question": "다음과 같은 형상이 나타내는 디자인 원리는? <img style = 'width:100px' src='../quiz/img/2009.9.27.19번 문제.png'>",
-        "question_img": "2009.9.27.19번 문제.png",
+        "question": "다음과 같은 형상이 나타내는 디자인 원리는?",
+        "question_img": "gineungsaWD2009_05_19",
         "correct_answer": "비대칭",
         "incorrect_answer": ["조화", "강조", "율동"],
         "desc": "비대칭의 이미지를 외우세요."

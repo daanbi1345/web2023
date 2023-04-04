@@ -33,7 +33,7 @@
     <main id="main">
         <div class="quiz__wrap__cbt">
             <div class="cbt__header">
-                <h2>2020년 1회 정보처리기능사 기출문제</h2>
+                <h2>2020년 1회 정보처리기능사 기출문제</h2>                
             </div>
             <div class="cbt__conts">
                 <div class="cbt__quiz">
@@ -57,19 +57,19 @@
                     
                     
                 </div>
-            </div>
-            <div class="aside__btn">
-                <div class="cbt__time">59분 10초</div>
-                <div class="cbt__submit">제출하기</div>
-            </div>
+            </div>                         
             <div class="cbt__aside">
                 <div class="cbt__info">
                     <div>
+                        <button class="cbt__submit">제출하기</button>
+                        <span class="cbt__time">59분 10초</span>
+                    </div>
+                    <div>
                         <div class="cbt__title">수험자 : <em>ooo</em></div>
-                        <!-- <div>
-                            <span>전체 문제수 : <em>23</em>문항</span>
-                            <span>남은 문제수 : <em>59</em>문항</span>
-                        </div> -->
+                        <div class="cbt__score">
+                            <span>전체 문제수 : <em class="cbt__length">23</em>문항</span>
+                            <span>남은 문제수 : <em class="cbt__rest">59</em>문항</span>
+                        </div>
                     </div>
                 </div>
                 <div class="cbt__omr">
@@ -95,7 +95,67 @@
                     </div>                     -->
                     
                 </div>
-            </div>                       
+            </div>  
+            <!-- <div class="cbt__start">
+                <div class="cbt__modal1">
+                    <h2>기능사 시험 기출문제</h2>
+                    <div class="cbt__choice">
+                        <select name="cbtTime" id="cbtTime">
+                            <option value="gineungsaJC2005_02">정보처리기능사 2005년 2회</option>
+                            <option value="gineungsaJC2005_05">정보처리기능사 2005년 4회</option>
+                            <option value="gineungsaJC2005_04">정보처리기능사 2005년 5회</option>
+                            <option value="gineungsaJC2006_01">정보처리기능사 2006년 1회</option>
+                            <option value="gineungsaJC2006_02">정보처리기능사 2006년 2회</option>
+                            <option value="gineungsaJC2006_03">정보처리기능사 2006년 3회</option>
+                            <option value="gineungsaJC2006_05">정보처리기능사 2006년 5회</option>
+                            <option value="gineungsaJC2007_01">정보처리기능사 2007년 1회</option>
+                            <option value="gineungsaJC2007_02">정보처리기능사 2007년 2회</option>
+                            <option value="gineungsaJC2007_05">정보처리기능사 2007년 5회</option>
+                            <option value="gineungsaJC2008_01">정보처리기능사 2008년 1회</option>
+                            <option value="gineungsaJC2008_02">정보처리기능사 2008년 2회</option>
+                            <option value="gineungsaJC2008_04">정보처리기능사 2008년 4회</option>
+                            <option value="gineungsaJC2008_05">정보처리기능사 2008년 5회</option>
+                            <option value="gineungsaJC2009_01">정보처리기능사 2009년 1회</option>
+                            <option value="gineungsaJC2009_05">정보처리기능사 2009년 5회</option>
+                            <option value="gineungsaJC2010_02">정보처리기능사 2010년 2회</option>
+                            <option value="gineungsaJC2010_05">정보처리기능사 2010년 5회</option>
+                            <option value="gineungsaJC2011_01">정보처리기능사 2011년 1회</option>
+                            <option value="gineungsaJC2011_02">정보처리기능사 2011년 2회</option>
+                            <option value="gineungsaJC2011_04">정보처리기능사 2011년 4회</option>
+                            <option value="gineungsaJC2011_05">정보처리기능사 2011년 5회</option>
+                        </select>
+                        <select name="cbtTime" id="cbtTime">
+                            <option value="gineungsaWD2009_05">웹디자인기능사 2009년 5회</option>
+                            <option value="gineungsaWD2010_01">웹디자인기능사 2010년 1회</option>
+                            <option value="gineungsaWD2010_02">웹디자인기능사 2010년 2회</option>
+                            <option value="gineungsaWD2010_04">웹디자인기능사 2010년 4회</option>
+                            <option value="gineungsaWD2010_05">웹디자인기능사 2010년 5회</option>
+                            <option value="gineungsaWD2011_04">웹디자인기능사 2011년 1회</option>
+                            <option value="gineungsaWD2011_02">웹디자인기능사 2011년 2회</option>
+                            <option value="gineungsaWD2011_04">웹디자인기능사 2011년 4회</option>
+                            <option value="gineungsaWD2011_05">웹디자인기능사 2011년 5회</option>
+                            <option value="gineungsaWD2012_04">웹디자인기능사 2012년 2회</option>
+                            <option value="gineungsaWD2012_04">웹디자인기능사 2012년 4회</option>
+                            <option value="gineungsaWD2012_05">웹디자인기능사 2012년 5회</option>
+                            <option value="gineungsaWD2013_02">웹디자인기능사 2013년 2회</option>
+                            <option value="gineungsaWD2013_04">웹디자인기능사 2013년 4회</option>
+                            <option value="gineungsaWD2013_05">웹디자인기능사 2013년 5회</option>
+                            <option value="gineungsaWD2014_01">웹디자인기능사 2014년 1회</option>
+                            <option value="gineungsaWD2014_04">웹디자인기능사 2014년 4회</option>
+                            <option value="gineungsaWD2014_05">웹디자인기능사 2014년 5회</option>
+                            <option value="gineungsaWD2015_01">웹디자인기능사 2015년 1회</option>
+                            <option value="gineungsaWD2015_03">웹디자인기능사 2015년 3회</option>
+                            <option value="gineungsaWD2015_04">웹디자인기능사 2015년 4회</option>
+                            <option value="gineungsaWD2015_05">웹디자인기능사 2015년 5회</option>
+                            <option value="gineungsaWD2016_01">웹디자인기능사 2016년 1회</option>
+                            <option value="gineungsaWD2016_04">웹디자인기능사 2016년 4회</option>
+                        </select>
+                        <div data-lit-hue='180' data-lit-count='100' class='lit-container'>
+                            <button class='minimal'>시작하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>                      -->
         </div>        
     </main>
     <!-- main -->
@@ -111,11 +171,17 @@
         const cbtOmr = document.querySelector(".cbt__omr");
         const cbtSubmit = document.querySelector(".cbt__submit");
 
+        const cbtLength = document.querySelector(".cbt__length");
+        const cbtRest = document.querySelector(".cbt__rest");
+
         let questionAll = []; //모든 퀴즈 정보
+
+        let questionLength = 0; //전체 문제 수
+        let questionRest = questionLength; //남은 문제 수
 
         //데이터 불러오기
         const dataQuestion = () => {
-            fetch("json/gineungsaWD2023_01.json")
+            fetch("json/gineungsaJC2023_01.json")
             .then(res => res.json())
             .then(items => {                
                 questionAll = items.map((item, index) => {
@@ -124,7 +190,7 @@
                         number: index + 1                            
                     }
                     const answerChoices = [...item.incorrect_answer]; //오답 불러오기
-                    formattedQuestion.answer = Math.floor(Math.random() * answerChoices.length) + 1; //정답을 랜덤으로 불러오기
+                    formattedQuestion.answer = Math.round(Math.random() * answerChoices.length) + 1; //정답을 랜덤으로 불러오기
                     answerChoices.splice(formattedQuestion.answer - 1, 0, item.correct_answer); //정답을 랜덤으로 추가
                     
                     //보기를 추가
@@ -134,24 +200,27 @@
 
                     //문제에 대한 해설이 있으면 출력
                     if(item.hasOwnProperty("question_desc")){
-                        formattedQuestion.questionDesc = item.question_desc;
-                    } else {
-
-                    }
+                        formattedQuestion.question_desc = item.question_desc;
+                    } 
 
                     //문제에 대한 이미지가 있으면 출력
                     if(item.hasOwnProperty("question_img")){
-                        formattedQuestion.questionImg = item.question_img;
+                        formattedQuestion.question_img = item.question_img;
                     }
 
                     //해설이 있으면 출력
                     if(item.hasOwnProperty("desc")){
                     formattedQuestion.desc = item.desc;
-                    }
+                    } else {};
 
                     return formattedQuestion;
                 });
                 newQuestion(); //문제 만들기
+
+                //전체 문제 수
+                questionLength = questionAll.length;
+                cbtLength.innerHTML = questionLength;
+                cbtRest.innerHTML = questionLength;
             })                
             .catch((err) => console.log(err));
             
@@ -166,15 +235,15 @@
                 exam.push(`
                 <div class="cbt">
                     <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
-                    <div class="cbt__question__img"></div>                  
-                    <div class="cbt__selects">                            
-                        <input type="radio" id="select${number}_1" name="select${number}" value="${number+1}_1" onclick="answerSelect(this)">
+                    <div class="cbt__question__img"><img src="img/${question.question_img}.jpg"alt=""></div>                  
+                    <div class="cbt__selects">${question.question_desc}                           
+                        <input type="radio" id="select${number}_1" name="select${number}" value="${number}_1" onclick="answerSelect2(this)">
                         <label for="select${number}_1"><span>${question.choice1}</span></label>                          
-                        <input type="radio" id="select${number}_2" name="select${number}" value="${number+1}_2" onclick="answerSelect(this)">
+                        <input type="radio" id="select${number}_2" name="select${number}" value="${number}_2" onclick="answerSelect2(this)">
                         <label for="select${number}_2"><span>${question.choice2}</span></label>                           
-                        <input type="radio" id="select${number}_3" name="select${number}" value="${number+1}_3" onclick="answerSelect(this)">
+                        <input type="radio" id="select${number}_3" name="select${number}" value="${number}_3" onclick="answerSelect2(this)">
                         <label for="select${number}_3"><span>${question.choice3}</span></label>                          
-                        <input type="radio" id="select${number}_4" name="select${number}" value="${number+1}_4" onclick="answerSelect(this)">
+                        <input type="radio" id="select${number}_4" name="select${number}" value="${number}_4" onclick="answerSelect2(this)">
                         <label for="select${number}_4"><span>${question.choice4}</span></label>
                     </div>                            
                     <div class="cbt__desc hide">${question.desc}</div>
@@ -184,13 +253,13 @@
                 omr.push(`
                 <div class="omr">
                     <strong>${question.number}</strong>
-                    <input type="radio" name="omr${number}" id="omr${number}_1" value="${number}_0">
+                    <input type="radio" name="omr${number}" id="omr${number}_1" value="${number}_1" onclick="answerSelect(this)">
                     <label for="omr${number}_1"><span class="label-inner">1</span></label>
-                    <input type="radio" name="omr${number}" id="omr${number}_2" value="${number}_1">
+                    <input type="radio" name="omr${number}" id="omr${number}_2" value="${number}_2" onclick="answerSelect(this)">
                     <label for="omr${number}_2"><span class="label-inner">2</span></label>
-                    <input type="radio" name="omr${number}" id="omr${number}_3" value="${number}_2">
+                    <input type="radio" name="omr${number}" id="omr${number}_3" value="${number}_3" onclick="answerSelect(this)">
                     <label for="omr${number}_3"><span class="label-inner">3</span></label>
-                    <input type="radio" name="omr${number}" id="omr${number}_4" value="${number}_3">
+                    <input type="radio" name="omr${number}" id="omr${number}_4" value="${number}_4" onclick="answerSelect(this)">
                     <label for="omr${number}_4"><span class="label-inner">4</span></label>
                 </div>                    
                 `);
@@ -223,6 +292,7 @@
                     label[question.answer-1].classList.add("correct");
                 }
 
+                //설명 숨기기
                 const quizDesc = document.querySelectorAll(".cbt__desc");
 
                 if(quizDesc[number].innerHTML == "undefined"){
@@ -233,30 +303,82 @@
             });
         }
 
-        const answerSelect = () => {}
-        cbtSubmit.addEventListener("click", answerQuiz);
+        //보기 체크
+        const answerSelect2 = (el) => { 
+            const answer = el.value; //value="${number}_1"
+            const answerNum = answer.split("_");
 
-        //문제수 확인
-        let quizCount = 0; //퀴즈 번호
-        
-        const cbtTitle = document.querySelector(".cbt__title em");
+            const select = document.querySelectorAll(".cbt__omr .omr"); //전체 문항 수 100개
+            const label = select[answerNum[0]].querySelectorAll("input") //보기 4개
+            label[answerNum[1]-1].checked = true;
 
-        const checkQiuz = () => {
-            const count = [];
-
-            questionAll.forEach((question, number) => { 
-                count.push(`
-                <span>전체 문제수 : <em>${question.length}</em>문항</span>
-                <span>남은 문제수 : <em>${question.length - number}</em>문항</span>
-                `); 
-            })          
-            cbtTitle.innerHTML = count.join('');
+            const answerInputs = document.querySelectorAll(".cbt__selects input:checked")
+            cbtRest.innerHTML = questionLength - answerInputs.length;
         }
-        
-        
+
+        //보기 체크2
+        const answerSelect = (el) => {     
+            const answer = el.value; //value="${number}_1"
+            const answerNum = answer.split("_");
+
+            const select = document.querySelectorAll(".cbt__quiz .cbt"); //전체 문항 수 100개
+            const label = select[answerNum[0]].querySelectorAll("input") //보기 4개
+            label[answerNum[1]-1].checked = true;
+
+            const answerInputs = document.querySelectorAll(".cbt__selects input:checked")
+            cbtRest.innerHTML = questionLength - answerInputs.length;
+        }
+
 
         
+        cbtSubmit.addEventListener("click", answerQuiz);                   
         dataQuestion();
+
+        //버블 버튼
+        const bubbleBtn = () => {
+            const clip = (v, min, max = Infinity) => {
+                if (v < min) return min;
+                else if (v > max) return max;
+                else return v;
+            };
+
+            // generated random value from given range
+            const randRange = (min, max) => Math.random() * max + min;
+
+            // create bubble on x and y position inside target with given hue theme
+            function bubble(x, y, rect, hue, target) {
+                // 변수 설정하기
+                const size = randRange(20, rect.width / 5);
+                const circleHue = hue + randRange(-20, 20);
+                const animDuration = randRange(clip(size ** 2/1000, 1), 6) 
+                const zIndex = Math.random() < 0.1 ? 2 : -1;
+
+                // 원 만들기
+                const circle = document.createElement("span");
+                circle.className = "lit";
+                circle.style.left = x + "px";
+                circle.style.top = y + "px";
+                circle.style.width = size + "px";
+                circle.style.height = size + "px";
+                circle.style.background = `hsl(${circleHue}deg, 100%, 60%)`;
+                circle.style.zIndex = zIndex
+                circle.style.animationDuration = animDuration + "s";
+                target.appendChild(circle);
+            }
+
+            document.querySelectorAll("[data-lit-hue]").forEach((target) => {
+                const rect = target.getBoundingClientRect();
+                const hue = Number(target.getAttribute("data-lit-hue"));
+                const count = Number(target.getAttribute("data-lit-count") || 50);
+
+                for (let i = 0; i < count; i++) {
+                    const x = randRange(0, rect.width);
+                    const y = randRange(0, rect.height);
+                    bubble(x, y, rect, hue, target);
+                }
+            });
+        }
+        bubbleBtn();
 
     </script>
 </body>
