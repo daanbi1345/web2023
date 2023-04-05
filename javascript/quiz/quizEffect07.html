@@ -96,11 +96,11 @@
                     
                 </div>
             </div>  
-            <!-- <div class="cbt__start">
+            <div class="cbt__start">
                 <div class="cbt__modal1">
                     <h2>기능사 시험 기출문제</h2>
                     <div class="cbt__choice">
-                        <select name="cbtTime" id="cbtTime">
+                        <select name="cbtTime" id="cbtTime" class="cbt__index" onchange="changeSelect(this)">
                             <option value="gineungsaJC2005_02">정보처리기능사 2005년 2회</option>
                             <option value="gineungsaJC2005_05">정보처리기능사 2005년 4회</option>
                             <option value="gineungsaJC2005_04">정보처리기능사 2005년 5회</option>
@@ -124,7 +124,7 @@
                             <option value="gineungsaJC2011_04">정보처리기능사 2011년 4회</option>
                             <option value="gineungsaJC2011_05">정보처리기능사 2011년 5회</option>
                         </select>
-                        <select name="cbtTime" id="cbtTime">
+                        <select name="cbtTime" id="cbtTime" class="cbt__index" onchange="changeSelect(this)">
                             <option value="gineungsaWD2009_05">웹디자인기능사 2009년 5회</option>
                             <option value="gineungsaWD2010_01">웹디자인기능사 2010년 1회</option>
                             <option value="gineungsaWD2010_02">웹디자인기능사 2010년 2회</option>
@@ -150,12 +150,17 @@
                             <option value="gineungsaWD2016_01">웹디자인기능사 2016년 1회</option>
                             <option value="gineungsaWD2016_04">웹디자인기능사 2016년 4회</option>
                         </select>
-                        <div data-lit-hue='180' data-lit-count='100' class='lit-container'>
-                            <button class='minimal'>시작하기</button>
+                        <div class="cbt__view">
+                            당신의 이름은 <input type="text" class="name"> 입니다.<br>
+                            당신은 <span class="subject">웹디자인 기능사시험</span>을 선택했습니다.
                         </div>
+                        <!-- <div data-lit-hue='180' data-lit-count='100' class='lit-container'>
+                            <button class='minimal'>시작하기</button>
+                        </div> -->
+                        <button class="cbt__start__btn">시작하기</button>
                     </div>
                 </div>
-            </div>                      -->
+            </div>                      
         </div>        
     </main>
     <!-- main -->
@@ -174,10 +179,21 @@
         const cbtLength = document.querySelector(".cbt__length");
         const cbtRest = document.querySelector(".cbt__rest");
 
+        const cbtIndex = document.querySelector(".cbt__index");
+        const cbtViewSubject = document.querySelector(".cbt__view .subject");
+        const cbtHeader = document.querySelector(".cbt__header h2");
+        const cbtStartBtn = document.querySelector(".cbt__start__btn");
+        const cbtStart = document.querySelector(".cbt__start");
+
         let questionAll = []; //모든 퀴즈 정보
 
         let questionLength = 0; //전체 문제 수
         let questionRest = questionLength; //남은 문제 수
+
+        //시작하기
+        const startQuiz = () => {
+            cbtStart.classList.add("hide");
+        }
 
         //데이터 불러오기
         const dataQuestion = () => {
@@ -329,8 +345,33 @@
             cbtRest.innerHTML = questionLength - answerInputs.length;
         }
 
+        //onchange this를 쓰지 않은 방식
+        // const changeSelect = () => {
+        //     let selectValue = cbtIndex.options[cbtIndex.selectedIndex].value;
+        //     let selectText = cbtIndex.options[cbtIndex.selectedIndex].text;
 
+        //     alert(selectText)
+        // }
         
+        // const changeSelect2 = () => {
+        //     let selectValue2 = cbtIndex2.options[cbtIndex2.selectedIndex].value;
+        //     let selectText2 = cbtIndex2.options[cbtIndex2.selectedIndex].text;
+            
+        //     alert(selectText2)
+        // }
+
+        //문제 선택
+        const changeSelect = (e) => {
+            let selectValue = e.value;
+            let selectText = e.options[cbtIndex.selectedIndex].text;
+
+            cbtViewSubject.innerHTML = selectText;
+            cbtHeader.innerHTML = selectText;
+
+            dataQuestion(selectValue);
+        }
+
+        cbtStartBtn.addEventListener("click", startQuiz);
         cbtSubmit.addEventListener("click", answerQuiz);                   
         dataQuestion();
 

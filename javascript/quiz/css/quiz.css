@@ -94,6 +94,11 @@
     padding: 100px 0;
 }
 
+/* common */
+.hide {
+    display:  none !important;
+}
+
 /* quiz__wrap */
 .quiz__wrap {
     display: flex;
@@ -646,12 +651,42 @@
     margin-bottom: 20px;
     font-family: Cafe24Oneprettynight;
 }
-/* .cbt__modal1 button {
+.cbt__start__button {
     width: 50px;
     height: 40px;
     font-family: Cafe24Oneprettynight;
     border: 0;
-} */
+    border-radius: 200px;
+    padding: 15px;
+
+}
+.cbt__start__button:hover {
+    background-color: rgb(217, 242, 232);
+}
+.cbt__view {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+    line-height: 1.8;
+}
+.cbt__view input {
+    border: 1px solid #d2d2ff;
+    padding: 2px 10px;
+    font-family: Cafe24Oneprettynight;
+}
+.cbt__view span {
+    position: relative;
+}
+.cbt__view span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 10px;
+    z-index: -1;
+
+}
 /* dog__wrap */
 .dog .tail,
 .dog .chin,
