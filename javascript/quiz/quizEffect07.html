@@ -100,10 +100,10 @@
                 <div class="cbt__modal1">
                     <h2>기능사 시험 기출문제</h2>
                     <div class="cbt__choice">
-                        <select name="cbtTime" id="cbtTime" class="cbt__index" onchange="changeSelect(this)">
+                        <select name="cbtTime" id="cbtTime" onchange="changeSelect(this)">
                             <option value="gineungsaJC2005_02">정보처리기능사 2005년 2회</option>
-                            <option value="gineungsaJC2005_05">정보처리기능사 2005년 4회</option>
-                            <option value="gineungsaJC2005_04">정보처리기능사 2005년 5회</option>
+                            <option value="gineungsaJC2005_04">정보처리기능사 2005년 4회</option>
+                            <option value="gineungsaJC2005_05">정보처리기능사 2005년 5회</option>
                             <option value="gineungsaJC2006_01">정보처리기능사 2006년 1회</option>
                             <option value="gineungsaJC2006_02">정보처리기능사 2006년 2회</option>
                             <option value="gineungsaJC2006_03">정보처리기능사 2006년 3회</option>
@@ -124,17 +124,17 @@
                             <option value="gineungsaJC2011_04">정보처리기능사 2011년 4회</option>
                             <option value="gineungsaJC2011_05">정보처리기능사 2011년 5회</option>
                         </select>
-                        <select name="cbtTime" id="cbtTime" class="cbt__index" onchange="changeSelect(this)">
+                        <select name="cbtTime" id="cbtTime" onchange="changeSelect(this)">
                             <option value="gineungsaWD2009_05">웹디자인기능사 2009년 5회</option>
                             <option value="gineungsaWD2010_01">웹디자인기능사 2010년 1회</option>
                             <option value="gineungsaWD2010_02">웹디자인기능사 2010년 2회</option>
                             <option value="gineungsaWD2010_04">웹디자인기능사 2010년 4회</option>
                             <option value="gineungsaWD2010_05">웹디자인기능사 2010년 5회</option>
-                            <option value="gineungsaWD2011_04">웹디자인기능사 2011년 1회</option>
+                            <option value="gineungsaWD2011_01">웹디자인기능사 2011년 1회</option>
                             <option value="gineungsaWD2011_02">웹디자인기능사 2011년 2회</option>
                             <option value="gineungsaWD2011_04">웹디자인기능사 2011년 4회</option>
                             <option value="gineungsaWD2011_05">웹디자인기능사 2011년 5회</option>
-                            <option value="gineungsaWD2012_04">웹디자인기능사 2012년 2회</option>
+                            <option value="gineungsaWD2012_02">웹디자인기능사 2012년 2회</option>
                             <option value="gineungsaWD2012_04">웹디자인기능사 2012년 4회</option>
                             <option value="gineungsaWD2012_05">웹디자인기능사 2012년 5회</option>
                             <option value="gineungsaWD2013_02">웹디자인기능사 2013년 2회</option>
@@ -179,7 +179,6 @@
         const cbtLength = document.querySelector(".cbt__length");
         const cbtRest = document.querySelector(".cbt__rest");
 
-        const cbtIndex = document.querySelector(".cbt__index");
         const cbtViewSubject = document.querySelector(".cbt__view .subject");
         const cbtHeader = document.querySelector(".cbt__header h2");
         const cbtStartBtn = document.querySelector(".cbt__start__btn");
@@ -363,7 +362,7 @@
         //문제 선택
         const changeSelect = (e) => {
             let selectValue = e.value;
-            let selectText = e.options[cbtIndex.selectedIndex].text;
+            let selectText = e.options[e.selectedIndex].text;
 
             cbtViewSubject.innerHTML = selectText;
             cbtHeader.innerHTML = selectText;
