@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>02. 슬라이드 이펙트</title>
+    <title>04. 슬라이드 이펙트</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/slider.css">
@@ -29,7 +29,7 @@
         .slider__inner {
             display: flex;
             flex-wrap: wrap;
-            width: 4000px;
+            width: 4800px; /* 총 이미지 4800px */
             height: 450px;
         }
         /* 개별적인 이미지 영역 */
@@ -40,15 +40,15 @@
         }
     </style>
 </head>
-<body class="img03 bg05 font09">
+<body class="img04 bg09 font10">
     <header id="header">
-        <h1>Javascript slider Effect02</h1>
-        <p>슬라이드 이펙트 : 좌로 움직이기</p>
+        <h1>Javascript slider Effect04</h1>
+        <p>슬라이드 이펙트 : 좌로 움직이기(연속적으로)</p>
         <ul>
             <li><a href="sliderEffect01.html">1</a></li>
-            <li class="active"><a href="sliderEffect02.html">2</a></li>
+            <li><a href="sliderEffect02.html">2</a></li>
             <li><a href="sliderEffect03.html">3</a></li>
-            <li><a href="sliderEffect04.html">4</a></li>
+            <li class="active"><a href="sliderEffect04.html">4</a></li>
             <li><a href="sliderEffect05.html">5</a></li>
             <li><a href="sliderEffect06.html">6</a></li>
         </ul>
@@ -59,11 +59,11 @@
         <div class="slider__wrap">
             <div class="slider__img">
                 <div class="slider__inner">
-                    <div class="slider"><img src="./img/sliderEffect06-min.jpg" alt="이미지6"></div>
-                    <div class="slider"><img src="./img/sliderEffect07-min.jpg" alt="이미지7"></div>
-                    <div class="slider"><img src="./img/sliderEffect08-min.jpg" alt="이미지8"></div>
-                    <div class="slider"><img src="./img/sliderEffect09-min.jpg" alt="이미지9"></div>
-                    <div class="slider"><img src="./img/sliderEffect10-min.jpg" alt="이미지10"></div>
+                    <div class="slider s1"><img src="./img/sliderEffect06-min.jpg" alt="이미지6"></div>
+                    <div class="slider s2"><img src="./img/sliderEffect07-min.jpg" alt="이미지7"></div>
+                    <div class="slider s3"><img src="./img/sliderEffect08-min.jpg" alt="이미지8"></div>
+                    <div class="slider s4"><img src="./img/sliderEffect09-min.jpg" alt="이미지9"></div>
+                    <div class="slider s5"><img src="./img/sliderEffect10-min.jpg" alt="이미지10"></div>
                 </div>
             </div>
         </div>
@@ -85,49 +85,47 @@
         let currentIndex = 0; //현재 보이는 이미지, 첫 번째라서 0
         let sliderCount = slider.length; //이미지 갯수
         let sliderInterval = 3000; //이미지 변경되는 간격 시간
+        let sliderWidth = slider[0].offsetWidth; //이미지 가로값
+        let sliderClone = sliderInner.firstElementChild.cloneNode(true); //첫 번째(firstElementChild) 이미지 복사(cloneNode(true))
+        
+        //복사한 첫 번째 이미지 마지막에 붙여넣기
+        sliderInner.appendChild(sliderClone);
+
+        function sliderEffect(){
+            currentIndex++;
+
+            sliderInner.style.transition = "all 0.6s";
+            sliderInner.style.transform = "translateX(-"+ sliderWidth * currentIndex +"px)";
+
+            //마지막 이미지에 위치했을 때
+            if(currentIndex == sliderCount){
+                setTimeout(() => {
+                    sliderInner.style.transition = "0s";
+                    sliderInner.style.transform = "translateX(0px)";
+                }, 700);
+                currentIndex = 0;
+            }
+        }
+
+        setInterval(sliderEffect, sliderInterval);
+
     </script>
     <!-- javascript -->
     <script>
-        // sliderInner.style.transform = translateX("-0px"); //-800 * 0
-        // sliderInner.style.transform = translateX("-800px"); //-800 * 1
-        // sliderInner.style.transform = translateX("-1600px"); //-800 * 2
-        // sliderInner.style.transform = translateX("-2400px"); //-800 * 3
-        // sliderInner.style.transform = translateX("-3200px"); //-800 * 4
-        // sliderInner.style.transform = translateX("-0px"); // -800 * 0
-        
-        // sliderInner.style.transition = "all 0.6s";
-        // setInterval(() => {
-        //         currentIndex = (currentIndex + 1) % sliderCount; //1 2 3 4 0 1 2 3 4 0 ...
-            
-        //         console.log(currentIndex)
-        //         sliderInner.style.transform = "translateX("+ -800 * currentIndex + "px)";
-        //     },sliderInterval);
+       
     </script>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script>
-        // setInterval(() => {
-        //     currentIndex = (currentIndex + 1) % sliderCount;
-
-        //     gsap.to(sliderInner, {
-        //         x : -800 * currentIndex,
-        //         duration : 1,
-        //         ease : "elastic.out(1, 0.3)"
-        //     })
-        // }, sliderInterval);
+       
     </script>
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script>
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % $(".slider").length;
-
-            $(".slider__inner").css("position", "relative");
-            $(".slider__inner").animate({left : -800 * currentIndex}, 600, "easeOutElastic");
-        }, sliderInterval);
+       
     </script>
         
         
