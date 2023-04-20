@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스 </title>
+    <style>
+        @font-face {
+            font-family: 'ReciaSerifDisplay';
+            font-weight: normal;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/recia/ReciaSerifDisplay.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/recia/ReciaSerifDisplay.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/recia/ReciaSerifDisplay.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/recia/ReciaSerifDisplay.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/recia/ReciaSerifDisplay.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "ReciaSerifDisplay";
+        }
+        body {
+            height: 20000px;
+            background-color: #e0e4dd;
+        }
+        .scrollTop {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            z-index: 1000;
+            width: 40px;
+            height: 40px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+        .s1-text1 {
+            font-size: 30vw;
+            padding-top: 8vw;
+            line-height: 1;
+        }
+        .s2-text2 {
+            font-size: 0vw;
+            line-height: 1;
+            padding-top: 8vw;
+        }
+        .s1-img1 {
+            width: 100vw;
+            height: 100vh;            
+        }
+        .s1-img1 > div {
+            height: 20vh;
+            display: flex;
+            justify-content: space-between;
+        }
+        .s1-img1 > div > div {
+            width: 19vh;
+            height: 19vh;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 3px solid #000;           
+        }
+        /* .s1-img1 > div > div:first-child {
+            width: 19vh;
+            height: 19vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .s1-img1 > div > div:last-child {
+            width: 19vh;
+            height: 19vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        } */
+        .s1-img1-1 > div:first-child {
+            background-image: url(https://i.pinimg.com/236x/2e/6a/c1/2e6ac1196206d176c6e4db89bb379aea.jpg)           
+        }
+        .s1-img1-1 > div:last-child {
+            background-image: url(https://i.pinimg.com/236x/16/2b/88/162b88a46f682bc0335467e6b6b367c4.jpg);
+        }        
+        .s1-img1-2 > div:first-child {
+            background-image: url(https://i.pinimg.com/236x/e3/1c/fd/e31cfd1177424fa62103dbb0daa2334d.jpg);           
+        }
+        .s1-img1-2 > div:last-child {
+            background-image: url(https://i.pinimg.com/236x/0e/78/dd/0e78dd8e15834e6e210d7d6f6328cc65.jpg);           
+        }
+        .s1-img1-3 > div:first-child {
+            background-image: url(https://i.pinimg.com/236x/ca/93/7a/ca937ae94e99355ab0ca24ef6f8f2c0c.jpg);          
+        }
+        .s1-img1-3 > div:last-child {
+            background-image: url(https://i.pinimg.com/236x/b1/41/88/b14188e79e6f3eefb566ea87fe68ff8a.jpg);           
+        }
+        .s1-img1-4 > div:first-child {
+            background-image: url(https://i.pinimg.com/236x/cd/73/e6/cd73e6651b49cd220c45769fe42efb50.jpg);           
+        }
+        .s1-img1-4 > div:last-child {
+            background-image: url(https://i.pinimg.com/236x/61/6e/ee/616eee37d03c20df23cffe0446db364b.jpg);           
+        }
+        .s1-img1-5 > div:first-child {
+            background-image: url(https://i.pinimg.com/236x/0e/25/35/0e2535fa555aaa07357f0a5a9a93ef81.jpg);           
+        }
+        .s1-img1-5 > div:last-child {
+            background-image: url(https://i.pinimg.com/236x/38/fb/7e/38fb7e4fe5e50e71f9c6477c60488864.jpg);           
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollTop"></div>
+
+        <section id="section1">
+            <div class="s1-text1 fixed"
+                data-0="font-size: 0vw; opacity: 1"
+                data-1000="font-size: 30vw; opacity: 1"
+                data-2000="font-size: 30vw; opacity: 1"
+                data-3000="font-size: 0vw; opacity: 0"
+            >Vintage</div>
+        </section>
+        <section id="section2">
+            <div class="s2-text2 fixed"
+                data-2500="font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg); opacity: 1"
+                data-3000="font-size: 30vw; transform: translate(-50%, -50%) rotate(720deg); opacity: 1"
+                data-18000="opacity: 0"
+            >Photos</div>
+            <div class="s1-img1 fixed"
+                data-3500="width: 200vw;"
+                data-4500="width: 30vw;">                              
+                    <div class="s1-img1-1">
+                        <div
+                            data-4490="transform: scale(0.5); opacity: 0"                                              
+                            data-4500="transform: scale(0.5); opacity: 1"
+                            data-5000="transform: scale(2); opacity: 1"                            
+                            data-6000="transform: scale(1); opacity: 0"
+                        ></div>
+                        <div                           
+                            data-5990="transform: scale(0.5); opacity: 0"
+                            data-6000="transform: scale(0.5); opacity: 1"
+                            data-6500="transform: scale(2); opacity: 1"
+                            data-7500="transform: scale(1); opacity: 0"
+                        ></div>
+                    </div>
+                    <div class="s1-img1-2">
+                        <div
+                            data-7490="transform: scale(0.5); opacity: 0"
+                            data-7500="transform: scale(0.5); opacity: 1"
+                            data-8000="transform: scale(2); opacity: 1"
+                            data-9000="transform: scale(1); opacity: 0"
+                        ></div>
+                        <div
+                            data-8990="transform: scale(0.5); opacity: 0"
+                            data-9000="transform: scale(0.5); opacity: 1"
+                            data-9500="transform: scale(2); opacity: 1"
+                            data-10500="transform: scale(1); opacity: 0"
+                        ></div>
+                    </div>                
+                    <div class="s1-img1-3">
+                        <div
+                            data-10490="transform: scale(0.5); opacity: 0"
+                            data-10500="transform: scale(0.5); opacity: 1"
+                            data-11000="transform: scale(2); opacity: 1"
+                            data-12000="transform: scale(1); opacity: 0"
+                        ></div>
+                        <div
+                            data-11990="transform: scale(0.5); opacity: 0"
+                            data-12000="transform: scale(0.5); opacity: 1"
+                            data-12500="transform: scale(2); opacity: 1"
+                            data-13500="transform: scale(1); opacity: 0"
+                        ></div>
+                    </div>
+                    <div class="s1-img1-4">
+                        <div
+                            data-13490="transform: scale(0.5); opacity: 0"
+                            data-13500="transform: scale(0.5); opacity: 1"
+                            data-14000="transform: scale(2); opacity: 1"
+                            data-15000="transform: scale(1); opacity: 0"
+                        ></div>
+                        <div
+                            data-14990="transform: scale(0.5); opacity: 0"
+                            data-15000="transform: scale(0.5); opacity: 1"
+                            data-15500="transform: scale(2); opacity: 1"
+                            data-16500="transform: scale(1); opacity: 0"
+                        ></div>
+                    </div>
+                    <div class="s1-img1-5">
+                        <div
+                            data-15990="transform: scale(0.5); opacity: 0"
+                            data-16000="transform: scale(0.5); opacity: 1"
+                            data-16500="transform: scale(2); opacity: 1"
+                            data-17000="transform: scale(1); opacity: 0"
+                        ></div>
+                        <div
+                            data-16990="transform: scale(0.5); opacity: 0"
+                            data-17000="transform: scale(0.5); opacity: 1"
+                            data-17500="transform: scale(2); opacity: 1"
+                            data-18000="transform: scale(1); opacity: 0"
+                        ></div>
+                    </div>
+            </div>
+        </section>
+        <section id="section3">
+            <div class="s3-text3 fixed"
+                data-18000="font-size: 0vw; transform: translate(-50%, -50%) rotate(0deg); opacity: 1"
+                data-18500="font-size: 10vw; transform: translate(-50%, -50%) rotate(360deg); opacity: 1"                
+            >don't Run from it, Learn from it</div>
+        </section>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js" integrity="sha512-A2+khatRDWHUE2VUtN4xUTkr1nc4YfDBw9Sg3ea6x0aRPfpcYieDZji4D2edDHy/yF5NsYzP7kL8sSM8s5EqCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/Javascript">
+        let s = skrollr.init();
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY;
+
+            document.querySelector(".scrollTop").innerText = parseInt(scrollTop);
+        });
+    </script>
+</body>
+</html>
