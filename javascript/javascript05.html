@@ -86,6 +86,93 @@
 
             <div class="main__sample">
 
+                <div id="sample01" class="sample">
+                    <h3>01. at()</h3>
+                    <div class="notice">at()</div>
+                    <ul>
+                        <li>문자열에서 특정 인덱스에 위치한 문자를 반환하는 메서드입니다.</li>
+                        <li>이 메서드는 문자열의 유니코드 코드 포인트를 기준으로 작동하며, 문자열에서 유효한 인덱스 범위를 벗어난 경우 undefined를 반환합니다. </li>
+                        <li>charCodeAt() 메서드와 유사하지만, UTF-16이 아닌 전체 유니코드를 지원합니다.</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">const str = '👨‍👩‍👦';
+
+console.log(str.at(0)); // "👨‍👩‍👦" 중 첫 번째 문자 > 이모지와 조합 문자열에서 첫 번째 문자인 "👨 : MAN (U+1F468)"를 반환
+console.log(str.at(1)); // "👨‍👩‍👦" 중 두 번째 문자 > 이모지와 조합 문자열에서 두 번째 문자 "‍👩 : WOMAN (U+1F469)"를 반환
+console.log(str.at(2)); // "👨‍👩‍👦" 중 세 번째 문자 > 이모지와 조합 문자열에서 세 번째 문자 "‍👦 : BOY (U+1F466)"를 반환
+</code></pre>
+                </div>
+                <!-- //sample01 -->
+
+                <div id="sample02" class="sample">
+                    <h3>02. charAt()</h3>
+                    <div class="notice">charAt()</div>
+                    <ul>
+                        <li>문자열에서 특정 인덱스에 위치한 문자를 반환하는 메서드입니다.</li>
+                        <li>이 메서드는 at()와 유사하지만, at()은 코드 포인트를 기준으로 작동하는 반면, charAt()은 유니코드 코드 단위를 기준으로 작동합니다.</li>
+                        <li>따라서 일부 유니코드 문자는 여러 코드 단위로 인코딩되므로, charAt()는 이러한 문자를 처리하는 데 있어서 일부 문제가 있을 수 있습니다.</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">const str = "hello world";
+
+console.log(str.charAt(0)); // "h" > 문자열 "hello world"에서 첫 번째 문자인 "h"를 반환
+console.log(str.charAt(1)); // "e" >  두 번째 문자 "e"를 반환
+console.log(str.charAt(6)); // " " > 7번째 문자인 공백(space)을 반환
+</code></pre>
+                </div>
+                <!-- //sample02 -->
+
+                <div id="sample03" class="sample">
+                    <h3>03. charCodeAt()</h3>
+                    <div class="notice">charCodeAt()</div>
+                    <ul>
+                        <li>문자열에서 특정 인덱스에 위치한 문자의 유니코드 코드 포인트 값을 반환하는 메서드입니다.</li>
+                        <li>이 메서드는 charAt()와 유사하지만, charAt()이 문자 자체를 반환하는 반면, charCodeAt()은 해당 문자의 코드 포인트 값을 반환합니다.</li>
+                        <li>이 메서드는 문자열에서 특정 위치의 문자를 비교하는 등의 작업에 유용하게 사용됩니다.</li>
+                        <li>주어진 문자열에서 특정 인덱스 위치에 있는 문자의 UTF-16 코드 유닛 값을 반환합니다.</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">const str = "hello world";
+
+console.log(str.charCodeAt(0)); // 104 > 문자열 "hello world"에서 첫 번째 문자인 "h"의 UTF-16 코드 유닛 값을 반환
+console.log(str.charCodeAt(1)); // 101 > 두 번째 문자 "e"의 UTF-16 코드 유닛 값을 반환
+console.log(str.charCodeAt(6)); // 32 > 7번째 문자인 공백(space)의 UTF-16 코드 유닛 값을 반환    
+</code></pre>
+                </div>
+                <!-- //sample03 -->
+
+                <div id="sample04" class="sample">
+                    <h3>04. charPointAt()</h3>
+                    <div class="notice">charPointAt()</div>
+                    <ul>
+                        <li>문자열에서 주어진 인덱스에 대한 코드 포인트를 나타내는 10진수 값을 반환하는 메서드입니다.</li>
+                        <li>이 메서드는 at() 메서드와 유사하지만, 문자열에서 주어진 위치의 코드 포인트가 두 개 이상의 16 비트 코드 단위로 인코딩 된 경우, 이 메서드는 올바른 코드 포인트 값을 반환합니다.</li>
+                        <li>대소문자를 구별합니다.</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">const str = '😀👍';
+
+charAt(0) // 😀 > 문자의 첫 번째 코드 단위만 반환
+charCodeAt(0) // 55357 (😀의 UTF-16 코드 유닛 중 첫 번째 유닛)
+str.at(0) // 😀 주어진 문자열에서 0번째 위치의 유니코드 코드 포인트를 나타내는 문자열을 반환
+str.charCodeAt(0) // 55357 (😀의 UTF-16 코드 유닛 중 첫 번째 유닛)
+</code></pre>
+                </div>
+                <!-- //sample04 -->
+
+                <div id="sample05" class="sample">
+                    <h3>05. concat()</h3>
+                    <div class="notice">concat()</div>
+                    <ul>
+                        <li>문자열과 문자열 또는 문자열과 다른 데이터 유형을 결합하여 새로운 문자열을 만드는 메서드입니다.</li>
+                        <li>기존 문자열을 변경하지 않고, 새로운 문자열을 반환합니다.</li>
+                        <li>문자열을 결합하는 데 유용합니다.</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">const str1 = 'Hello';
+const str2 = 'World'; 
+
+str1.concat(str2) // HelloWorld
+str1.concat(' ', str2, '!') // Hello World!
+</code></pre>
+                </div>
+                <!-- //sample05 -->
+
                 <div id="sample06" class="sample">
                     <h3>06. includes()</h3>
                     <div class="notice">"문자열".includes(검색값, [위치값])</div>
@@ -151,6 +238,22 @@
 </code></pre>
                 </div>
                 <!-- //sample08 -->   
+
+                <div id="sample09" class="sample">
+                    <h3>09. localeCompare()</h3>
+                    <div class="notice">localeCompare()</div>
+                    <ul>
+                        <li>두 개의 문자열을 비교하여 정렬 순서를 결정하는 메서드입니다.</li>
+                        <li>로케일별로 문자열을 비교할 수 있으므로, 다국어 지원 웹 사이트나 애플리케이션에서 문자열을 정렬하는 데 유용하게 사용됩니다.</li>
+                        <li>로케일별로 문자열을 비교하여 정렬 순서를 결정하며, 두 문자열이 동일한 경우 0을, 첫 번째 문자열이 두 번째 문자열보다 작은 경우 음수를, 첫 번째 문자열이 두 번째 문자열보다 큰 경우 양수를 반환합니다.</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">const str1 = 'apple';
+const str2 = 'banana'; 
+
+str1.localeCompare(str2) // 음수 값을 반환 > 즉, 'apple'이 'banana'보다 먼저 나와야 하는 정렬 순서를 나타냄    
+</code></pre>
+                </div>
+                <!-- //sample09 --> 
                 
                 <div id="sample10" class="sample">
                     <h3>10. match()</h3>
@@ -175,6 +278,71 @@
 </code></pre>
                 </div>
                 <!-- //sample10 -->
+
+                <div id="sample12" class="sample">
+                    <h3>12. normalize()</h3>
+                    <div class="notice">normalize()</div>
+                    <ul>
+                        <li>문자열의 유니코드 정규화를 수행하는 메서드입니다.</li>
+                        <li>문자열을 NFC, NFD, NFKC, NFKD 중 하나로 정규화할 수 있습니다.</li>
+                        <li>유니코드 정규화는 문자열에 포함된 문자의 유니코드 표현 방식을 표준화하는 프로세스입니다.</li>
+                        <li>같은 문자를 여러 가지 방법으로 표현하는 경우, 이를 표준화하여 문자열을 비교하거나 검색할 때 일관성을 유지할 수 있습니다.</li>
+                        <li>normalize() 메서드는 인자로 받는 문자열을 정규화한 새로운 문자열을 반환합니다</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">const str = 'caf\u00e9';
+
+str.normalize('NFD') // cafe\u0301 > 문자 "é"를 기본 문자 "e"와 "´"를 조합한 문자열로 표현한 결과
+</code></pre>
+                </div>
+                <!-- //sample12 -->
+
+                <div id="sample13" class="sample">
+                    <h3>13. padEnd()</h3>
+                    <div class="notice">padEnd()</div>
+                    <ul>
+                        <li>문자열 끝에 지정된 길이만큼 다른 문자열을 삽입하여 새로운 문자열을 생성하는 메서드입니다.</li>
+                        <li>기존 문자열의 길이를 확인하고, 지정된 길이보다 짧은 경우 다른 문자열을 삽입하여 길이를 늘립니다.</li>
+                        <li>삽입할 문자열은 첫 번째 인자로 전달되며, 두 번째 인자로 전달된 길이를 기준으로 문자열이 잘릴 수 있습니다.</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">const str = 'Hello';
+
+str.padEnd(10, '!') // Hello!!!! > 원래 문자열 'Hello' 뒤에 '!' 문자를 추가하여 총 10자리로 만든 결과
+str.padEnd(3, '!') // Hello > 기존 문자열의 길이가 3보다 크기 때문에 문자열이 잘리지 않았기 때문
+</code></pre>
+                </div>
+                <!-- //sample13 -->
+
+                <div id="sample14" class="sample">
+                    <h3>14. padStart()</h3>
+                    <div class="notice">padStart()</div>
+                    <ul>
+                        <li>문자열 앞에 지정된 길이만큼 다른 문자열을 삽입하여 새로운 문자열을 생성하는 메서드입니다.</li>
+                        <li>기존 문자열의 길이를 확인하고, 지정된 길이보다 짧은 경우 다른 문자열을 삽입하여 길이를 늘립니다.</li>
+                        <li>삽입할 문자열은 첫 번째 인자로 전달되며, 두 번째 인자로 전달된 길이를 기준으로 문자열이 잘릴 수 있습니다.</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">"const str = 'Hello';
+str.padStart(10, '!') // !!!!Hello > 원래 문자열 'Hello' 앞에 '!' 문자를 추가하여 총 10자리로 만든 결과
+str.padStart(3, '!') // Hello > 문자열의 길이가 3보다 크기 때문에 문자열이 잘리지 않았기 때문
+</code></pre>
+                </div>
+                <!-- //sample14 -->
+
+                <div id="sample15" class="sample">
+                    <h3>15. repeat()</h3>
+                    <div class="notice">repeat()</div>
+                    <ul>
+                        <li>문자열을 지정된 횟수만큼 반복하여 새로운 문자열을 생성하는 메서드입니다.</li>
+                        <li>숫자 타입의 인자를 하나 받으며, 이 인자는 반복할 횟수를 나타냅니다.</li>
+                        <li>이때, 인자로 전달된 값은 0 이상의 정수이어야 합니다.</li>
+                        <li>만약 0 이하의 값이 전달되면 빈 문자열을 반환합니다.</li>
+                    </ul>
+<pre class="line-numbers"><code class="language-js">const str = 'Hello';
+
+str.repeat(3) // HelloHelloHello
+str.repeat(0) // '' (빈 문자열)
+</code></pre>
+                </div>
+                <!-- //sample15 -->
 
                 <div id="sample18" class="sample">
                     <h3>18. search()</h3>
