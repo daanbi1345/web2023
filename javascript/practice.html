@@ -162,18 +162,18 @@
     }
 }
 //11. 다음은 최솟값을 출력하는 예제이다. 밑줄에 적합한 표현을 작성하시오.
-{
-    let num = [30,40,24,80,99];
-    let min = 9999;
+// {
+//     let num = [30,40,24,80,99];
+//     let min = 9999;
 
-    for(let i=0; i<5; i++){
-        if(min > num[i]){
-            min = ________;
-        }
-    }
+//     for(let i=0; i<5; i++){
+//         if(min > num[i]){
+//             min = ________;
+//         }
+//     }
 
-    console.log("최소값 : ", min);
-}
+//     console.log("최소값 : ", min);
+// }
 //12. 다음의 결괏값을 작성하시오.
 {
     let s1 = "Remember november";
@@ -283,6 +283,93 @@
         }
     } else {
         console.log(a + b)
+    }
+}
+{
+    let i = 3, k = 1;
+
+    switch(i){
+        case 1: k++;
+        case 2: k += 3;
+        case 3: k = 0;
+        case 4: k += 3;
+        case 5: k -= 10;
+        default: k--;
+    }
+    console.log(k);
+}
+{
+    let i = 0;
+    let sum = 0;
+
+    while(i < 10){
+        i++;
+        if(i % 2 == 1){
+            continue;
+        }
+        sum += i;
+    }
+
+    console.log(sum)
+}
+{
+    function func(num1, num2){
+        let res = 1;
+        for(let i=0; i<num2; i++){
+            res *= num1;
+        }
+        return res;
+    }
+    let res = func(2, 10);
+
+    console.log(res)
+}
+{
+    function func(a){
+        if( a < 1 ) return 1
+        return a * func(a - 1);
+    }
+    
+    console.log(func(5))
+}
+{
+    let a = 10, b = 15;
+
+    console.log(++a/5 << b/2-1*2);
+}
+{
+    let a=1, b=1, num;
+
+    for(let i=0; i<6; i++){
+        num = a + b;
+        a = b;
+        b = num;
+    }
+    console.log(num)
+}
+{
+    let a, b, c, sum;
+    a = b = 1;
+    sum = a + b;
+
+    for(let i=3; i<=5; i++){
+        c = a + b;
+        sum += c;
+        a = b;
+        b = c;
+    }
+
+    console.log(sum)
+}
+{
+    let num, i;
+    for(num=2; num<=10; num++){
+        for(i=2; i<num; i++){
+            if(num % i == 0) break;
+        }
+        if(i==num){
+            console.log(num)
+        }
     }
 }
     </script>
