@@ -17,7 +17,7 @@
     </div>
     <header id="header">
         <h1>CYBER WORLD</h1>
-        <div class="time">2023년 4월 24일 16시 44분 01초</div>
+        <div class="time"></div>
     </header>
 
     <main>
@@ -98,6 +98,42 @@
             printTime(); // 오른쪽 상단 시간
             printAgent(); // 하단 중앙
         }
+
+        // 현재 시간을 구합니다.
+        function updateTime() {
+
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1;
+            const day = now.getDate();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            // 시간을 표시할 요소를 찾고 내용을 설정합니다.
+            const timeElem = document.querySelector('.time');
+            timeElem.textContent = `${year}년 ${month}월 ${day}일 ${hours}시 ${minutes}분 ${seconds}초`;
+        }
+
+        // 1초마다 updateTime 함수를 실행합니다.
+        setInterval(updateTime, 1000);
+
+        function updateInfo() {
+            // 화면 크기를 구합니다.
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            // 정보를 표시할 요소를 찾고 내용을 설정합니다.
+            const infoElem = document.querySelector('.info');
+            infoElem.textContent = `현재 윈도우를 사용하고 있으면, 화면 크기는 ${width} x ${height} 입니다.`;
+        }
+
+        // 페이지가 로드되면 updateInfo 함수를 실행합니다.
+        window.addEventListener('load', updateInfo);
+
+        // 화면 크기가 변경될 때마다 updateInfo 함수를 실행합니다.
+        window.addEventListener('resize', updateInfo);
+
     </script>
 </body>
 </html>
