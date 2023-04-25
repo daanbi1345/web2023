@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="css/bg.css">
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/music.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+
     
 </head>
 <body>
@@ -43,6 +47,50 @@
                 <span>뮤직 듣기</span>
             </div>
         </div>
+        
+        <div class="music__wrap">
+            <div class="music__inner">
+                <div class="music__header">
+                    <span class="left"></span>
+                    <h2>MUSIC PLAYER</h2>
+                    <span class="right"></span>
+                </div>
+                <div class="music__contents">
+                    <div class="music__view">
+                        <div class="images">
+                            <img src="img/music_view01.png" alt="음악">
+                        </div>                       
+                    </div>
+                    <div class="music__control">
+                        <div class="title">
+                            <h3>노래 제목</h3>
+                            <p>작곡가 이름</p>
+                        </div>
+                        <div class="progress">
+                            <div class="bar">
+                                <audio src="audio/music_audio01.mp3"></audio>
+                            </div>
+                            <div class="timer">
+                                <span class="current">0:00</span>
+                                <span class="duration">0:00</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <span>전체 반복</span>
+                            <span>이전 곡 재생</span>
+                            <span>재생</span>
+                            <span>다음 곡 재생</span>
+                            <span>재생 목록</span>
+                            <!-- <span>반복 재생</span>
+                            <span>랜덤 재생</span>
+                            <span>정지</span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="music__footer"></div>
+            </div>
+        </div>
+        <!-- music player -->
     </main>
 
     <footer id="footer">
@@ -52,6 +100,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="js/music.js"></script>
     <script>
         $(".icon1").draggable({
             containment: ".icon__box", scroll: false,
