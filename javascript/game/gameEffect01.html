@@ -58,7 +58,7 @@
                 <div class="music__contents">
                     <div class="music__view">
                         <div class="images">
-                            <img src="img/music_view01.png" alt="음악">
+                            <img src="img/music_view08.png" alt="음악">
                         </div>                       
                     </div>
                     <div class="music__control">
@@ -68,7 +68,7 @@
                         </div>
                         <div class="progress">
                             <div class="bar">
-                                <audio src="audio/music_audio01.mp3"></audio>
+                                <audio id ="main__audio" src="audio/music_audio01.mp3"></audio>
                             </div>
                             <div class="timer">
                                 <span class="current">0:00</span>
@@ -76,14 +76,24 @@
                             </div>
                         </div>
                         <div class="control">
-                            <span>전체 반복</span>
-                            <span>이전 곡 재생</span>
-                            <span>재생</span>
-                            <span>다음 곡 재생</span>
-                            <span>재생 목록</span>
-                            <!-- <span>반복 재생</span>
-                            <span>랜덤 재생</span>
-                            <span>정지</span> -->
+                            <span>
+                                <i class="repeat" id="control-repeat" title="전체 반복"></i>
+                            </span>
+                            <span>
+                                <i class="prev" id="control-prev" title="이전 곡 재생"></i>
+                            </span>
+                            <span>
+                                <i class="play" id="control-play" title="재생"></i>
+                            </span>
+                            <span>
+                                <i class="next" id="control-next" title="다음 곡 재생"></i>
+                            </span>
+                            <span>
+                                <i class="list" id="control-list" title="재생 목록"></i>
+                            </span>
+                            <!-- <span class="repeat_one">한 곡 반복 재생</span>
+                            <span class="shuffle">랜덤 재생</span>
+                            <span class="stop">정지</span> -->
                         </div>
                     </div>
                 </div>
