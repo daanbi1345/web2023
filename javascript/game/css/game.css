@@ -27,7 +27,7 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #7318acb2;
+    background-color: #8a9b94b2;
     width: 100%;
     padding: 10px;
     display: flex;
@@ -57,7 +57,7 @@ body {
     margin-bottom: 10px;
 }
 .icon__box > div span {
-    background-color: #7318acb2;
+    background-color: #8a9b94b2;
     border-radius: 20px;
 }
 
