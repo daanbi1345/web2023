@@ -22,11 +22,10 @@
             height: 700px;
             margin: 0 auto;
             text-align: center;
-            border: 1px solid #000;
             flex-wrap: wrap;
         }
         #header {
-            border: 1px solid #000;
+            background-color: #f6d6d6;
             display: flex;
         }
         #header h1 {
@@ -35,7 +34,7 @@
             border-right: 1px dashed #000;
         }
         #slider {
-            border: 1px solid #000;
+            background-color: #f6e4d6;
             height: 300px;
         }
         #container {
@@ -43,36 +42,37 @@
             display: flex;
         }
         .notice {
-            border: 1px solid #000;
+            background-color: #f6eed6;
             width: 33.3333%;
         }
         .banner {
-            border: 1px solid #000;
+            background-color: #eaf6d6;
             width: 33.3333%;
         }
         .gotomain {
-            border: 1px solid #000;
+            background-color: #d6f6db;
             width: 33.3333%;
         }
         #footer {
+            width: 100%;
             height: 100px;
             display: flex;
         }
         .flogo {
-            border: 1px solid #000;
+            background-color: #d6f6f2;
             width: 20%;
         }
         .copyright {
-            border: 1px solid #000;
+            background-color: #d6f1f6;
             width: 60%;
         }
         .sns {
-            border: 1px solid #000;
+            background-color: #d6def6;
             width: 20%;
         }
         .nav {
             width: 80%;
-            background-color: #ccc;
+            background-color: #f1b9a4;
             padding: 30px 40px;
         }
         .nav > ul {
@@ -83,18 +83,18 @@
             position: relative;
         }
         .nav > ul > li > a {
-            background-color: #996e6e;
+            background-color: #f19a7a;
             display: block;
             padding: 10px 40px;
         }
         .nav > ul > li > a:hover {
-            background-color: #b06f6f;
+            background-color: #c57d63;
         }
         .nav > ul > li > ul {
             position: absolute;
             left: 0;
             top: 40px;
-            background-color: #ccc;
+            background-color: #ee7245;
             width: 100%;
             display: none;
         }
@@ -103,7 +103,7 @@
             display: block;
         }
         .nav > ul > li > ul > li > a:hover {
-            background-color: #ddd;
+            background-color: #b85936;
         }
     </style>
 </head>
@@ -148,34 +148,65 @@
                 </ul>
             </nav>              
         </div>
-        <div id="slider">이미지 슬라이드</div>
+        <div id="slider"></div>
         <div id="container">
-            <div class="notice">공지사항</div>
-            <div class="banner">배너</div>
-            <div class="gotomain">바로가기</div>
+            <div class="notice"></div>
+            <div class="banner"></div>
+            <div class="gotomain"></div>
         </div>
         <div id="footer">
-            <div class="flogo">로고</div>
-            <div class="copyright">copyright</div>
-            <div class="sns">sns</div>
+            <div class="flogo"></div>
+            <div class="copyright"></div>
+            <div class="sns"></div>
         </div>        
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        $(".nav > ul > li").mouseover(function(){
-            $(".nav > ul > li").find(".submenu").stop().slideDown(); // 여러 개 동시에
-            // $(this).find(".submenu").stop().slideDown(); // 한 개만
-        });
-        $(".nav > ul > li").mouseout(function(){
-            $(".nav > ul > li").find(".submenu").stop().slideUp();
-        });
+        // $(".nav > ul > li").mouseover(function(){
+        //     $(".nav > ul > li").find(".submenu").stop().slideDown(); // 여러 개 동시에
+        //     // $(this).find(".submenu").stop().slideDown(); // 한 개만
+        // });
+        // $(".nav > ul > li").mouseout(function(){
+        //     $(".nav > ul > li").find(".submenu").stop().slideUp();
+        // });
 
-        document.querySelectorAll("nav > ul > li").forEach(li => {
-            li.addEventListener("mouseover", () => {
+        // document.querySelectorAll("nav > ul > li").forEach(li => {
+        //     li.addEventListener("mouseover", () => {
+                
+        //     });
+        // }); 
 
+        // 마우스 오버 이벤트 핸들러 등록
+        const navItems = document.querySelectorAll(".nav > ul > li");
+
+        navItems.forEach((item) => {
+        item.addEventListener("mouseover", () => {
+            const subMenu = item.querySelector(".submenu");
+            const allSubMenus = document.querySelectorAll(".submenu");
+            
+            // 모든 서브메뉴를 보이게 하기
+            allSubMenus.forEach((menu) => {
+            menu.style.display = "block";
             });
-        }); 
+            
+            // 현재 아이템의 서브메뉴만 숨기지 않고 보이게 하기
+            subMenu.style.display = "block";
+        });
+        });
+
+        // 마우스 아웃 이벤트 핸들러 등록
+        navItems.forEach((item) => {
+        item.addEventListener("mouseout", () => {
+            const allSubMenus = document.querySelectorAll(".submenu");
+            
+            // 모든 서브메뉴를 숨기기
+            allSubMenus.forEach((menu) => {
+            menu.style.display = "none";
+            });
+        });
+        });
+
     </script>
 </body>
 </html>
