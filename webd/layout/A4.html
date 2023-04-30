@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 A유형 4번 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: black;            
+        }
+        li {
+            list-style: none;
+        }
+        #wrap {
+            width: 1200px;
+            height: 700px;
+            margin: 0 auto;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        #header {
+            background-color: #f6d6d6;
+            display: flex;
+        }
+        #header h1 {
+            width: 30%;
+            height: 100px;
+            border-right: 1px dashed #000;
+        }
+        #slider {
+            background-color: #f6e4d6;
+            height: 300px;
+        }
+        #container {
+            height: 200px;
+            display: flex;
+        }
+        .notice1 {
+            background-color: #f6eed6;
+            width: 33.3333%;
+        }
+        .notice2 {
+            background-color: #adbf90;
+            width: 33.3333%;
+        }
+        .notice3 {
+            background-color: #8ab991;
+            width: 33.3333%;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        .familysite {
+            background-color: #d6f6f2;
+            width: 20%;
+        }
+        .fmenu {
+            width: 80%;
+        }
+        .bottommenu {
+            background-color: #d2a7f2;
+            width: 100%;
+            height: 50px;
+        }
+        .copyright {
+            background-color: #64aab7;
+            width: 100%;
+            height: 50px;
+        }
+        .nav {
+            width: 80%;
+            background-color: #f1b9a4;
+            padding: 30px 40px;
+        }
+        .nav > ul {
+            display: flex;
+            justify-content: right;
+        }
+        .nav > ul > li {
+            position: relative;
+        }
+        .nav > ul > li > a {
+            background-color: #f19a7a;
+            display: block;
+            padding: 10px 40px;
+        }
+        .nav > ul > li > a:hover {
+            background-color: #c57d63;
+        }
+        .nav > ul > li > ul {
+            position: absolute;
+            left: 0;
+            top: 40px;
+            background-color: #ee7245;
+            width: 100%;
+            display: none;
+        }
+        .nav > ul > li > ul > li > a {
+            padding: 10px;
+            display: block;
+        }
+        .nav > ul > li > ul > li > a:hover {
+            background-color: #b85936;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1></h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">메뉴 1</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴1-1</a></li>
+                            <li><a href="#">서브메뉴1-2</a></li>
+                            <li><a href="#">서브메뉴1-3</a></li>
+                            <li><a href="#">서브메뉴1-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴 2</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴2-1</a></li>
+                            <li><a href="#">서브메뉴2-2</a></li>
+                            <li><a href="#">서브메뉴2-3</a></li>
+                            <li><a href="#">서브메뉴2-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴 3</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴3-1</a></li>
+                            <li><a href="#">서브메뉴3-2</a></li>
+                            <li><a href="#">서브메뉴3-3</a></li>
+                            <li><a href="#">서브메뉴3-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴 4</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴4-1</a></li>
+                            <li><a href="#">서브메뉴4-2</a></li>
+                            <li><a href="#">서브메뉴4-3</a></li>
+                            <li><a href="#">서브메뉴4-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>              
+        </div>
+        <div id="slider"></div>
+        <div id="container">
+            <div class="notice1"></div>
+            <div class="notice2"></div>
+            <div class="notice3"></div>
+        </div>
+        <div id="footer">
+            <div class="fmenu">
+                <div class="bottommenu"></div>
+                <div class="copyright"></div>
+            </div>
+            <div class="familysite"></div>
+        </div>        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        // $(".nav > ul > li").mouseover(function(){
+        //     $(".nav > ul > li").find(".submenu").stop().slideDown(); // 여러 개 동시에
+        //     // $(this).find(".submenu").stop().slideDown(); // 한 개만
+        // });
+        // $(".nav > ul > li").mouseout(function(){
+        //     $(".nav > ul > li").find(".submenu").stop().slideUp();
+        // });
+
+        // document.querySelectorAll("nav > ul > li").forEach(li => {
+        //     li.addEventListener("mouseover", () => {
+                
+        //     });
+        // }); 
+
+        // 마우스 오버 이벤트 핸들러 등록
+        const navItems = document.querySelectorAll(".nav > ul > li");
+
+        navItems.forEach((item) => {
+        item.addEventListener("mouseover", () => {
+            const subMenu = item.querySelector(".submenu");
+            const allSubMenus = document.querySelectorAll(".submenu");
+            
+            // 모든 서브메뉴를 보이게 하기
+            allSubMenus.forEach((menu) => {
+            menu.style.display = "block";
+            });
+            
+            // 현재 아이템의 서브메뉴만 숨기지 않고 보이게 하기
+            subMenu.style.display = "block";
+        });
+        });
+
+        // 마우스 아웃 이벤트 핸들러 등록
+        navItems.forEach((item) => {
+        item.addEventListener("mouseout", () => {
+            const allSubMenus = document.querySelectorAll(".submenu");
+            
+            // 모든 서브메뉴를 숨기기
+            allSubMenus.forEach((menu) => {
+            menu.style.display = "none";
+            });
+        });
+        });
+
+    </script>
+</body>
+</html>
