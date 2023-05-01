@@ -20,7 +20,7 @@
         <img src="img/game_mouse03.png" alt=>
     </div>
     <header id="header">
-        <h1>CYBER WORLD</h1>
+        <h1>Music Player</h1>
         <div class="time"></div>
     </header>
 
@@ -77,7 +77,9 @@
                         </div>
                         <div class="control">
                             <span>
-                                <i class="repeat" id="control-repeat" title="전체 반복"></i>
+                                <i class="repeat" id="control-repeat" title="전체 반복 재생"></i>
+                                <!-- <i class="repeat_one" id="control-repeat" title="한 곡 반복 재생"></i>
+                                <i class="shuffle" id="control-repeat" title="랜덤 반복 재생"></i> -->
                             </span>
                             <span>
                                 <i class="prev" id="control-prev" title="이전 곡 재생"></i>
@@ -91,13 +93,25 @@
                             <span>
                                 <i class="list" id="control-list" title="재생 목록"></i>
                             </span>
-                            <!-- <span class="repeat_one">한 곡 반복 재생</span>
-                            <span class="shuffle">랜덤 재생</span>
-                            <span class="stop">정지</span> -->
+                            <!-- <span class="stop">정지</span> -->
                         </div>
                     </div>
-                </div>
-                <div class="music__footer"></div>
+                </div>                
+                <div class="music__list">
+                    <h3>PLAY LIST<a href="#" class="close"></a></h3>
+                    <ul>
+                        <!-- <li>
+                            <span class="img">
+                                <img class="img" src="img/music_view01.png" alt="01">
+                            </span>
+                            <span class="title">
+                                <strong>제목</strong>
+                                <em>가수</em>
+                            </span>
+                            <span class="time">3:04</span>
+                        </li> -->
+                    </ul>
+                </div>                
             </div>
         </div>
         <!-- music player -->
@@ -153,9 +167,6 @@
                     top: e.pageY-10
                 })
             });
-
-            printTime(); // 오른쪽 상단 시간
-            printAgent(); // 하단 중앙
         }
 
         // 현재 시간을 구합니다.
