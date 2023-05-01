@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 D유형 1번 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: black;            
+        }
+        li {
+            list-style: none;
+        }
+        #wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #aside {
+            width: 200px;
+            height: 850px;
+            background-color: #eccfcf;
+        }
+        #aside h1 {
+            width: 100%;
+            height: 100px;
+            background-color: #ab8585;
+        }
+        .nav {
+            width: 80%;
+            padding: 20px;
+        }
+        .nav > ul > li {
+            position: relative;
+        }
+        .nav > ul > li > a {
+            background-color: #f19a7a;
+            display: block;
+            padding: 10px 50px;
+        }
+        .nav > ul > li > a:hover {
+            background-color: #c57d63;
+        }
+        .nav > ul > li > ul {
+            position: absolute;
+            left: 0;
+            top: 40px;
+            background-color: #ee7245;
+            width: 100%;
+            display: none;
+        }
+        .nav > ul > li > ul:hover {
+            display: block;
+        }
+        .nav > ul > li > ul > li > a {
+            padding: 10px;
+            display: block;
+        }
+        .nav > ul > li > ul > li > a:hover {
+            background-color: #b85936;
+        }
+        #main {
+            width: calc(100% - 200px);
+            height: 850px;
+            background-color: #7ead66;
+        }
+        #slider {
+            width: 100%;
+            height: 400px;
+            background-color: #905151;
+        }
+        .link {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100px;
+            height: 300px;
+            background-color: #658a8c;
+        }
+        #banner {
+            width: 100%;
+            height: 200px;
+            background-color: #9a7347;
+        }
+        #contents {
+            width: 100%;
+            height: 250px;
+            background-color: #b09b46;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        #footer h1 {
+            width: 200px;
+            background-color: #659ea8;
+        }
+        #copyright {
+            width: calc(100% - 200px - 230px);
+            background-color: #4971a4;
+        }
+        #familysite {
+            width: 230px;
+            background-color: #44848f;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="aside">
+            <h1></h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">메뉴 1</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴1-1</a></li>
+                            <li><a href="#">서브메뉴1-2</a></li>
+                            <li><a href="#">서브메뉴1-3</a></li>
+                            <li><a href="#">서브메뉴1-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴 2</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴2-1</a></li>
+                            <li><a href="#">서브메뉴2-2</a></li>
+                            <li><a href="#">서브메뉴2-3</a></li>
+                            <li><a href="#">서브메뉴2-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴 3</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴3-1</a></li>
+                            <li><a href="#">서브메뉴3-2</a></li>
+                            <li><a href="#">서브메뉴3-3</a></li>
+                            <li><a href="#">서브메뉴3-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴 4</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴4-1</a></li>
+                            <li><a href="#">서브메뉴4-2</a></li>
+                            <li><a href="#">서브메뉴4-3</a></li>
+                            <li><a href="#">서브메뉴4-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>    
+        </div>
+        <div id="main">
+            <section id="slider">
+                <div class="link"></div>
+            </section>
+            <section id="banner"></section>
+            <section id="contents"></section>
+        </div>
+        <div id="footer">
+            <h1></h1>
+            <section id="copyright"></section>
+            <section id="familysite"></section>
+        </div>
+    </div>
+    <script>
+        // 마우스를 메뉴 항목 위로 올렸을 때
+        document.querySelectorAll('.nav > ul > li').forEach(function(item) {
+        item.addEventListener('mouseover', function() {
+            this.querySelector('.submenu').style.display = 'block'; // 해당 항목 하위의 서브메뉴를 보이게 함
+        });
+        });
+
+        // 마우스를 메뉴 항목에서 내렸을 때
+        document.querySelectorAll('.nav > ul > li').forEach(function(item) {
+        item.addEventListener('mouseout', function() {
+            this.querySelector('.submenu').style.display = 'none'; // 해당 항목 하위의 서브메뉴를 숨김
+        });
+        });    
+    </script>
+</body>
+</html>

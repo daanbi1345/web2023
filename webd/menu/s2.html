@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 S유형 2번 레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: black;            
+        }
+        li {
+            list-style: none;
+        }
+        #wrap {
+            width: 1200px;
+            height: 700px;
+            margin: 0 auto;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        #header {
+            background-color: #f6d6d6;
+            display: flex;
+        }
+        #header h1 {
+            width: 30%;
+            height: 100px;
+            border-right: 1px dashed #000;
+        }        
+        #wrap .slider__wrap {
+            /* display: flex;
+            overflow: hidden; */
+            width: 100%;
+            /* height: 300px; */
+        }
+        #wrap .slider__img {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        #wrap .slider__inner img {
+            width: 1200px;
+            height: 300px;
+        }
+        #wrap .slider__inner {
+            width: 100%;
+            display: flex;
+            height: 900px;
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+        .slider {
+            position: relative;
+            width: 1200px;
+            height: 300px;
+        }
+        #container {
+            height: 200px;
+            display: flex;
+        }
+        .notice {
+            background-color: #f6eed6;
+            width: 33.3333%;
+        }
+        .banner {
+            background-color: #eaf6d6;
+            width: 33.3333%;
+        }
+        .gotomain {
+            background-color: #d6f6db;
+            width: 33.3333%;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        .flogo {
+            background-color: #d6f6f2;
+            width: 20%;
+        }
+        .copyright {
+            background-color: #d6f1f6;
+            width: 60%;
+        }
+        .sns {
+            background-color: #d6def6;
+            width: 20%;
+        }
+        .nav {
+            width: 80%;
+            background-color: #f1b9a4;
+            padding: 30px 40px;
+        }
+        .nav > ul {
+            display: flex;
+            justify-content: right;
+        }
+        .nav > ul > li {
+            position: relative;
+        }
+        .nav > ul > li > a {
+            background-color: #f19a7a;
+            display: block;
+            padding: 10px 40px;
+        }
+        .nav > ul > li > a:hover {
+            background-color: #c57d63;
+        }
+        .nav > ul > li > ul {
+            position: absolute;
+            left: 0;
+            top: 40px;
+            background-color: #ee7245;
+            width: 100%;
+            display: none;
+        }
+        .nav > ul > li > ul > li > a {
+            padding: 10px;
+            display: block;
+        }
+        .nav > ul > li > ul > li > a:hover {
+            background-color: #b85936;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1></h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">메뉴 1</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴1-1</a></li>
+                            <li><a href="#">서브메뉴1-2</a></li>
+                            <li><a href="#">서브메뉴1-3</a></li>
+                            <li><a href="#">서브메뉴1-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴 2</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴2-1</a></li>
+                            <li><a href="#">서브메뉴2-2</a></li>
+                            <li><a href="#">서브메뉴2-3</a></li>
+                            <li><a href="#">서브메뉴2-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴 3</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴3-1</a></li>
+                            <li><a href="#">서브메뉴3-2</a></li>
+                            <li><a href="#">서브메뉴3-3</a></li>
+                            <li><a href="#">서브메뉴3-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴 4</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴4-1</a></li>
+                            <li><a href="#">서브메뉴4-2</a></li>
+                            <li><a href="#">서브메뉴4-3</a></li>
+                            <li><a href="#">서브메뉴4-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>              
+        </div>
+        <div class="slider__wrap">
+            <div class="slider__img">
+                <div class="slider__inner">
+                    <div class="slider 1"><img src="../img/banner1-1.jpg" alt="1"></div>
+                    <div class="slider 2"><img src="../img/banner1-2.jpg" alt="2"></div>
+                    <div class="slider 3"><img src="../img/banner1-3.jpg" alt="3"></div>
+                </div>
+            </div>
+        </div>     
+        <div id="container">
+            <div class="notice"></div>
+            <div class="banner"></div>
+            <div class="gotomain"></div>
+        </div>
+        <div id="footer">
+            <div class="flogo"></div>
+            <div class="copyright"></div>
+            <div class="sns"></div>
+        </div>        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        // $(".nav > ul > li").mouseover(function(){
+        //     $(".nav > ul > li").find(".submenu").stop().slideDown(); // 여러 개 동시에
+        //     // $(this).find(".submenu").stop().slideDown(); // 한 개만
+        // });
+        // $(".nav > ul > li").mouseout(function(){
+        //     $(".nav > ul > li").find(".submenu").stop().slideUp();
+        // });
+
+        // document.querySelectorAll("nav > ul > li").forEach(li => {
+        //     li.addEventListener("mouseover", () => {
+                
+        //     });
+        // }); 
+
+        // 마우스 오버 이벤트 핸들러 등록
+        const navItems = document.querySelectorAll(".nav > ul > li");
+
+        navItems.forEach((item) => {
+        item.addEventListener("mouseover", () => {
+            const subMenu = item.querySelector(".submenu");
+            const allSubMenus = document.querySelectorAll(".submenu");
+            
+            // 모든 서브메뉴를 보이게 하기
+            allSubMenus.forEach((menu) => {
+            menu.style.display = "block";
+            });
+            
+            // 현재 아이템의 서브메뉴만 숨기지 않고 보이게 하기
+            subMenu.style.display = "block";
+        });
+        });
+
+        // 마우스 아웃 이벤트 핸들러 등록
+        navItems.forEach((item) => {
+        item.addEventListener("mouseout", () => {
+            const allSubMenus = document.querySelectorAll(".submenu");
+            
+            // 모든 서브메뉴를 숨기기
+            allSubMenus.forEach((menu) => {
+            menu.style.display = "none";
+            });
+        });
+        });
+
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = sliderWrap.querySelector(".slider__img");
+        const sliderInner = sliderWrap.querySelector(".slider__inner");
+        const slider = sliderWrap.querySelectorAll(".slider");
+
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+        let sliderInterval = 3000;
+
+        sliderInner.style.transition = "all 0.6s";
+        setInterval(() => {
+                currentIndex = (currentIndex + 1) % sliderCount; 
+                    
+                sliderInner.style.transform = "translateY("+ 300 * currentIndex + "px)";
+        }, sliderInterval);
+    </script>
+</body>
+</html>
